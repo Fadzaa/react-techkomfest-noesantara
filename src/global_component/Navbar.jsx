@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Navbar() {
+const Navbar = () => {
   const [activeLink, setActiveLink] = useState(null);
 
   const handleSetActiveLink = (linkName) => {
@@ -15,7 +15,7 @@ function Navbar() {
   ];
 
   return (
-    <div className="font-urbanist text-xl">
+    <div className="font-urbanist text-xl ">
       <nav className="flex list-none gap-7 justify-center mt-9">
         {navItems.map((item, index) => (
           <li key={index}>

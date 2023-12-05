@@ -4,7 +4,7 @@ import { indonesia1, indonesia2, rainbowShape } from '../../utils/images';
 function LandingComponentIndonesia() {
   return (
     <>
-      <div className="w-screen h-screen bg-GreenWhite flex py-24 px-36 items-center">
+      <div className="w-screen h-screen bg-GreenWhite flex py-24 px-36 items-center relative">
         <div>
           <img src={rainbowShape} alt="rainbowShape" />
           <h1 className="font-milonga text-primary text-[84px]">Indonesia</h1>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function LandingComponentTestimony() {
+const LandingComponentTestimony = () => {
   return (
     <div>LandingComponentTestimony</div>
   )
