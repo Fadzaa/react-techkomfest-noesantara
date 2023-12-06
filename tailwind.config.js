@@ -11,7 +11,9 @@ export default {
       colors: {
         primary: "#99B080",
         primaryText: "#333333",
-        GreenWhite: "#FAF8ED"
+        GreenWhite: "#FAF8ED",
+        BorderGray: '#E9ECF2',
+        TextSecondary: '#7D7A7A',
       },
     },
   },
