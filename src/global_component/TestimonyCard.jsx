@@ -3,7 +3,7 @@ import { people } from '../utils/images';
 
 
 const TestimonyCard = ({width, height, marginTop, text}) => {
-  const customStyle = `w-${width} h-${height} mt-${marginTop} text-sm border-2 border-BorderGray rounded-3xl p-5`;
+  const customStyle = `w-${width} h-${height} mt-${marginTop} text-sm border-2 border-BorderGray rounded-3xl p-8`;
   return ( 
     <div className={customStyle}>
       <div className="flex gap-4 ">
