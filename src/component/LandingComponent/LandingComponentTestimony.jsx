@@ -13,10 +13,10 @@ const LandingComponentTestimony = () => {
         <div className="mx-16">
           <div className="flex flex-row gap-5 mt-16">
             <div className="flex flex-col ml-8 gap-4">
-              <div className="flex flex-col items-left w-[300px] h-[429px] border-2 border-BorderGray rounded-3xl pt-0  ">
+              <div className="flex flex-col items-left w-[294px] h-[429px] border-2 border-BorderGray rounded-3xl pt-0  ">
                 <img src={people} className="w-full h-full object-fill rounded-3xl" />
                 <div className="mx-auto px-6 pb-8">
-                  <p className=" text-justify mt-2 text-sm">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                  <p className="mt-4 text-sm">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                   <div className="font-urbanist text-sm mt-[53px]">
                     <p className="font-bold">Istiak Ahmed</p>
                     <p className="text-TextSecondary">CEO,Avito</p>
@@ -41,13 +41,13 @@ const LandingComponentTestimony = () => {
               <TestimonyCard
                 width={'[595px]'}
                 height={'[185px]'}
-                marginTop={3}
+                marginTop={5}
                 text={'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'}
               />
               <TestimonyCard
                 width={'[595px]'}
                 height={'[185px]'}
-                marginTop={3}
+                marginTop={5}
                 text={'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'}
               />
             </div>
@@ -57,10 +57,10 @@ const LandingComponentTestimony = () => {
               <TestimonyCard
                 width={'[323px]'}
                 height={'[241px]'}
-                marginTop={3}
+                marginTop={5}
                 text={'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt '}
               />
-              <TestimonyCard width={'[330px]'} height={'[138px]'} marginTop={3} text={'Amet minim mollit non deserunt ullamco est sit aliqua dolor d'} />
+              <TestimonyCard width={'[330px]'} height={'[138px]'} marginTop={5} text={'Amet minim mollit non deserunt ullamco est sit aliqua dolor d'} />
             </div>
           </div>
         </div>
