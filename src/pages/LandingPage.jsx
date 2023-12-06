@@ -3,6 +3,7 @@ import LandingComponentHero from '../component/LandingComponent/LandingComponent
 import LandingComponentCulture from '../component/LandingComponent/LandingComponentCulture'
 import LandingComponentIndonesia from '../component/LandingComponent/LandingComponentIndonesia'
 import Footer from '../global_component/Footer'
+import LandingComponentTestimony from '../component/LandingComponent/LandingComponentTestimony'
 
 function LandingPage() {
   return (
@@ -10,6 +11,7 @@ function LandingPage() {
       <LandingComponentHero/>
       <LandingComponentCulture/>
       <LandingComponentIndonesia/>
+      <LandingComponentTestimony/>
       <Footer/>
       </>
   )
