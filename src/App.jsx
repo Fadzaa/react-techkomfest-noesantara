@@ -1,6 +1,7 @@
 import React from 'react'
 import LandingPage from './pages/LandingPage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import LandingComponentTestimony from './component/LandingComponent/LandingComponentTestimony';
 import GalleryComponentHero from './component/GalleryComponent/GalleryComponentHero';
 import InformativePage from './pages/InformativePage';
 

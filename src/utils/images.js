@@ -12,6 +12,10 @@ import bgGallery4 from '../assets/image/gallery4.png'
 import bgGallery5 from '../assets/image/gallery5.png'
 import bgGallery6 from '../assets/image/gallery6.png'
 import bgGallery7 from '../assets/image/gallery7.png'
+import cultureClothes from '../assets/image/culture_clothes.png'
+import cultureFood from '../assets/image/culture_food.png'
+import cultureHouse from '../assets/image/culture_house.png'
+import cultureWeapon from '../assets/image/culture_weapon.png'
 
 //Example
 export { 
@@ -29,5 +33,9 @@ export {
     bgGallery5,
     bgGallery6,
     bgGallery7,
+    cultureClothes,
+    cultureFood,
+    cultureHouse,
+    cultureWeapon
 
 }
