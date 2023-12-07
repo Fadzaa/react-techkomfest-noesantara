@@ -1,5 +1,6 @@
 import React from 'react'
 import { bgLandingHero, mistEffect } from '../../utils/images'
+import Navbar from '../../global_component/Navbar';
 
 function LandingComponentHero() {
   return (
@@ -11,7 +12,7 @@ function LandingComponentHero() {
             src={bgLandingHero}
             alt="hero"
           />
-          <div className='h-full absolute w-full mt-28'>
+          <div className="h-full absolute w-full mt-28">
             <img
               className="bottom-0 absolute w-full"
               src={mistEffect}
@@ -19,7 +20,6 @@ function LandingComponentHero() {
             />
           </div>
         </div>
-
         <div className="w-full h-full absolute flex flex-col items-center justify-center">
           <div className="flex items-center">
             <div className="h-[1px] w-8 bg-white"></div>
@@ -35,6 +35,8 @@ function LandingComponentHero() {
             Explore Now
           </button>
         </div>
+
+        <Navbar />
       </div>
     </div>
   );
