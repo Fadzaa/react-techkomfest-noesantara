@@ -1,8 +1,23 @@
-import React from 'react'
+import React, { useState } from "react";
+import { cultureClothes, cultureFood, cultureHouse, cultureWeapon } from "../../utils/images";
+import CultureCard from "../../global_component/CultureCard";
 
 function LandingComponentCulture() {
+  const [activeCard, setActiveCard] = useState(0);
+
+  const cards = [
+    { title: "Food", image: cultureFood },
+    { title: "Clothes", image: cultureClothes },
+    { title: "Weapon", image: cultureWeapon },
+    { title: "House", image: cultureHouse },
+  ];
+
+  const handleCardHover = (index) => {
+    setActiveCard(index);
+  };
+
   return (
-    <div className="w-screen h-screen bg-white flex py-24 px-36 items-center">
+    <div className="w-screen h-screen bg-white flex py-24 px-36 items-center justify-between">
       <div>
         <h1 className="font-milonga text-primary text-[84px]">Culture</h1>
         <h3 className="font-yiBaiti tracking-widest text-primaryText mb-10 ps-3 mt-[-15px]">
@@ -14,20 +29,19 @@ function LandingComponentCulture() {
           nec gravida ipsum pulvinar vel non.
         </p>
       </div>
-      <div className="flex w-full ms-16">
-              <div className="w-[384px] h-[473px] rounded-2xl flex flex-col justify-end relative overflow-hidden">
-                  {/* temporary image template */}
-                  <div className='bg-yellow-100 h-full w-full absolute'></div> 
-                  
-          <div className="w-[280px] h-24 bg-[#343434] mb-8 px-7 py-2 absolute">
-            <h1 className="font-urbanist font-medium text-[32px] leading-10 text-white">
-              Traditional Food
-            </h1>
-          </div>
-        </div>
+      <div className="flex ms-16 justify-end">
+        {cards.map((card, index) => (
+          <CultureCard
+            key={index}
+            image={card.image}
+            title={card.title}
+            isActive={index === activeCard}
+            onHover={() => handleCardHover(index)}
+          />
+        ))}
       </div>
     </div>
   );
 }
 
-export default LandingComponentCulture
+export default LandingComponentCulture;

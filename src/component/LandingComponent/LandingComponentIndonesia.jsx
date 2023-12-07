@@ -21,8 +21,8 @@ function LandingComponentIndonesia() {
           </div>
         </div>
         <div className="flex gap-10 absolute top-0 right-[115px]">
-          <img src={indonesia1} alt="gambar1" className="w-[256px] h-[527px] rounded-b-[70px]" />
-          <img src={indonesia2} alt="gambar2" className="w-[256px] h-[740px] rounded-b-[70px]" />
+          <img src={indonesia1} alt="gambar1" className="w-[256px] h-[527px] rounded-b-[70px] object-cover" />
+          <img src={indonesia2} alt="gambar2" className="w-[256px] h-[740px] rounded-b-[70px] object-cover" />
         </div>
       </div>
     </>
