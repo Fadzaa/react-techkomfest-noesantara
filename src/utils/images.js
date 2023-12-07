@@ -4,6 +4,7 @@ import rainbowShape from '../assets/image/rainbow_shape.png'
 import indonesia1 from '../assets/image/indonesia1.png'
 import indonesia2 from '../assets/image/indonesia2.png'
 import people from '../assets/image/people.png'
+import bgInformative1 from '../assets/image/bg_informative_1.png'
 import bgGallery1 from '../assets/image/gallery1.png'
 import bgGallery2 from '../assets/image/gallery2.png'
 import bgGallery3 from '../assets/image/gallery3.png'
@@ -20,6 +21,7 @@ export {
     indonesia1,
     indonesia2,
     people,
+    bgInformative1,
     bgGallery1,
     bgGallery2,
     bgGallery3, 
