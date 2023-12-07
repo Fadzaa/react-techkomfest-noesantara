@@ -16,6 +16,11 @@ import cultureClothes from '../assets/image/culture_clothes.png'
 import cultureFood from '../assets/image/culture_food.png'
 import cultureHouse from '../assets/image/culture_house.png'
 import cultureWeapon from '../assets/image/culture_weapon.png'
+import informativeBali from '../assets/image/informative_bali.png'
+import informativeJakarta from '../assets/image/informative_jakarta.png'
+import informativeJawaBarat from '../assets/image/informative_jawa_barat.png'
+import informativeJawaTengah from '../assets/image/informative_jawa_tengah.png'
+import informativePapua from '../assets/image/informative_papua.png'
 
 //Example
 export { 
@@ -36,6 +41,11 @@ export {
     cultureClothes,
     cultureFood,
     cultureHouse,
-    cultureWeapon
+    cultureWeapon,
+    informativeBali,
+    informativeJakarta,
+    informativeJawaBarat,
+    informativeJawaTengah,
+    informativePapua
 
 }
