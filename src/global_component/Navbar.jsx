@@ -10,9 +10,9 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { name: 'Wonderful Indonesia', href: '/wonderfulindonesia' },
+    { name: 'Wonderful Indonesia', href: '/' },
     { name: 'Gallery', href: '/gallery' },
-    { name: 'Informative Page', href: '/informativepage' },
+    { name: 'Informative Page', href: '/informative' },
     { name: 'About', href: '/about' },
   ];
 
@@ -33,7 +33,7 @@ const Navbar = () => {
    return (
      <div
        className={`font-urbanist text-xl fixed z-10 w-screen flex justify-center  ${
-         scrolled ? "bg-white text-black border-b-[1px] border-black" : ""
+         scrolled ? "bg-white text-black shadow-md" : ""
        }`}
      >
        <div className="my-5 ">
