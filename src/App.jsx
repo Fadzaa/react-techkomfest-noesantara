@@ -5,6 +5,7 @@ import LandingComponentTestimony from './component/LandingComponent/LandingCompo
 import GalleryComponentHero from './component/GalleryComponent/GalleryComponentHero';
 import InformativePage from './pages/InformativePage';
 
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -12,7 +13,6 @@ const App = () => {
         <Route path="/" element={<LandingPage />} />
         <Route path="/gallery" element={<GalleryComponentHero />} />
         <Route path="/testimony" element={<LandingComponentTestimony />} />
-        <Route path="/informative" element={<InformativePage />} />
       </Routes>
     </BrowserRouter>
   );
