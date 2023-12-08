@@ -41,13 +41,13 @@ const LandingComponentTestimony = () => {
               <TestimonyCard
                 width={'[595px]'}
                 height={'[185px]'}
-                marginTop={5}
+                marginTop={4}
                 text={'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'}
               />
               <TestimonyCard
                 width={'[595px]'}
                 height={'[185px]'}
-                marginTop={5}
+                marginTop={4}
                 text={'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'}
               />
             </div>
@@ -57,10 +57,10 @@ const LandingComponentTestimony = () => {
               <TestimonyCard
                 width={'[323px]'}
                 height={'[241px]'}
-                marginTop={5}
+                marginTop={4}
                 text={'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt '}
               />
-              <TestimonyCard width={'[330px]'} height={'[138px]'} marginTop={5} text={'Amet minim mollit non deserunt ullamco est sit aliqua dolor d'} />
+              <TestimonyCard width={'[330px]'} height={'[138px]'} marginTop={4} text={'Amet minim mollit non deserunt ullamco est sit aliqua dolor d'} />
             </div>
           </div>
         </div>
