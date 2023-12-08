@@ -2,8 +2,8 @@ import React from 'react'
 import LandingPage from './pages/LandingPage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LandingComponentTestimony from './component/LandingComponent/LandingComponentTestimony';
-import GalleryComponentHero from './component/GalleryComponent/GalleryComponentHero';
-import InformativePage from './pages/InformativePage';
+import GalleryPage from './pages/GalleryPage';
+
 
 
 const App = () => {
@@ -11,7 +11,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/gallery" element={<GalleryComponentHero />} />
+        <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/testimony" element={<LandingComponentTestimony />} />
       </Routes>
     </BrowserRouter>
