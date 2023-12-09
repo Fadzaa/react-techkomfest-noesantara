@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <>
-      <div className="bg-primary pt-[120px] px-32 items-center h-auto  flex flex-col gap-56 ">
+      <div className="bg-primary pt-[120px] px-32 items-center h-auto flex flex-col gap-56 sm:bg-red-500 ">
         <div className="flex gap-40">
           <div>
             <h2 className="font-urbanist font-semibold text-white text-2xl">Contact</h2>
@@ -55,12 +55,12 @@ const Footer = () => {
           </div>
           <div className="flex my-7 justify-center space-x-96">
             <div>
-               <p className="text-white font-urbanist text-base">Copyright &copy; 2023 Lorem Ipsum Ltd. </p>
+              <p className="text-white font-urbanist text-base">Copyright &copy; 2023 Lorem Ipsum Ltd. </p>
             </div>
             <div className="flex gap-4  text-white ">
-              <ion-icon name="logo-instagram" size='large'></ion-icon>
-              <ion-icon name="logo-facebook" size='large'></ion-icon>
-              <ion-icon name="logo-twitter" size='large'></ion-icon>
+              <ion-icon name="logo-instagram" size="large"></ion-icon>
+              <ion-icon name="logo-facebook" size="large"></ion-icon>
+              <ion-icon name="logo-twitter" size="large"></ion-icon>
             </div>
           </div>
         </div>

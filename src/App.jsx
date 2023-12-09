@@ -3,8 +3,7 @@ import LandingPage from './pages/LandingPage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import GalleryPage from './pages/GalleryPage';
 import QuizComponent from './component/QuizComponent/QuizComponent';
-import AnswerComponent from './component/QuizComponent/AnswerComponent';
-import IndicatorBar from './component/QuizComponent/IndicatorBar';
+import Footer from './global_component/Footer';
 
 const App = () => {
   return (
@@ -13,7 +12,7 @@ const App = () => {
         <Route path="/" element={<LandingPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/quiz" element={<QuizComponent />} />
-        <Route path="/answer" element={<IndicatorBar />} />
+        <Route path="/footer" element={<Footer />} />
       </Routes>
     </BrowserRouter>
   );
