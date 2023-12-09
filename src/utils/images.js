@@ -21,6 +21,8 @@ import informativeJakarta from '../assets/image/informative_jakarta.png'
 import informativeJawaBarat from '../assets/image/informative_jawa_barat.png'
 import informativeJawaTengah from '../assets/image/informative_jawa_tengah.png'
 import informativePapua from '../assets/image/informative_papua.png'
+import logo from "../assets/icon/logo.svg"; 
+import menuMobile from "../assets/icon/menu_mobile.svg"; 
 
 
 //Example
@@ -48,5 +50,6 @@ export {
     informativeJawaBarat,
     informativeJawaTengah,
     informativePapua,
-
+    logo,
+    menuMobile
 }
