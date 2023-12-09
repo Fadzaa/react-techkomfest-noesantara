@@ -28,7 +28,7 @@ function CultureCard({ image, title, isActive, onHover }) {
   return (
     <div
       className={`group w-[${
-        isActive ? "384px" : "127px"
+        isActive ? "380px" : "127px"
       }] h-[473px] rounded-2xl flex flex-col justify-end relative overflow-hidden ms-7 transition-all duration-500`}
       onMouseEnter={onHover}
       onMouseLeave={onHover}
