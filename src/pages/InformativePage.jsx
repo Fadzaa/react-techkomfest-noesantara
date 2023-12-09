@@ -55,6 +55,8 @@ function InformativePage() {
         <div className="w-1/2 mt-32">
           <Splide
             options={{
+              type: "loop",
+              focus: -1,
               rewind: true,
               width: 800,
               height: 500,
@@ -64,7 +66,7 @@ function InformativePage() {
               pagination: false,
               arrows: false,
               autoplay: true,
-              interval: 3000,
+              interval: 1000,
             }}
           >
             {cardList.map((card, index) => (
