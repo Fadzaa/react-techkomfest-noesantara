@@ -22,6 +22,7 @@ import informativeJawaBarat from '../assets/image/informative_jawa_barat.png'
 import informativeJawaTengah from '../assets/image/informative_jawa_tengah.png'
 import informativePapua from '../assets/image/informative_papua.png'
 
+
 //Example
 export { 
     bgLandingHero,
@@ -46,6 +47,6 @@ export {
     informativeJakarta,
     informativeJawaBarat,
     informativeJawaTengah,
-    informativePapua
+    informativePapua,
 
 }
