@@ -25,7 +25,6 @@ const AntTab = styled((props) => <Tab disableRipple {...props} />)(({ theme }) =
     minWidth: 0,
   },
   fontWeight: theme.typography.fontWeightRegular,
-  marginRight: theme.spacing(1),
   color: '#fff',
   fontFamily: [
     'Urbanist',

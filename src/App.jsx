@@ -1,10 +1,10 @@
 import React from 'react'
 import LandingPage from './pages/LandingPage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import LandingComponentTestimony from './component/LandingComponent/LandingComponentTestimony';
 import GalleryPage from './pages/GalleryPage';
-
-
+import QuizComponent from './component/QuizComponent/QuizComponent';
+import AnswerComponent from './component/QuizComponent/AnswerComponent';
+import IndicatorBar from './component/QuizComponent/IndicatorBar';
 
 const App = () => {
   return (
@@ -12,7 +12,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
-        <Route path="/testimony" element={<LandingComponentTestimony />} />
+        <Route path="/quiz" element={<QuizComponent />} />
+        <Route path="/answer" element={<IndicatorBar />} />
       </Routes>
     </BrowserRouter>
   );
