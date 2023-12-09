@@ -8,9 +8,9 @@ import LandingComponentTestimony from '../component/LandingComponent/LandingComp
 function LandingPage() {
   return (
       <>
-      <LandingComponentHero/>
-      {/* <LandingComponentCulture/>
-      <LandingComponentIndonesia/>
+      {/* <LandingComponentHero/> */}
+      <LandingComponentCulture/>
+      {/* <LandingComponentIndonesia/>
       <LandingComponentTestimony/>
       <Footer/> */}
       </>

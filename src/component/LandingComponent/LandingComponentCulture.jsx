@@ -17,19 +17,22 @@ function LandingComponentCulture() {
   };
 
   return (
-    <div className="w-screen h-screen bg-white flex py-24 px-36 items-center justify-between">
+    <div className="w-screen h-screen bg-white  flex flex-col items-start  py-4 px-8 lg:flex lg:flex-row lg:py-24 lg:px-36 lg:justify-between lg:items-center">
       <div>
-        <h1 className="font-milonga text-primary text-[84px]">Culture</h1>
-        <h3 className="font-yiBaiti tracking-widest text-primaryText mb-10 ps-3 mt-[-15px]">
+        <h1 className="font-milonga text-primary text-[40px] lg:text-[84px]">
+          Culture
+        </h1>
+        <h3 className="font-yiBaiti tracking-widest text-primaryText  mb-3 ps-1 mt-[-5px] lg:mb-10 lg:ps-3 lg:mt-[-15px]">
           INDONESIA CULTURES
         </h3>
-        <p className="font-urbanist font-normal ps-3 text-2xl text-primaryText w-96 leading-9">
+        <p className="font-urbanist font-normal text-primaryText  text-xs leading-6 ps-1 lg:ps-3 lg:text-2xl  lg:leading-9 lg:w-96 ">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus
           imperdiet sed id elementum. Quam vel aliquam sit vulputate. Faucibus
           nec gravida ipsum pulvinar vel non.
         </p>
       </div>
-      <div className="flex ms-16 justify-end">
+
+      <div className="flex mt-7 lg:ms-11 ">
         {cards.map((card, index) => (
           <CultureCard
             key={index}
