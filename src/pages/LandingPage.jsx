@@ -9,10 +9,10 @@ function LandingPage() {
   return (
       <>
       <LandingComponentHero/>
-      <LandingComponentCulture/>
+      {/* <LandingComponentCulture/>
       <LandingComponentIndonesia/>
       <LandingComponentTestimony/>
-      <Footer/>
+      <Footer/> */}
       </>
   )
 }
