@@ -3,10 +3,10 @@ import React from 'react';
 const Footer = () => {
   return (
     <>
-      <div className="bg-primary w-screen h-screen flex pt-10 lg:flex-col lg:pt-[120px] lg:items-center lg:gap-56 ">
-        <div className="flex flex-col w-screen h-screen lg:gap-36">
-          <div className="lg:flex lg:gap-[120px] lg:ml-[104px]">
-            <div className="flex gap-9 pl-9 lg:gap-[210px]">
+      <div className="bg-primary flex w-screen pt-10 lg:flex-col lg:pt-[120px] lg:items-center lg:gap-56 ">
+        <div className="flex flex-col lg:gap-36">
+          <div className="pl-9 lg:flex lg:gap-[120px] lg:ml-[104px]">
+            <div className="flex gap-9 lg:gap-[210px]">
               <div>
                 <h2 className="font-urbanist font-semibold text-xl text-white lg:text-2xl">Contact</h2>
                 <div className="text-white text-xs font-urbanist lg:text-base">
@@ -27,7 +27,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-9 pl-9 lg:flex-row lg:gap-[120px]">
+            <div className="flex flex-col gap-9 lg:flex-row lg:gap-[120px]">
               <div>
                 <h2 className="font-urbanist font-semibold text-xl text-white lg:text-2xl">Company</h2>
                 <div className="text-white text-xs font-urbanist lg:text-base">
@@ -54,9 +54,9 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="lg:flex lg:flex-col">
-            <hr className="border-white w-full mt-[117px] lg:mt-9" />
-            <p className="text-center text-white text-base font-urbanist mt-9 lg:mt-11">Copyright &copy; 2023 Lorem Ipsum Ltd.</p>
+          <div className='mt-[119px] lg:mt-[65px]'>
+            <div className="h-[1px] bg-white w-screen"></div>
+            <p className="text-center text-white text-base font-urbanist my-8 lg:mt-11">Copyright &copy; 2023 Lorem Ipsum Ltd.</p>
           </div>
         </div>
       </div>

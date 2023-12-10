@@ -11,8 +11,8 @@ function LandingPage() {
       {/* <LandingComponentHero/> */}
       <LandingComponentCulture/>
       {/* <LandingComponentIndonesia/>
-      <LandingComponentTestimony/>
-      <Footer/> */}
+      <LandingComponentTestimony/> */}
+      <Footer/>
       </>
   )
 }
