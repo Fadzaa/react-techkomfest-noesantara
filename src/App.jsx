@@ -5,6 +5,7 @@ import GalleryPage from './pages/GalleryPage';
 import InformativePage from './pages/InformativePage';
 import QuizComponent from './component/QuizComponent/QuizComponent';
 import LandingComponentIndonesia from './component/LandingComponent/LandingComponentIndonesia';
+import AboutPage from './pages/AboutPage';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/quiz" element={<QuizComponent />} />
         <Route path="/informative" element={<InformativePage />} />
         <Route path="/indo" element={<LandingComponentIndonesia />} />
+        <Route path="/about" element={<AboutPage />} />
       </Routes>
     </BrowserRouter>
   );
