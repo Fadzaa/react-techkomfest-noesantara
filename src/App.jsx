@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import GalleryPage from './pages/GalleryPage';
 import InformativePage from './pages/InformativePage';
 import QuizComponent from './component/QuizComponent/QuizComponent';
-import Footer from './global_component/Footer';
+import LandingComponentIndonesia from './component/LandingComponent/LandingComponentIndonesia';
 
 const App = () => {
   return (
@@ -14,7 +14,7 @@ const App = () => {
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/quiz" element={<QuizComponent />} />
         <Route path="/informative" element={<InformativePage />} />
-        <Route path="/footer" element={<Footer />} />
+        <Route path="/indo" element={<LandingComponentIndonesia />} />
       </Routes>
     </BrowserRouter>
   );
