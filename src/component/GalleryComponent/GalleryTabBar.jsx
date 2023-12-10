@@ -6,17 +6,27 @@ import Box from '@mui/material/Box';
 import GalleryCardGroup from './GalleryCardGroup';
 import { bgGallery2, bgGallery5, bgGallery6, bgGallery7 } from '../../utils/images';
 
-const AntTabs = styled(Tabs)({
-  width: 621,
+const AntTabs = styled(Tabs)(({ theme }) => ({
+  width: 300,
   bgcolor: 'transparent',
   borderBottom: 'none',
   '& .MuiTabs-indicator': {
     backgroundColor: '#fff',
+    width: '30px',
+    marginLeft: 'auto',
+    marginRight: 'auto',
   },
   '& .MuiTabs-scrollButtons': {
     color: '#fff',
   },
-});
+  [theme.breakpoints.up('lg')]: {
+    width: '621px',
+    '&.lg:w-621': {
+      width: '621px',
+      marginRight: '30px',
+    },
+  },
+}));
 
 const AntTab = styled((props) => <Tab disableRipple {...props} />)(({ theme }) => ({
   textTransform: 'none',
@@ -26,9 +36,7 @@ const AntTab = styled((props) => <Tab disableRipple {...props} />)(({ theme }) =
   },
   fontWeight: theme.typography.fontWeightRegular,
   color: '#fff',
-  fontFamily: [
-    'Urbanist',
-  ].join(','),
+  fontFamily: ['Urbanist'].join(','),
   '&:hover': {
     color: '#fff',
     opacity: 1,
@@ -40,7 +48,13 @@ const AntTab = styled((props) => <Tab disableRipple {...props} />)(({ theme }) =
   '&.Mui-focusVisible': {
     backgroundColor: '#d1eaff',
   },
-  marginRight: '30px',
+  marginRight: '10px',
+  [theme.breakpoints.up('lg')]: {
+    marginRight: '30px',
+    '&.lg:mr-30': {
+      marginRight: '30px',
+    },
+  },
 }));
 
 const GalleryTabBar = () => {
@@ -61,8 +75,8 @@ const GalleryTabBar = () => {
 
   return (
     <Box sx={{ width: '100%', bgcolor: 'transparent' }}>
-      <Box sx={{ bgcolor: 'transparent',  marginBottom: '-1px' }}>
-        <AntTabs value={value} onChange={handleChange} aria-label="ant example" variant='scrollable' scrollButtons="auto" sx={{'& .MuiTabs-indicator': {bgcolor: '#fff'}}}>
+      <Box sx={{ bgcolor: 'transparent', marginBottom: '-1px', overflowX: 'auto' }}>
+        <AntTabs value={value} onChange={handleChange} aria-label="ant example" variant="scrollable" scrollButtons="auto" className="lg:w-621">
           <AntTab label="Makanan Adat" />
           <AntTab label="Tari Adat" />
           <AntTab label="Rumah Adat" />
@@ -70,12 +84,10 @@ const GalleryTabBar = () => {
           <AntTab label="Senjata Adat" />
           <AntTab label="Lagu tradisonal" />
         </AntTabs>
-        <Box sx={{ marginTop: '20px', marginLeft: '2px' }}>
-          {tabContents[value]}
-        </Box>
+        <Box sx={{ marginTop: '20px', marginLeft: '2px' }}>{tabContents[value]}</Box>
       </Box>
     </Box>
   );
-}
+};
 
 export default GalleryTabBar;
