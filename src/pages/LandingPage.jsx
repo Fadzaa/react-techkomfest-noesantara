@@ -10,8 +10,8 @@ function LandingPage() {
       <>
       {/* <LandingComponentHero/> */}
       <LandingComponentCulture/>
-      {/* <LandingComponentIndonesia/>
-      <LandingComponentTestimony/> */}
+      <LandingComponentIndonesia/>
+      {/* <LandingComponentTestimony/> */}
       <Footer/>
       </>
   )
