@@ -5,7 +5,7 @@ import GalleryPage from './pages/GalleryPage';
 import InformativePage from './pages/InformativePage';
 import QuizComponent from './component/QuizComponent/QuizComponent';
 import AboutPage from './pages/AboutPage';
-import AnswerComponent from './component/QuizComponent/AnswerComponent';
+import GalleryTabBar from './component/GalleryComponent/GalleryTabBar';
 
 const App = () => {
   return (
@@ -15,7 +15,7 @@ const App = () => {
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/quiz" element={<QuizComponent />} />
         <Route path="/informative" element={<InformativePage />} />
-        <Route path="/answer" element={<AnswerComponent />} />
+        <Route path="/tabbar" element={<GalleryTabBar />} />
         <Route path="/about" element={<AboutPage />} />
       </Routes>
     </BrowserRouter>
