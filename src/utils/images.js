@@ -23,6 +23,7 @@ import informativeJawaTengah from '../assets/image/informative_jawa_tengah.png'
 import informativePapua from '../assets/image/informative_papua.png'
 import logo from "../assets/icon/logo.svg"; 
 import menuMobile from "../assets/icon/menu_mobile.svg"; 
+import letterDecoration from "../assets/image/letterdecor.png";
 
 
 //Example
@@ -51,5 +52,6 @@ export {
     informativeJawaTengah,
     informativePapua,
     logo,
-    menuMobile
+    menuMobile,
+    letterDecoration
 }
