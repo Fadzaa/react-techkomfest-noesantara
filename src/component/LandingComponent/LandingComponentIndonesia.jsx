@@ -8,11 +8,11 @@ function LandingComponentIndonesia() {
         <div>
           <h1 className="font-milonga text-primary absolute top-[178px] left-[30px] lg:left-[120px] lg:top-[292px] text-[35px] lg:text-[84px]">Indonesia</h1>
           <h3 className="font-yiBaiti tracking-widest text-primaryText absolute top-[220px] left-[33px] text-xs lg:text-xl lg:mb-10 lg:ps-3 lg:mt-[-15px] lg:top-[420px] lg:left-[127px] ">ABOUT INDONESIA</h3>
-          <p className="font-urbanist font-normal lg:ps-3 absolute text-xs w-[197px] top-[237px] left-[33px] lg:text-2xl text-primaryText lg:w-[430px] lg:top-[457px] lg:left-[125px] lg:leading-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus imperdiet sed id elementum.</p>
+          <p className="font-urbanist font-normal lg:ps-3 absolute text-xs w-[197px] top-[237px] left-[33px] lg:text-2xl text-primaryText lg:w-[595px] lg:top-[457px] lg:left-[125px] lg:leading-9">Indonesia, negara kepulauan yang megah, dikenal dengan keindahan alamnya yang menakjubkan, keanekaragaman budayanya, dan keramahan masyarakatnya.</p>
           <div className="border border-primary p-6 absolute top-[335px] left-12 bg-white lg:top-[600px]  lg:left-[120px]  lg:p-6 lg:mt-14">
             <div> 
               <p className="bg-primary text-left p-3 font-urbanist font-light italic text-xs w-[220px] leading-[21px] lg:p-4 text-white lg:w-[839px]">
-              “The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.”“The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.”
+              “Indonesia, sebuah surga tropis yang memukau, mempersembahkan keindahan alam yang tak terlukiskan. Dari pulau-pulau eksotis dengan pantai berpasir putih yang memanjang hingga gunung-gunung megah yang menyapu langit, Indonesia menawarkan ragam panorama yang memikat hati. Hutan-hutan hujan yang lebat, danau-danau yang tenang, serta terumbu karang yang memukau di dasar laut, semuanya menyatu dalam kekayaan alam yang mempesona. Ditambah lagi dengan keragaman budaya yang berakar dalam sejarah panjang, Indonesia adalah sebuah destinasi yang memanjakan mata, merayakan keelokan alam dan warisan budaya yang tiada tara.”
               </p>
             </div>
           </div>
