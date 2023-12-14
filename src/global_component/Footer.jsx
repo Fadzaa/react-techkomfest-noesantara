@@ -15,35 +15,31 @@ const Footer = () => {
                 </div>
               </div>
               <div>
-                <h2 className="font-urbanist font-semibold text-xl text-white lg:text-2xl">Shop</h2>
+                <h2 className="font-urbanist font-semibold text-xl text-white lg:text-2xl">About us</h2>
                 <div className="text-white text-xs font-urbanist lg:text-base">
-                  <p>Tops</p>
-                  <p>Bottoms</p>
-                  <p>Outerwear</p>
-                  <p>New in</p>
-                  <p>About</p>
-                  <p>Blog</p>
-                  <p>Contact</p>
+                  <p>Letter</p>
+                  <p>Mission</p>
+                  <p>Success Team</p>
                 </div>
               </div>
             </div>
             <div className="flex flex-col gap-9 lg:flex-row lg:gap-[120px]">
               <div>
-                <h2 className="font-urbanist font-semibold text-xl text-white lg:text-2xl">Company</h2>
+                <h2 className="font-urbanist font-semibold text-xl text-white lg:text-2xl">Pages</h2>
                 <div className="text-white text-xs font-urbanist lg:text-base">
-                  <p>Cookies</p>
-                  <p>Payments</p>
+                  <p>Wonderful Indonesia</p>
+                  <p>Gallery</p>
                   <p>Terms & Conditions</p>
-                  <p>Privacy Policy</p>
-                  <p>Security</p>
+                  <p>Informative </p>
+                  <p>Quiz</p>
                 </div>
               </div>
               <div>
                 <h2 className="font-urbanist font-semibold text-xl text-white lg:text-2xl">Newsletter</h2>
                 <div className="text-white text-xs font-urbanist lg:text-base">
-                  <p>Be the first to hear about our latest offers</p>
+                  <p className='lg:w-[328px]'>Do you have feedback and suggestions to make our website better?</p>
                   <div className="flex items-center">
-                    <input type="text" placeholder="YOUR EMAIL ADDRESS" pattern="[a-zA-Z0-9._%+-]+@gmail\.com" className="w-[260px] h-10 px-3 mt-3 border border-white bg-transparent rounded-sm focus:outline-none placeholder-white" />
+                    <input type="text" placeholder="SEND HERE" pattern="[a-zA-Z0-9._%+-]+@gmail\.com" className="w-[260px] h-10 px-3 mt-3 border border-white bg-transparent rounded-sm focus:outline-none placeholder-white" />
                     <a href="#">
                       <button className="border border-white rounded-sm h-10 w-10 mt-3">
                         <ion-icon name="send-sharp"></ion-icon>
