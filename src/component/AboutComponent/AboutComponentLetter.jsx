@@ -1,4 +1,4 @@
-import React,{ useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { letterDecoration, letterDecorationmobile } from '../../utils/images';
 
 const AboutComponentLetter = () => {
