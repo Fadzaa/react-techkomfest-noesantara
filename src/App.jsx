@@ -6,6 +6,7 @@ import InformativePage from './pages/InformativePage';
 import QuizComponent from './component/QuizComponent/QuizComponent';
 import GalleryTabBar from './component/GalleryComponent/GalleryTabBar';
 import AboutComponentLetter from './component/AboutComponent/AboutComponentLetter';
+import ClothDetailHero from './component/ClothDetailComponent/ClothDetailHero';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/informative" element={<InformativePage />} />
         <Route path="/tabbar" element={<GalleryTabBar />} />
         <Route path="/about" element={<AboutComponentLetter />} />
+        <Route path="/detailcloth" element={<ClothDetailHero />} />
       </Routes>
     </BrowserRouter>
   );
