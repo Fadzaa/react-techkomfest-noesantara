@@ -5,8 +5,9 @@ import GalleryPage from './pages/GalleryPage';
 import InformativePage from './pages/InformativePage';
 import QuizComponent from './component/QuizComponent/QuizComponent';
 import GalleryTabBar from './component/GalleryComponent/GalleryTabBar';
-import AboutComponentLetter from './component/AboutComponent/AboutComponentLetter';
-import ClothDetailHero from './component/ClothDetailComponent/ClothDetailHero';
+import AboutComponentLetter from './component/AboutComponent/AboutComponentLetter';;
+import ClothDetailTraditional from './component/ClothDetailComponent/ClothDetailTraditional';
+import ClothDetailCardGroup from './component/ClothDetailComponent/ClothDetailCardGroup';
 
 const App = () => {
   return (
@@ -18,7 +19,7 @@ const App = () => {
         <Route path="/informative" element={<InformativePage />} />
         <Route path="/tabbar" element={<GalleryTabBar />} />
         <Route path="/about" element={<AboutComponentLetter />} />
-        <Route path="/detailcloth" element={<ClothDetailHero />} />
+        <Route path="/detailcloth" element={<ClothDetailTraditional />} />
       </Routes>
     </BrowserRouter>
   );

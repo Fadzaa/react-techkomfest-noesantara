@@ -26,6 +26,10 @@ import menuMobile from "../assets/icon/menu_mobile.svg";
 import letterDecoration from "../assets/image/letterdecor.png";
 import letterDecorationmobile from "../assets/image/letterdecorationmobile.png";
 import bgDetailCloth from "../assets/image/bgDetailCloth.png";
+import clothCard1 from "../assets/image/clothcard1.png";
+import clothCard2 from "../assets/image/clothcard2.png";
+import clothCard3 from "../assets/image/clothcard3.png";
+import clothCard4 from "../assets/image/clothcard4.png";
 
 
 //Example
@@ -57,5 +61,9 @@ export {
     menuMobile,
     letterDecoration,
     letterDecorationmobile,
-    bgDetailCloth
+    bgDetailCloth,
+    clothCard1,
+    clothCard2,
+    clothCard3,
+    clothCard4
 }
