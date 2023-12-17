@@ -5,12 +5,9 @@ import GalleryPage from './pages/GalleryPage';
 import InformativePage from './pages/InformativePage';
 import QuizComponent from './component/QuizComponent/QuizComponent';
 import GalleryTabBar from './component/GalleryComponent/GalleryTabBar';
-import AboutComponentLetter from './component/AboutComponent/AboutComponentLetter';
-import ClothDetailCollection from './component/ClothDetailComponent/ClothDetailCollection';
-import PauseOnHover from './component/ClothDetailComponent/ClothDetailCardSlider';
 import ClothDetailWorld from './component/ClothDetailComponent/ClothDetailWorld';
-import ClothDetailHero from './component/ClothDetailComponent/ClothDetailHero';
 import ClothDetailTraditional from './component/ClothDetailComponent/ClothDetailTraditional';
+import AboutPage from "./pages/AboutPage.jsx";
 
 const App = () => {
   return (
@@ -21,7 +18,7 @@ const App = () => {
         <Route path="/quiz" element={<QuizComponent />} />
         <Route path="/informative" element={<InformativePage />} />
         <Route path="/tabbar" element={<GalleryTabBar />} />
-        <Route path="/about" element={<AboutComponentLetter />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/traditional" element={<ClothDetailTraditional />} />
         <Route path="/world" element={<ClothDetailWorld />} />
       </Routes>
