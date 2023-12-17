@@ -8,6 +8,8 @@ import GalleryTabBar from './component/GalleryComponent/GalleryTabBar';
 import AboutComponentLetter from './component/AboutComponent/AboutComponentLetter';
 import ClothDetailCollection from './component/ClothDetailComponent/ClothDetailCollection';
 import PauseOnHover from './component/ClothDetailComponent/ClothDetailCardSlider';
+import ClothDetailWorld from './component/ClothDetailComponent/ClothDetailWorld';
+import ClothDetailHero from './component/ClothDetailComponent/ClothDetailHero';
 
 const App = () => {
   return (
@@ -19,8 +21,8 @@ const App = () => {
         <Route path="/informative" element={<InformativePage />} />
         <Route path="/tabbar" element={<GalleryTabBar />} />
         <Route path="/about" element={<AboutComponentLetter />} />
-        <Route path="/detailcloth" element={<ClothDetailCollection />} />
-        <Route path="/slider" element={<PauseOnHover />} />
+        <Route path="/hero" element={<ClothDetailHero />} />
+        <Route path="/world" element={<ClothDetailWorld />} />
       </Routes>
     </BrowserRouter>
   );
