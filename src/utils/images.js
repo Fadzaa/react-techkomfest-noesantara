@@ -34,6 +34,8 @@ import cardCloth from "../assets/image/cardcloth1.png";
 import kebaya from "../assets/image/kebaya.png";
 import payasAgung from "../assets/image/payasAgung.png";
 import ulos from "../assets/image/ulos.png";
+import bgHeroAbout from "../assets/image/bg_hero_about.jpg";
+import aboutPerson from "../assets/image/person_about.png";
 
 
 //Example
@@ -74,4 +76,6 @@ export {
     kebaya,
     payasAgung, 
     ulos,
+    bgHeroAbout,
+    aboutPerson
 }
