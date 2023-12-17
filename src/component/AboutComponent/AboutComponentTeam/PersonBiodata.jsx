@@ -1,4 +1,4 @@
-import {iconGithub, iconInstagram, iconLinkedin} from "../../../utils/images.js";
+import {iconGithub, iconInstagram, iconLinkedin} from "../../../utils/icon.js";
 import React from "react";
 
 export default function PersonBiodata() {

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { logo, menuMobile } from '../utils/images';
+import { logo, menuMobile } from '../utils/icon.js';
 
 export default function Navbar() {
   const [width, setWidth] = useState(window.innerWidth);
