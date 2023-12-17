@@ -1,3 +1,6 @@
+@import "slick-carousel/slick/slick.css"; 
+@import "slick-carousel/slick/slick-theme.css";
+
 @import url('https://fonts.googleapis.com/css2?family=Milonga&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700&display=swap');
 @import url(https://db.onlinewebfonts.com/c/5d22bd0816f911a4c90e5d8661157ef9?family=Microsoft+Yi+Baiti);
@@ -5,4 +8,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 

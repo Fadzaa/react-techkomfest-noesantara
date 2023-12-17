@@ -5,9 +5,9 @@ import GalleryPage from './pages/GalleryPage';
 import InformativePage from './pages/InformativePage';
 import QuizComponent from './component/QuizComponent/QuizComponent';
 import GalleryTabBar from './component/GalleryComponent/GalleryTabBar';
-import AboutComponentLetter from './component/AboutComponent/AboutComponentLetter';;
-import ClothDetailTraditional from './component/ClothDetailComponent/ClothDetailTraditional';
-import ClothDetailCardGroup from './component/ClothDetailComponent/ClothDetailCardGroup';
+import AboutComponentLetter from './component/AboutComponent/AboutComponentLetter';
+import ClothDetailCollection from './component/ClothDetailComponent/ClothDetailCollection';
+import PauseOnHover from './component/ClothDetailComponent/ClothDetailCardSlider';
 
 const App = () => {
   return (
@@ -19,7 +19,8 @@ const App = () => {
         <Route path="/informative" element={<InformativePage />} />
         <Route path="/tabbar" element={<GalleryTabBar />} />
         <Route path="/about" element={<AboutComponentLetter />} />
-        <Route path="/detailcloth" element={<ClothDetailTraditional />} />
+        <Route path="/detailcloth" element={<ClothDetailCollection />} />
+        <Route path="/slider" element={<PauseOnHover />} />
       </Routes>
     </BrowserRouter>
   );
