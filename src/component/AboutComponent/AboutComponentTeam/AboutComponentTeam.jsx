@@ -1,5 +1,4 @@
 import React from 'react';
-import {aboutPerson, iconGithub, iconInstagram, iconLinkedin} from "../../../utils/images.js";
 import PersonCard from "./PersonCard.jsx";
 import PersonBiodata from "./PersonBiodata.jsx";
 import PersonDescription from "./PersonDescription.jsx";

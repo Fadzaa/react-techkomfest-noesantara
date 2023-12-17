@@ -8,6 +8,7 @@ import GalleryTabBar from './component/GalleryComponent/GalleryTabBar';
 import ClothDetailWorld from './component/ClothDetailComponent/ClothDetailWorld';
 import ClothDetailTraditional from './component/ClothDetailComponent/ClothDetailTraditional';
 import AboutPage from "./pages/AboutPage.jsx";
+import DetailFoodPage from "./pages/DetailFoodPage.jsx";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/traditional" element={<ClothDetailTraditional />} />
         <Route path="/world" element={<ClothDetailWorld />} />
+        <Route path="/food" element={<DetailFoodPage />} />
       </Routes>
     </BrowserRouter>
   );
