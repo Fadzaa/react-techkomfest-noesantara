@@ -36,6 +36,9 @@ import payasAgung from "../assets/image/payasAgung.png";
 import ulos from "../assets/image/ulos.png";
 import bgHeroAbout from "../assets/image/bg_hero_about.jpg";
 import aboutPerson from "../assets/image/person_about.png";
+import iconLinkedin from "../assets/icon/icon_linkedin.svg";
+import iconGithub from "../assets/icon/icon_github.svg";
+import iconInstagram from "../assets/icon/icon_instagram.svg";
 
 
 //Example
@@ -77,5 +80,8 @@ export {
     payasAgung, 
     ulos,
     bgHeroAbout,
-    aboutPerson
+    aboutPerson,
+    iconGithub,
+    iconLinkedin,
+    iconInstagram
 }
