@@ -30,6 +30,7 @@ import clothCard1 from "../assets/image/clothcard1.png";
 import clothCard2 from "../assets/image/clothcard2.png";
 import clothCard3 from "../assets/image/clothcard3.png";
 import clothCard4 from "../assets/image/clothcard4.png";
+import cardCloth from "../assets/image/cardcloth1.png";
 
 
 //Example
@@ -65,5 +66,6 @@ export {
     clothCard1,
     clothCard2,
     clothCard3,
-    clothCard4
+    clothCard4,
+    cardCloth
 }
