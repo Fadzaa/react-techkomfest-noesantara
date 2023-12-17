@@ -39,6 +39,7 @@ import foodGudeg from "../assets/image/food_gudeg.png";
 import foodRendang from "../assets/image/food_rendang.png";
 import foodSatai from "../assets/image/food_satai.png";
 import foodTempe from "../assets/image/food_tempe.png";
+import peopleFood from "../assets/image/people_food.png";
 
 
 
@@ -84,5 +85,6 @@ export {
     foodGudeg,
     foodRendang,
     foodSatai,
-    foodTempe
+    foodTempe,
+    peopleFood
 }
