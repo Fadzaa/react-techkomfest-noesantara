@@ -7,10 +7,10 @@ import PersonSubDescription from "./PersonSubDescription.jsx";
 
 function AboutComponentTeam() {
     return (
-        <div className="w-screen h-screen px-6 pt-6 lg:px-16 ">
+        <div className="w-screen px-6 pt-6 lg:px-16 relative mb-12 lg:mb-24">
             <div className="flex flex-col items-center">
                 <h1 className=" font-milonga text-[40px] lg:text-[80px] text-primary">Our Team</h1>
-                <div className="w-2/3 lg:w-3/5 h-[2px] bg-primary mb-10 lg:mb-16"></div>
+                <div className="w-2/3 lg:w-3/5 h-[2px] lg:h-[5px] bg-primary mb-10 lg:mb-16"></div>
             </div>
             <div className="lg:flex lg:border-black lg:border-opacity-30 lg:border-[1px] lg:rounded-xl">
                 <PersonCard/>
