@@ -39,8 +39,14 @@ import foodGudeg from "../assets/image/food_gudeg.png";
 import foodRendang from "../assets/image/food_rendang.png";
 import foodSatai from "../assets/image/food_satai.png";
 import foodTempe from "../assets/image/food_tempe.png";
+import foodGudegDesktop from "../assets/image/food_gudeg_desktop.png";
+import foodRendangDesktop from "../assets/image/food_rendang_desktop.png";
+import foodSataiDesktop from "../assets/image/food_satai_desktop.png";
+import foodTempeDesktop from "../assets/image/food_tempe_desktop.png";
 import cardHouse from "../assets/image/cardTraditionalHouse.svg";
 
+import peopleFood from "../assets/image/people_food.png";
+import traditionalFood from "../assets/image/traditional_food.png";
 
 
 //Example
@@ -85,6 +91,13 @@ export {
     foodGudeg,
     foodRendang,
     foodSatai,
+    foodTempe,
+    foodGudegDesktop,
+    foodRendangDesktop,
+    foodSataiDesktop,
+    foodTempeDesktop,
+    peopleFood,
+    traditionalFood
     foodTempe,
     cardHouse
 }
