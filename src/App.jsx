@@ -9,6 +9,7 @@ import ClothDetailWorld from './component/ClothDetailComponent/ClothDetailWorld'
 import ClothDetailTraditional from './component/ClothDetailComponent/ClothDetailTraditional';
 import AboutPage from "./pages/AboutPage.jsx";
 import DetailFoodPage from "./pages/DetailFoodPage.jsx";
+import HouseDetailTraditional from './component/HouseDetailComponent/HouseDetailTraditional.jsx';
 
 const App = () => {
   return (
@@ -21,7 +22,7 @@ const App = () => {
         <Route path="/tabbar" element={<GalleryTabBar />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/traditional" element={<ClothDetailTraditional />} />
-        <Route path="/world" element={<ClothDetailWorld />} />
+        <Route path="/house" element={<HouseDetailTraditional />} />
         <Route path="/food" element={<DetailFoodPage />} />
       </Routes>
     </BrowserRouter>
