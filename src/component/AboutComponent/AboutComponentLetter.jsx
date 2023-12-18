@@ -21,12 +21,12 @@ const AboutComponentLetter = () => {
 
   return (
     <>
-      <div className="pt-[100px] relative">
-        <div className="font-milonga ml-[30px]">
+      <div className="pt-[100px] relative mb-12 lg:mb-24">
+        <div className="font-milonga mx-[30px] lg:mx-[80px]">
           <p className="text-[38px] lg:text-[80px] text-primary">Letter</p>
           <p className="text-[28px] lg:text-[45px]">From Our Teams</p>
         </div>
-        <div className="flex flex-col gap-2 w-[300px] lg:w-[1325px] lg:text-[28px] lg:gap-9 lg:leading-9 mt-7 ml-[30px] font-urbanist text-sm">
+        <div className="flex flex-col gap-2  lg:text-[28px] lg:gap-9 lg:leading-9 mt-7 mx-[30px] lg:mx-[80px] font-urbanist text-sm">
           <p>Neosantara berkomitmen menjadi platform pendidikan teknologi terkemuka, menumbuhkan bakat digital berstandar global. Upaya kami didedikasikan untuk mempercepat kemajuan Indonesia menuju puncak dalam ranah digital.</p>
           <p>
             Dalam semangat komitmen ini, kami mengundang Anda untuk menjelajahi Neosantara sebuah website digital yang menghidupkan kembali kekayaan budaya Indonesia melalui pengalaman inovatif dan mendalam. Temukan perpaduan tradisi dan

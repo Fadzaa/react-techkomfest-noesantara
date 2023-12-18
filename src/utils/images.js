@@ -21,8 +21,6 @@ import informativeJakarta from '../assets/image/informative_jakarta.png'
 import informativeJawaBarat from '../assets/image/informative_jawa_barat.png'
 import informativeJawaTengah from '../assets/image/informative_jawa_tengah.png'
 import informativePapua from '../assets/image/informative_papua.png'
-import logo from "../assets/icon/logo.svg"; 
-import menuMobile from "../assets/icon/menu_mobile.svg"; 
 import letterDecoration from "../assets/image/letterdecor.png";
 import letterDecorationmobile from "../assets/image/letterdecorationmobile.png";
 import bgDetailCloth from "../assets/image/bgDetailCloth.png";
@@ -34,6 +32,15 @@ import cardCloth from "../assets/image/cardcloth1.png";
 import kebaya from "../assets/image/kebaya.png";
 import payasAgung from "../assets/image/payasAgung.png";
 import ulos from "../assets/image/ulos.png";
+import bgHeroAbout from "../assets/image/bg_hero_about.jpg";
+import aboutPerson from "../assets/image/person_about.png";
+import bgHeroFood from "../assets/image/bg_hero_food.png";
+import foodGudeg from "../assets/image/food_gudeg.png";
+import foodRendang from "../assets/image/food_rendang.png";
+import foodSatai from "../assets/image/food_satai.png";
+import foodTempe from "../assets/image/food_tempe.png";
+import cardHouse from "../assets/image/cardTraditionalHouse.svg";
+
 
 
 //Example
@@ -61,8 +68,6 @@ export {
     informativeJawaBarat,
     informativeJawaTengah,
     informativePapua,
-    logo,
-    menuMobile,
     letterDecoration,
     letterDecorationmobile,
     bgDetailCloth,
@@ -74,4 +79,12 @@ export {
     kebaya,
     payasAgung, 
     ulos,
+    bgHeroAbout,
+    aboutPerson,
+    bgHeroFood,
+    foodGudeg,
+    foodRendang,
+    foodSatai,
+    foodTempe,
+    cardHouse
 }
