@@ -10,6 +10,7 @@ import ClothDetailTraditional from './component/ClothDetailComponent/ClothDetail
 import AboutPage from "./pages/AboutPage.jsx";
 import DetailFoodPage from "./pages/DetailFoodPage.jsx";
 import HouseDetailTraditional from './component/HouseDetailComponent/HouseDetailTraditional.jsx';
+import { QuizMenuComponent } from './component/QuizComponent/QuizMenuComponent/QuizMenuComponent';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/traditional" element={<ClothDetailTraditional />} />
         <Route path="/house" element={<HouseDetailTraditional />} />
         <Route path="/food" element={<DetailFoodPage />} />
+        <Route path="/menu" element={<QuizMenuComponent />} />
       </Routes>
     </BrowserRouter>
   );
