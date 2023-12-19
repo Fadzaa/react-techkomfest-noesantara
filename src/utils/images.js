@@ -40,6 +40,8 @@ import foodRendang from "../assets/image/food_rendang.png";
 import foodSatai from "../assets/image/food_satai.png";
 import foodTempe from "../assets/image/food_tempe.png";
 import cardHouse from "../assets/image/cardTraditionalHouse.svg";
+import mbaruNiang from "../assets/image/mbaruNiang.png";
+import mbaruNiang2 from "../assets/image/mbaruNiang2.png";
 
 
 
@@ -86,5 +88,8 @@ export {
     foodRendang,
     foodSatai,
     foodTempe,
-    cardHouse
+    cardHouse,
+    mbaruNiang,
+    mbaruNiang2
+
 }
