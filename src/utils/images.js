@@ -44,6 +44,8 @@ import foodRendangDesktop from "../assets/image/food_rendang_desktop.png";
 import foodSataiDesktop from "../assets/image/food_satai_desktop.png";
 import foodTempeDesktop from "../assets/image/food_tempe_desktop.png";
 import cardHouse from "../assets/image/cardTraditionalHouse.svg";
+import mbaruNiang from "../assets/image/mbaruNiang.png";
+import mbaruNiang2 from "../assets/image/mbaruNiang2.png";
 
 import peopleFood from "../assets/image/people_food.png";
 import traditionalFood from "../assets/image/traditional_food.png";
@@ -92,12 +94,15 @@ export {
     foodRendang,
     foodSatai,
     foodTempe,
+    cardHouse,
+    mbaruNiang,
+    mbaruNiang2,
     foodGudegDesktop,
     foodRendangDesktop,
     foodSataiDesktop,
     foodTempeDesktop,
     peopleFood,
-    traditionalFood
+    traditionalFood,
     foodTempe,
     cardHouse
 }
