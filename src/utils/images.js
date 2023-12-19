@@ -46,9 +46,18 @@ import foodTempeDesktop from "../assets/image/food_tempe_desktop.png";
 import cardHouse from "../assets/image/cardTraditionalHouse.svg";
 import mbaruNiang from "../assets/image/mbaruNiang.png";
 import mbaruNiang2 from "../assets/image/mbaruNiang2.png";
-
+import weaponMenu from "../assets/image/WeaponMenu.png";
+import houseMenu from "../assets/image/houseMenu.png";
+import foodMenu from "../assets/image/foodMenu.png";
+import clothesMenu from "../assets/image/clothesMenu.png";
+import house1 from "../assets/image/house1.png";
+import house2 from "../assets/image/house2.png";
+import house3 from "../assets/image/house3.png";
+import house4 from "../assets/image/house4.png";
 import peopleFood from "../assets/image/people_food.png";
 import traditionalFood from "../assets/image/traditional_food.png";
+import barrierMobile from "../assets/image/barrierMobile.png";
+import barrierDesktop from "../assets/image/barrierDesktop.png";
 
 
 //Example
@@ -103,4 +112,14 @@ export {
     foodTempeDesktop,
     peopleFood,
     traditionalFood,
+    foodMenu,
+    clothesMenu,
+    houseMenu,
+    weaponMenu,
+    house1,
+    house2,
+    house3,
+    house4,
+    barrierMobile,
+    barrierDesktop
 }
