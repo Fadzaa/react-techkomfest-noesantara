@@ -11,6 +11,8 @@ import AboutPage from "./pages/AboutPage.jsx";
 import DetailFoodPage from "./pages/DetailFoodPage.jsx";
 import HouseDetailTraditional from './component/HouseDetailComponent/HouseDetailTraditional.jsx';
 import HouseDetailWorld from './component/HouseDetailComponent/HouseDetailWorld.jsx';
+import HouseDetailCollection from './component/HouseDetailComponent/HouseDetailCollection.jsx';
+import AutoPlay from './component/HouseDetailComponent/HouseDetailCollection.jsx';
 
 const App = () => {
   return (
@@ -23,7 +25,7 @@ const App = () => {
         <Route path="/tabbar" element={<GalleryTabBar />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/traditional" element={<ClothDetailTraditional />} />
-        <Route path="/house" element={<HouseDetailWorld />} />
+        <Route path="/house" element={<AutoPlay />} />
         <Route path="/food" element={<DetailFoodPage />} />
       </Routes>
     </BrowserRouter>
