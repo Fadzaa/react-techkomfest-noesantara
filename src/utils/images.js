@@ -103,6 +103,4 @@ export {
     foodTempeDesktop,
     peopleFood,
     traditionalFood,
-    foodTempe,
-    cardHouse
 }

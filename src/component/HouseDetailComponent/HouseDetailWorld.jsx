@@ -21,7 +21,7 @@ const HouseDetailWorld = () => {
             mencapai 15 meter.
           </p>
           <p className="font-urbanist text-base mt-1 lg:text-[32px] lg:mt-6 lg:w-[763px] lg:leading-10">Berikut adalah beberapa prestasi yang telah diraih oleh rumah adat Mbaru Niang:</p>
-          <ul className="font-urbanist text-base mt-1  lg:text-[32px] lg:mt-6 lg:w-[763px] lg:leading-10 list-disc list-inside">
+          <ul className="font-urbanist text-base lg:items-baseline mt-1  lg:text-[32px] lg:mt-6 lg:w-[763px] lg:leading-10 list-disc list-inside">
             <li>Dinobatkan sebagai salah satu situs warisan dunia oleh UNESCO pada tahun 2012.</li>
             <li>Menjadi salah satu destinasi wisata populer di Nusa Tenggara Timur.</li>
             <li>Menjadi sumber inspirasi bagi para desainer dan arsitek.</li>
