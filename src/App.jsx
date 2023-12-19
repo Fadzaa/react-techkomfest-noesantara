@@ -10,6 +10,9 @@ import ClothDetailTraditional from './component/ClothDetailComponent/ClothDetail
 import AboutPage from "./pages/AboutPage.jsx";
 import DetailFoodPage from "./pages/DetailFoodPage.jsx";
 import HouseDetailTraditional from './component/HouseDetailComponent/HouseDetailTraditional.jsx';
+import HouseDetailWorld from './component/HouseDetailComponent/HouseDetailWorld.jsx';
+import HouseDetailCollection from './component/HouseDetailComponent/HouseDetailCollection.jsx';
+import AutoPlay from './component/HouseDetailComponent/HouseDetailCollection.jsx';
 import { QuizMenuComponent } from './component/QuizComponent/QuizMenuComponent/QuizMenuComponent';
 
 const App = () => {
@@ -23,7 +26,7 @@ const App = () => {
         <Route path="/tabbar" element={<GalleryTabBar />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/traditional" element={<ClothDetailTraditional />} />
-        <Route path="/house" element={<HouseDetailTraditional />} />
+        <Route path="/house" element={<AutoPlay />} />
         <Route path="/food" element={<DetailFoodPage />} />
         <Route path="/menu" element={<QuizMenuComponent />} />
       </Routes>
