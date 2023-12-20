@@ -22,6 +22,8 @@ const GalleryComponentHero = () => {
     };
   }, [backgroundImages]);
 
+  
+
   return (
     <>
       <div className="w-screen h-screen relative bg-black  opacity-95">
@@ -39,7 +41,7 @@ const GalleryComponentHero = () => {
               <p className="w-[300px] lg:mb-6 lg:mt-3 mt-3 ml-[30px] text-white"> Tiap gambar adalah pintu ajaib ke budaya dan keindahan yang tak terlupakan. </p>
               <div className="border border-white mt-[55px] ml-[30px] w-[300px] h-[39px] rounded-[20px] flex lg:w-[511px] lg:h-[48px] lg:rounded-3xl lg:flex items-center gap-1 lg:gap-5 lg:text-sm">
                 <ion-icon name="search-outline" style={{ fontSize: '24px', margin: '0 10px', marginLeft: '20px', color: 'white' }}></ion-icon>
-                <input type="text" placeholder="What do you want to see today?" className="bg-transparent text-white w-full text-[10px] lg:h-[48px] rounded-3xl focus:outline-none" />
+                <input type="text" placeholder="What do you want to see today?" className="bg-transparent text-white w-full text-[10px] lg:text-base lg:h-[48px] rounded-3xl focus:outline-none" />
               </div>
             </div>
             <div className="lg:flex-row absolute lg:top-44 lg:right-16 top-[409px] mt-[28px]">
