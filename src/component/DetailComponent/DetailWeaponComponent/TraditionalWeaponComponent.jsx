@@ -4,7 +4,7 @@ import {peopleFood, traditionalWeapon} from "../../../utils/images.js";
 function TraditionalWeaponComponent() {
     return (
         <div
-            className="w-screen h-screen bg-white px-11 py-10 lg:ps-32 lg:px-0 lg:flex lg:flex-row-reverse lg:justify-between">
+            className="w-screen  bg-white px-11 py-10 lg:ps-32 lg:px-0 lg:flex lg:flex-row-reverse lg:justify-between">
             <ImageExplanation/>
             <TextExplanation/>
         </div>
