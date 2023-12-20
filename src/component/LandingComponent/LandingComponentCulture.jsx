@@ -17,7 +17,7 @@ function LandingComponentCulture() {
   };
 
   return (
-    <div className="w-screen h-screen bg-white  flex flex-col items-start  py-4 px-8 lg:flex lg:flex-row lg:py-24 lg:px-36 lg:justify-between lg:items-center">
+    <div className="w-screen lg:h-screen bg-white  flex flex-col items-start  py-4 px-8 md:flex md:flex-row md:py-24 md:px-36 md:justify-between md:items-center">
       <div>
         <h1 className="font-milonga text-primary text-[40px] lg:text-[84px]">
           Culture
