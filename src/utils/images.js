@@ -70,7 +70,7 @@ import recordWeapon2 from "../assets/image/record_weapon_2.png";
 import recordWeapon3 from "../assets/image/record_weapon_3.png";
 import barrierMobile from "../assets/image/barrierMobile.png";
 import barrierDesktop from "../assets/image/barrierDesktop.png";
-
+import bgHeroHouse from "../assets/image/bg_hero_house.png";
 
 //Example
 export { 
@@ -145,5 +145,6 @@ export {
     house3,
     house4,
     barrierMobile,
-    barrierDesktop
+    barrierDesktop,
+    bgHeroHouse
 }
