@@ -13,6 +13,7 @@ import AutoPlay from './component/DetailComponent/HouseDetailComponent/HouseDeta
 import { QuizMenuComponent } from './component/QuizComponent/QuizMenuComponent/QuizMenuComponent';
 import Sidebar from './component/DetailComponent/InformativeDetailComponent/Sidebar.jsx';
 import InformativeDetailMain from './component/DetailComponent/InformativeDetailComponent/InformativeDetailMain.jsx';
+import InformativeDetailPage from './pages/InformativeDetailPage';
 
 const App = () => {
   return (
@@ -31,8 +32,7 @@ const App = () => {
         <Route path="/food" element={<DetailFoodPage />} />
         <Route path="/weapon" element={<DetailWeaponPage />} />
         <Route path="/menu" element={<QuizMenuComponent />} />
-        <Route path="/sidebar" element={<Sidebar />} />
-        <Route path="/detail" element={<InformativeDetailMain />} />
+        <Route path="/detail" element={<InformativeDetailPage />} />
       </Routes>
     </BrowserRouter>
   );
