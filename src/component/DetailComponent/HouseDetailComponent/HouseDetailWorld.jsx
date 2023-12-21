@@ -3,7 +3,7 @@ import { mbaruNiang, mbaruNiang2 } from '../../../utils/images.js';
 
 const HouseDetailWorld = () => {
   return (
-    <div className="flex flex-col justify-center items-center px-10 w-screen h-screen relative bg-GreenWhite">
+    <div className="flex flex-col justify-center items-center px-10 w-screen h-[130vh] relative bg-GreenWhite">
       <div className="pt-[41px]">
         <p className="font-milonga text-4xl lg:text-8xl text-center lg:absolute lg:right-[390px] lg:top-3 text-primary">World’s Record</p>
         <div>

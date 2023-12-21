@@ -1,12 +1,12 @@
 import React from 'react';
-import DetailComponentHero from "../global_component/DetailComponentHero.jsx";
-import {bgHeroWeapon} from "../utils/images.js";
+import DetailComponentHero from "../../global_component/DetailComponentHero.jsx";
+import {bgHeroWeapon} from "../../utils/images.js";
 import TraditionalWeaponComponent
-    from "../component/DetailComponent/DetailWeaponComponent/TraditionalWeaponComponent.jsx";
-import RecordWeaponComponent from "../component/DetailComponent/DetailWeaponComponent/RecordWeaponComponent.jsx";
+    from "../../component/DetailComponent/DetailWeaponComponent/TraditionalWeaponComponent.jsx";
+import RecordWeaponComponent from "../../component/DetailComponent/DetailWeaponComponent/RecordWeaponComponent.jsx";
 import CollectionWeaponComponent
-    from "../component/DetailComponent/DetailWeaponComponent/CollectionWeaponComponent.jsx";
-import Footer from "../global_component/Footer.jsx";
+    from "../../component/DetailComponent/DetailWeaponComponent/CollectionWeaponComponent.jsx";
+import Footer from "../../global_component/Footer.jsx";
 
 function DetailWeaponPage() {
     return (

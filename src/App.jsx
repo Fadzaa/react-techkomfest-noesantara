@@ -7,12 +7,14 @@ import QuizComponent from './component/QuizComponent/QuizComponent';
 import GalleryTabBar from './component/MainComponent/GalleryComponent/GalleryTabBar';
 import ClothDetailTraditional from './component/DetailComponent/ClothDetailComponent/ClothDetailTraditional';
 import AboutPage from "./pages/AboutPage.jsx";
-import DetailFoodPage from "./pages/DetailFoodPage.jsx";
-import DetailWeaponPage from "./pages/DetailWeaponPage.jsx";
+import DetailFoodPage from "./pages/Detail/DetailFoodPage.jsx";
+import DetailWeaponPage from "./pages/Detail/DetailWeaponPage.jsx";
 import AutoPlay from './component/DetailComponent/HouseDetailComponent/HouseDetailCollection.jsx';
 import { QuizMenuComponent } from './component/QuizComponent/QuizMenuComponent/QuizMenuComponent';
 import Sidebar from './component/DetailComponent/InformativeDetailComponent/Sidebar.jsx';
 import InformativeDetailMain from './component/DetailComponent/InformativeDetailComponent/InformativeDetailMain.jsx';
+import DetailHousePage from "./pages/Detail/DetailHousePage.jsx";
+import DetailClothPage from "./pages/Detail/DetailClothPage.jsx";
 import InformativeDetailPage from './pages/InformativeDetailPage';
 
 const App = () => {
@@ -27,10 +29,11 @@ const App = () => {
 
         <Route path="/tabbar" element={<GalleryTabBar />} />
 
-        <Route path="/traditional" element={<ClothDetailTraditional />} />
-        <Route path="/house" element={<AutoPlay />} />
+        <Route path="/house" element={<DetailHousePage />} />
         <Route path="/food" element={<DetailFoodPage />} />
         <Route path="/weapon" element={<DetailWeaponPage />} />
+        <Route path="/cloth" element={<DetailClothPage />} />
+
         <Route path="/menu" element={<QuizMenuComponent />} />
         <Route path="/detail" element={<InformativeDetailPage />} />
       </Routes>
