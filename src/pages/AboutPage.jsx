@@ -8,9 +8,9 @@ import Footer from "../global_component/Footer.jsx";
 function AboutPage() {
   return (
       <>
-          <AboutHeroComponent/>
-          <AboutComponentLetter/>
-          <AboutComponentMission/>
+          {/*<AboutHeroComponent/>*/}
+          {/*<AboutComponentLetter/>*/}
+          {/*<AboutComponentMission/>*/}
           <AboutComponentTeam/>
           <Footer/>
       </>
