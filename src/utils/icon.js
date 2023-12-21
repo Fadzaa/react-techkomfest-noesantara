@@ -10,6 +10,7 @@ import wavesTop from "../assets/icon/waves_top.svg";
 import wavesDown from "../assets/icon/waves_down.svg";
 import rectangleBottomDecoration from "../assets/icon/rectangle_bottom_decoration.svg";
 import rectangleTopDecoration from "../assets/icon/rectangle_top_decoration.svg";
+import arrowRight from "../assets/icon/arrowRight.svg";
 
 export {
     logo,
@@ -23,6 +24,7 @@ export {
     wavesTop,
     wavesDown,
     rectangleBottomDecoration,
-    rectangleTopDecoration
+    rectangleTopDecoration,
+    arrowRight
 
 }
