@@ -4,8 +4,8 @@ import {rainbowShape} from "../../../utils/icon.js";
 
 function RecordWeaponComponent() {
     return (
-        <div className="w-screen bg-[#FAF8ED] px-[40px] lg:px-[80px] py-10 flex flex-col items-center relative">
-            <h1 className="font-milonga text-4xl lg:text-[80px] text-primary mb-10">World's Record</h1>
+        <div className="w-screen bg-[#FAF8ED] px-[40px] lg:px-[80px] py-10 lg:py-20 flex flex-col items-center relative">
+            <h1 className="font-milonga text-4xl lg:text-[80px] text-primary mb-10 lg:mb-28">World's Record</h1>
             <div className="w-full flex flex-col-reverse justify-between lg:flex-row ">
                 <div className="flex flex-col w-full mt-7 lg:w-1/2">
                     <TextExplanation/>

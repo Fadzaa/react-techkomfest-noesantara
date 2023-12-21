@@ -4,7 +4,7 @@ import {peopleFood, traditionalWeapon} from "../../../utils/images.js";
 function TraditionalWeaponComponent() {
     return (
         <div
-            className="w-screen  bg-white px-11 py-10 lg:ps-32 lg:px-0 lg:flex lg:flex-row-reverse lg:justify-between">
+            className="w-screen bg-white px-11 py-10 mt-10 mb-24 lg:ps-32 lg:px-0 lg:flex lg:flex-row-reverse lg:justify-between lg:items-center">
             <ImageExplanation/>
             <TextExplanation/>
         </div>
@@ -26,7 +26,7 @@ function TextExplanation() {
 
 function ImageExplanation() {
     return (
-        <div className="w-full h-[532px] bg-[#FAF8ED] rounded-[80px] lg:rounded-full flex justify-center items-center lg:w-[50vw] lg:h-full">
+        <div className="w-full h-[532px] bg-[#FAF8ED] rounded-[80px] lg:rounded-full flex justify-center items-center lg:w-[50vw] lg:h-[85vh]">
             <img className="w-4/5 h-4/5 object-cover rounded-full " src={traditionalWeapon}
                  alt="People Opinion about Indonesian Traditional Food"/>
         </div>

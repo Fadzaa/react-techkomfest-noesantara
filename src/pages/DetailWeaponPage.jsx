@@ -6,6 +6,7 @@ import TraditionalWeaponComponent
 import RecordWeaponComponent from "../component/DetailComponent/DetailWeaponComponent/RecordWeaponComponent.jsx";
 import CollectionWeaponComponent
     from "../component/DetailComponent/DetailWeaponComponent/CollectionWeaponComponent.jsx";
+import Footer from "../global_component/Footer.jsx";
 
 function DetailWeaponPage() {
     return (
@@ -14,6 +15,7 @@ function DetailWeaponPage() {
             <TraditionalWeaponComponent/>
             <CollectionWeaponComponent/>
             <RecordWeaponComponent/>
+            <Footer/>
         </>
     );
 }

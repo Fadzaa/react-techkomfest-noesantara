@@ -12,7 +12,7 @@ import {useResponsive} from "../../../hooks/useResponsive.js";
 function CollectionWeaponComponent() {
     const isMobile = useResponsive(640);
     return (
-        <div className=" w-screen bg-white flex flex-col items-center px-[20px] lg:px-[96px] text-primaryText">
+        <div className=" w-screen bg-white flex flex-col items-center mb-16 lg:mb-32 px-[20px] lg:px-[96px] text-primaryText">
             {isMobile
                 ? <><HeadingSection/><ImageSection/></>
                 : <><HeadingSectionDesktop/><ImageSectionDesktop/></>}
