@@ -15,6 +15,7 @@ import Sidebar from './component/DetailComponent/InformativeDetailComponent/Side
 import InformativeDetailMain from './component/DetailComponent/InformativeDetailComponent/InformativeDetailMain.jsx';
 import DetailHousePage from "./pages/Detail/DetailHousePage.jsx";
 import DetailClothPage from "./pages/Detail/DetailClothPage.jsx";
+import InformativeDetailPage from './pages/InformativeDetailPage';
 
 const App = () => {
   return (
@@ -34,8 +35,7 @@ const App = () => {
         <Route path="/cloth" element={<DetailClothPage />} />
 
         <Route path="/menu" element={<QuizMenuComponent />} />
-        <Route path="/sidebar" element={<Sidebar />} />
-        <Route path="/detail" element={<InformativeDetailMain />} />
+        <Route path="/detail" element={<InformativeDetailPage />} />
       </Routes>
     </BrowserRouter>
   );

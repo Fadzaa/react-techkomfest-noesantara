@@ -126,16 +126,18 @@ const QuizComponent = () => {
   }, [quizCompleted]);
 
   return (
-    <div className="w-full h-screen relative flex flex-col items-center">
+    <div className="w-full h-screen relative flex flex-col items-center justify-between py-12">
       {!quizCompleted && (
         <>
-          <Question question={questions[currentQuestion].question} />
-          <Options
-            options={questions[currentQuestion].options}
-            handleAnswerClick={handleAnswerClick}
-            userAnswers={userAnswers}
-            currentQuestion={currentQuestion}
-          />
+          <div>
+            <Question question={questions[currentQuestion].question} />
+            <Options
+              options={questions[currentQuestion].options}
+              handleAnswerClick={handleAnswerClick}
+              userAnswers={userAnswers}
+              currentQuestion={currentQuestion}
+            />
+          </div>
           <ProgressBar currentQuestion={currentQuestion} totalQuestions={questions.length} />
         </>
       )}
