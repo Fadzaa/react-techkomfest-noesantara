@@ -3,7 +3,7 @@ import { cardHouse } from '../../../utils/images.js';
 
 const HouseDetailTraditional = () => {
   return (
-    <div className='flex flex-col justify-center items-center lg:relative'>
+    <div className='w-screen h-screen flex flex-col justify-center items-center lg:relative'>
       <div>
         <div className='font-milonga text-4xl mt-[107px] lg:text-[80px] lg:absolute lg:top-[187px] lg:left-[116px]'>
           <p>What is</p>

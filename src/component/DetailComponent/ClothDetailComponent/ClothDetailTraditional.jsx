@@ -4,7 +4,7 @@ import ClothDetailCardGroup from './ClothDetailCardGroup.jsx';
 const ClothDetailTraditional = () => {
   return (
     <>
-      <div className="relative">
+      <div className="h-screen w-screen relative">
         <div>
           <p className="font-milonga text-[36px] text-primary w-[306px] mt-[59px] ml-[27px] lg:text-[80px] lg:w-[671px] lg:absolute lg:top-[176px] lg:left-[86px]">What is traditional clothes?</p>
           <div className="mt-[57px] lg:absolute lg:top-[176px] lg:right-[83px]">
