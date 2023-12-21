@@ -1,5 +1,5 @@
 import React from 'react';
-import { mbaruNiang, mbaruNiang2 } from '../../utils/images';
+import { mbaruNiang, mbaruNiang2 } from '../../../utils/images.js';
 
 const HouseDetailWorld = () => {
   return (

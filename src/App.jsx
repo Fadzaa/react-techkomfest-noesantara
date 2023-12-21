@@ -5,16 +5,11 @@ import GalleryPage from './pages/GalleryPage';
 import InformativePage from './pages/InformativePage';
 import QuizComponent from './component/QuizComponent/QuizComponent';
 import GalleryTabBar from './component/MainComponent/GalleryComponent/GalleryTabBar';
-import ClothDetailWorld from './component/DetailComponent/ClothDetailComponent/ClothDetailWorld';
 import ClothDetailTraditional from './component/DetailComponent/ClothDetailComponent/ClothDetailTraditional';
 import AboutPage from "./pages/AboutPage.jsx";
 import DetailFoodPage from "./pages/DetailFoodPage.jsx";
-import HouseDetailTraditional from './component/DetailComponent/HouseDetailComponent/HouseDetailTraditional.jsx';
 import DetailWeaponPage from "./pages/DetailWeaponPage.jsx";
-import HouseDetailTraditional from './component/HouseDetailComponent/HouseDetailTraditional.jsx';
-import HouseDetailWorld from './component/HouseDetailComponent/HouseDetailWorld.jsx';
-import HouseDetailCollection from './component/HouseDetailComponent/HouseDetailCollection.jsx';
-import AutoPlay from './component/HouseDetailComponent/HouseDetailCollection.jsx';
+import AutoPlay from './component/DetailComponent/HouseDetailComponent/HouseDetailCollection.jsx';
 import { QuizMenuComponent } from './component/QuizComponent/QuizMenuComponent/QuizMenuComponent';
 
 const App = () => {
