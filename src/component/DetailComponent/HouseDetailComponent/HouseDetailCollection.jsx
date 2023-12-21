@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { barrierDesktop, barrierMobile, house1, house2, house3, house4 } from '../../utils/images';
+import { barrierDesktop, barrierMobile, house1, house2, house3, house4 } from '../../../utils/images.js';
 
 const houseImages = [house1, house2, house3, house4];
 
