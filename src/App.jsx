@@ -11,6 +11,11 @@ import AboutPage from "./pages/AboutPage.jsx";
 import DetailFoodPage from "./pages/DetailFoodPage.jsx";
 import HouseDetailTraditional from './component/DetailComponent/HouseDetailComponent/HouseDetailTraditional.jsx';
 import DetailWeaponPage from "./pages/DetailWeaponPage.jsx";
+import HouseDetailTraditional from './component/HouseDetailComponent/HouseDetailTraditional.jsx';
+import HouseDetailWorld from './component/HouseDetailComponent/HouseDetailWorld.jsx';
+import HouseDetailCollection from './component/HouseDetailComponent/HouseDetailCollection.jsx';
+import AutoPlay from './component/HouseDetailComponent/HouseDetailCollection.jsx';
+import { QuizMenuComponent } from './component/QuizComponent/QuizMenuComponent/QuizMenuComponent';
 
 const App = () => {
   return (
@@ -25,9 +30,10 @@ const App = () => {
         <Route path="/tabbar" element={<GalleryTabBar />} />
 
         <Route path="/traditional" element={<ClothDetailTraditional />} />
-        <Route path="/house" element={<HouseDetailTraditional />} />
+        <Route path="/house" element={<AutoPlay />} />
         <Route path="/food" element={<DetailFoodPage />} />
         <Route path="/weapon" element={<DetailWeaponPage />} />
+        <Route path="/menu" element={<QuizMenuComponent />} />
       </Routes>
     </BrowserRouter>
   );

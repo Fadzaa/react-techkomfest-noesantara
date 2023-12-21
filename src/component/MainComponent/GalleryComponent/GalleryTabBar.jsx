@@ -3,8 +3,8 @@ import { styled } from '@mui/material/styles';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-import GalleryCardGroup from './GalleryCardGroup.jsx';
-import { bgGallery2, bgGallery5, bgGallery6, bgGallery7 } from '../../../utils/images.js';
+import GalleryCardGroup from './GalleryCardGroup';
+import dataGallery from './dataGallery';
 
 const AntTabs = styled(Tabs)(({ theme }) => ({
   width: 300,
@@ -64,25 +64,35 @@ const GalleryTabBar = () => {
     setValue(newValue);
   };
 
-  const tabContents = [
-    <GalleryCardGroup key={0} category="Makanan Adat" images={bgGallery5} />,
-    <GalleryCardGroup key={1} category="Tari Adat" images={bgGallery2} />,
-    <GalleryCardGroup key={2} category="Rumah Adat" images={bgGallery7} />,
-    <GalleryCardGroup key={3} category="Wisata Daerah" images={bgGallery6} />,
-    <GalleryCardGroup key={4} category="Senjata Adat" images={bgGallery2} />,
-    <GalleryCardGroup key={5} category="Lagu Tradisional" images={bgGallery7} />,
+
+  const filteredData = (category) => {
+    if (category === 'All') {
+      return dataGallery; 
+    } else {
+      return dataGallery.filter((item) => item.category === category);
+    }
+  };
+
+  const tabCategories = [
+    'All',
+    'Makanan Tradisional',
+    'Warisan Kebudayaan',
+    'Rumah Adat',
+    'Alat Musik Tradisional',
+    'Senjata Tradisional',
   ];
+
+  const tabContents = tabCategories.map((category, index) => (
+    <GalleryCardGroup key={index} category={category} images={filteredData(category).map((item) => item.culture_image)} />
+  ));
 
   return (
     <Box sx={{ width: '100%', bgcolor: 'transparent' }}>
       <Box sx={{ bgcolor: 'transparent', marginBottom: '-1px', overflowX: 'auto' }}>
         <AntTabs value={value} onChange={handleChange} aria-label="ant example" variant="scrollable" scrollButtons="auto" className="lg:w-621">
-          <AntTab label="Makanan Adat" />
-          <AntTab label="Tari Adat" />
-          <AntTab label="Rumah Adat" />
-          <AntTab label="Wisata Daerah" />
-          <AntTab label="Senjata Adat" />
-          <AntTab label="Lagu tradisonal" />
+          {tabCategories.map((label, index) => (
+            <AntTab key={index} label={label} />
+          ))}
         </AntTabs>
         <Box sx={{ marginTop: '20px', marginLeft: '2px' }}>{tabContents[value]}</Box>
       </Box>
@@ -91,3 +101,6 @@ const GalleryTabBar = () => {
 };
 
 export default GalleryTabBar;
+
+
+

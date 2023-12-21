@@ -44,6 +44,16 @@ import foodRendangDesktop from "../assets/image/food_rendang_desktop.png";
 import foodSataiDesktop from "../assets/image/food_satai_desktop.png";
 import foodTempeDesktop from "../assets/image/food_tempe_desktop.png";
 import cardHouse from "../assets/image/cardTraditionalHouse.svg";
+import mbaruNiang from "../assets/image/mbaruNiang.png";
+import mbaruNiang2 from "../assets/image/mbaruNiang2.png";
+import weaponMenu from "../assets/image/WeaponMenu.png";
+import houseMenu from "../assets/image/houseMenu.png";
+import foodMenu from "../assets/image/foodMenu.png";
+import clothesMenu from "../assets/image/clothesMenu.png";
+import house1 from "../assets/image/house1.png";
+import house2 from "../assets/image/house2.png";
+import house3 from "../assets/image/house3.png";
+import house4 from "../assets/image/house4.png";
 import peopleFood from "../assets/image/people_food.png";
 import traditionalFood from "../assets/image/traditional_food.png";
 import bgHeroWeapon from "../assets/image/bg_hero_weapon.png";
@@ -58,6 +68,8 @@ import weaponCollection7 from "../assets/image/weapon_collection_7.png";
 import recordWeapon1 from "../assets/image/record_weapon_1.png";
 import recordWeapon2 from "../assets/image/record_weapon_2.png";
 import recordWeapon3 from "../assets/image/record_weapon_3.png";
+import barrierMobile from "../assets/image/barrierMobile.png";
+import barrierDesktop from "../assets/image/barrierDesktop.png";
 
 
 //Example
@@ -103,13 +115,14 @@ export {
     foodRendang,
     foodSatai,
     foodTempe,
+    cardHouse,
+    mbaruNiang,
+    mbaruNiang2,
     foodGudegDesktop,
     foodRendangDesktop,
     foodSataiDesktop,
     foodTempeDesktop,
     peopleFood,
-    traditionalFood,
-    cardHouse,
     bgHeroWeapon,
     traditionalWeapon,
     weaponCollection1,
@@ -121,5 +134,16 @@ export {
     weaponCollection7,
     recordWeapon1,
     recordWeapon2,
-    recordWeapon3
+    recordWeapon3,
+    traditionalFood,
+    foodMenu,
+    clothesMenu,
+    houseMenu,
+    weaponMenu,
+    house1,
+    house2,
+    house3,
+    house4,
+    barrierMobile,
+    barrierDesktop
 }

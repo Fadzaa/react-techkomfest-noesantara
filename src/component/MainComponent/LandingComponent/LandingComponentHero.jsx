@@ -25,14 +25,14 @@ function LandingComponentHero() {
           <div className="flex items-center">
             <div className="h-[1px] w-4 lg:w-8 bg-white"></div>
             <h3 className="font-yiBaiti text-xs lg:text-[20px] text-white mx-3 tracking-widest">
-              DISCOVER INDONESIA
+              WONDERFUL INDONESIA
             </h3>
             <div className="h-[1px] w-4 lg:w-8 bg-white"></div>
           </div>
           <h1 className="font-milonga text-5xl lg:text-[100px] text-white mb-14">
             Neosantara
           </h1>
-          <button className="w-[157px] lg:w-[175px] h-[40px] border-[2px] border-white rounded-full font-urbanist text-white text-sm lg:text-base">
+          <button className="w-[157px] lg: h-[40px] border-[2px] border-white rounded-full font-urbanist text-white text-sm lg:text-base transition-transform transform-gpu hover:-translate-y-1 hover:shadow-lg">
             Explore Now
           </button>
         </div>
