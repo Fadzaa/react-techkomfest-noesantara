@@ -5,7 +5,7 @@ import Navbar from '../global_component/Navbar'
 const GalleryPage = () => {
   return (
     <>
-    <Navbar/>
+
     <GalleryComponentHero/>
     </>
     

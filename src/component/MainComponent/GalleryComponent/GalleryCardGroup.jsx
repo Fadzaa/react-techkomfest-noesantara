@@ -32,7 +32,7 @@ const GalleryCardGroup = ({ images, searchQuery }) => {
 
     return (
         <>
-            <div className="grid grid-cols-3 gap-2 overflow-y-auto h-[70vh]">
+            <div className=" w-full grid grid-cols-3 gap-2 overflow-y-auto h-[40vh] lg:h-[70vh]">
                 {filteredImages.map((image, index) => (
                     <div key={index} className={`col-span-${imageSizes[index]}`}>
                         <img

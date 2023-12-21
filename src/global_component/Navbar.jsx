@@ -114,7 +114,7 @@ function NavbarMobile() {
   ];
 
   return (
-    <div className={`w-screen flex justify-between fixed z-10 px-7 py-4 ${isScrolled ? 'bg-white' : ''}`}>
+    <div className={`w-screen flex justify-between fixed z-10 px-5 py-4 ${isScrolled ? 'bg-white' : ''}`}>
       <img src={logo} alt="Logo Neosantara" style={{ filter: isScrolled ? 'invert(100%)' : 'none' }} />
       <button
         onClick={toggleMobileMenu}

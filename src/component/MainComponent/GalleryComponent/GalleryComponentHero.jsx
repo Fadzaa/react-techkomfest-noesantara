@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { bgGallery1, bgGallery2, bgGallery3, bgGallery4, bgGallery5, bgGallery6, bgGallery7 } from '../../../utils/images.js';
 import GalleryTabBar from './GalleryTabBar.jsx';
+import Navbar from "../../../global_component/Navbar.jsx";
 
 const GalleryComponentHero = () => {
   const [backgroundImages, setBackgroundImages] = useState([bgGallery5, bgGallery2, bgGallery6, bgGallery4]);
@@ -31,23 +32,25 @@ const GalleryComponentHero = () => {
 
   return (
       <div className="w-screen h-screen relative">
+        <Navbar/>
         <div className="absolute w-full h-full bg-black opacity-95"></div>
         <img src={backgroundImages[currentBackgroundIndex]} alt="bggallery"
              className={`w-full h-full object-cover absolute transition-opacity duration-500 ease-in-out ${fade ? 'opacity-0' : 'opacity-100'}`}/>
 
-        <div className="absolute flex lg:flex lg:w-full lg:h-full lg:ps-20 lg:pe-5 ">
+        <div className="absolute w-full flex flex-col px-5 lg:flex lg:flex-row lg:w-full lg:h-full lg:ps-20 lg:pe-10 lg:gap-5 ">
 
+          <div className="h-20 lg:h-0"></div>
           <div className="flex flex-col  lg:h-full lg:w-1/2 lg:justify-center lg:pe-5">
 
-            <div className="flex lg:items-center gap-5">
+            <div className="flex w-full items-center justify-center lg:justify-start lg:gap-5">
               <div className="h-[1px] w-[50px] lg:h-[1px] lg:w-8 bg-white"></div>
               <h3 className="font-yiBaiti mx-3 lg:text-[20px] text-white lg:mx-3 tracking-widest">GALLERY INDONESIA</h3>
               <div className="h-[1px] w-[50px] lg:h-[1px] lg:w-8 bg-white"></div>
             </div>
 
-            <h1 className="font-milonga mt-4  text-[55px] lg:text-[100px] text-white lg:mb-8">Gallery</h1>
+            <h1 className="font-milonga mt-4 ml-[-3px]  text-[55px] lg:text-[100px] text-white lg:mb-8">Gallery</h1>
             {/*INI*/}
-            <p className="lg:mb-6 lg:mt-3 mt-3 font-urbanist font-medium text-white"> Tiap gambar adalah pintu ajaib ke budaya
+            <p className="lg:mb-6 lg:mt-3 mt-3 font-urbanist font-medium text-[#DADADA] leading-6 text-xs lg:text-base"> Tiap gambar adalah pintu ajaib ke budaya
               dan keindahan yang tak terlupakan. </p>
 
             <div className="border border-white border-opacity-70 mt-[55px] h-[39px] rounded-[20px] flex  lg:h-[48px] lg:rounded-3xl lg:flex items-center gap-1 lg:gap-5 lg:text-sm">
@@ -69,7 +72,7 @@ const GalleryComponentHero = () => {
 
 
 
-        <p className="lg:text-white lg:font-urbanist lg:text-base lg:absolute lg:bottom-4 lg:text-center lg:left-0 lg:right-0 hidden lg:block">Copyright &copy; 2023
+        <p className="lg:text-[#D1D1D1] lg:font-urbanist lg:text-base lg:absolute lg:bottom-4 lg:text-center lg:ps-20 lg:left-0 hidden lg:block">Copyright &copy; 2023
           Lorem Ipsum Ltd.</p>
       </div>
   );
