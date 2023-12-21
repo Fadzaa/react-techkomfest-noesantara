@@ -1,8 +1,8 @@
 import React from 'react'
-import AboutComponentLetter from "../component/AboutComponent/AboutComponentLetter.jsx";
-import AboutHeroComponent from "../component/AboutComponent/AboutHeroComponent.jsx";
-import AboutComponentMission from "../component/AboutComponent/AboutComponentMission.jsx";
-import AboutComponentTeam from "../component/AboutComponent/AboutComponentTeam/AboutComponentTeam.jsx";
+import AboutComponentLetter from "../component/MainComponent/AboutComponent/AboutComponentLetter.jsx";
+import AboutHeroComponent from "../component/MainComponent/AboutComponent/AboutHeroComponent.jsx";
+import AboutComponentMission from "../component/MainComponent/AboutComponent/AboutComponentMission.jsx";
+import AboutComponentTeam from "../component/MainComponent/AboutComponent/AboutComponentTeam/AboutComponentTeam.jsx";
 import Footer from "../global_component/Footer.jsx";
 
 function AboutPage() {

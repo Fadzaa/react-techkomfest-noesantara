@@ -56,6 +56,18 @@ import house3 from "../assets/image/house3.png";
 import house4 from "../assets/image/house4.png";
 import peopleFood from "../assets/image/people_food.png";
 import traditionalFood from "../assets/image/traditional_food.png";
+import bgHeroWeapon from "../assets/image/bg_hero_weapon.png";
+import traditionalWeapon from "../assets/image/traditional_weapon.png";
+import weaponCollection1 from "../assets/image/weapon_collection_1.png";
+import weaponCollection2 from "../assets/image/weapon_collection_2.png";
+import weaponCollection3 from "../assets/image/weapon_collection_3.png";
+import weaponCollection4 from "../assets/image/weapon_collection_4.png";
+import weaponCollection5 from "../assets/image/weapon_collection_5.png";
+import weaponCollection6 from "../assets/image/weapon_collection_6.png";
+import weaponCollection7 from "../assets/image/weapon_collection_7.png";
+import recordWeapon1 from "../assets/image/record_weapon_1.png";
+import recordWeapon2 from "../assets/image/record_weapon_2.png";
+import recordWeapon3 from "../assets/image/record_weapon_3.png";
 import barrierMobile from "../assets/image/barrierMobile.png";
 import barrierDesktop from "../assets/image/barrierDesktop.png";
 
@@ -111,6 +123,18 @@ export {
     foodSataiDesktop,
     foodTempeDesktop,
     peopleFood,
+    bgHeroWeapon,
+    traditionalWeapon,
+    weaponCollection1,
+    weaponCollection2,
+    weaponCollection3,
+    weaponCollection4,
+    weaponCollection5,
+    weaponCollection6,
+    weaponCollection7,
+    recordWeapon1,
+    recordWeapon2,
+    recordWeapon3,
     traditionalFood,
     foodMenu,
     clothesMenu,
