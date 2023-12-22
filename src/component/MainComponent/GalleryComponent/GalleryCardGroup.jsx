@@ -23,7 +23,7 @@ const GalleryCardGroup = ({ images, searchQuery }) => {
             sizes.push(...pattern);
         });
         setImageSizes(sizes);
-        console.log(images)
+        console.log(sizes)
     }, [images]);
 
     const filteredImages = searchQuery
@@ -34,7 +34,7 @@ const GalleryCardGroup = ({ images, searchQuery }) => {
         <>
             <div className=" w-full grid grid-cols-3 gap-2 overflow-y-auto h-[40vh] lg:h-[70vh]">
                 {filteredImages.map((image, index) => (
-                    <div key={index} className={`col-span-${imageSizes[index]}`}>
+                    <div key={index} className={`${"col-span-" + imageSizes[index]}`}>
                         <img
                             src={image}
                             alt={`Culture Image ${index}`}
