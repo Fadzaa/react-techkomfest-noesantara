@@ -47,7 +47,7 @@ import mbaruNiang from "../assets/image/mbaruNiang.png";
 import mbaruNiang2 from "../assets/image/mbaruNiang2.png";
 import weaponMenu from "../assets/image/WeaponMenu.png";
 import houseMenu from "../assets/image/houseMenu.png";
-import foodMenu from "../assets/image/foodMenu.png";
+import foodMenu from "../assets/image/FoodMenu.png";
 import clothesMenu from "../assets/image/clothesMenu.png";
 import house1 from "../assets/image/house1.png";
 import house2 from "../assets/image/house2.png";
