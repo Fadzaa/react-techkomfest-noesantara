@@ -5,14 +5,16 @@ import {bgDetailCloth} from "../../utils/images.js";
 import ClothDetailCollection from "../../component/DetailComponent/ClothDetailComponent/ClothDetailCollection.jsx";
 import ClothDetailWorld from "../../component/DetailComponent/ClothDetailComponent/ClothDetailWorld.jsx";
 import ClothDetailTraditional from "../../component/DetailComponent/ClothDetailComponent/ClothDetailTraditional.jsx";
+import Footer from '../../global_component/Footer.jsx';
 
 function DetailClothPage() {
     return (
         <>
             <DetailComponentHero image={bgDetailCloth} title={"Traditional Cloth"} subtitle={"Detail Budaya"} description={"sentuhan warisan budaya yang mewujud dalam setiap ukiran dan coraknya."}/>
-            {/*<ClothDetailCollection/>*/}
+            {/* <ClothDetailCollection/> */}
             <ClothDetailTraditional/>
             <ClothDetailWorld/>
+            <Footer/>
         </>
     );
 }
