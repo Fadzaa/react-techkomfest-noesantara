@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  people,
   testimony1,
   testimony2,
   testimony3,

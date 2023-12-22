@@ -159,7 +159,6 @@ export {
     barrierDesktop,
     bgHeroHouse,
     cardHouse1,
-    cardHouse2,
     testimony1,
     testimony2,
     testimony3,
