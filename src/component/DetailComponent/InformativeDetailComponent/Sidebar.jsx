@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { arrowRight } from '../../../utils/icon';
+import {Link, NavLink} from "react-router-dom";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(window.innerWidth >= 1040); // Initially open on desktop
@@ -44,16 +45,18 @@ const Sidebar = () => {
         />
         <div className="flex gap-x-4 items-center  ">
           <div className={` ${open ? 'w-30' : 'w-3 '} bg-GreenWhite fixed pt-8 mt-20 `}>
-            <h1 className={`text-black origin-left font-bold font-milonga text-3xl duration-200 ${!open && 'scale-0'} `}>
-              Neosantara
-            </h1>
+            <Link to={"/"}>
+              <h1 className={`cursor-pointer text-black origin-left font-bold font-milonga text-3xl duration-200 ${!open && 'scale-0'} `}>
+                Neosantara
+              </h1>
+            </Link>
           </div>
         </div>
         <ul className="mt-24">
           {Menus.map((Menu, index) => (
-            <li
-              key={index}
-              className={`flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-black text-sm items-center gap-x-4 
+              <li
+                  key={index}
+                  className={`flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-black text-sm items-center gap-x-4 
               ${Menu.gap ? 'mt-9' : 'mt-2'} ${index === 0 && 'bg-light-white'}`}
             >
               <a href={`#${Menu.id}`} className={`${!open && 'hidden'} origin-left duration-200 font-urbanist text-base`}>

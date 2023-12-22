@@ -52,7 +52,7 @@ function InformativePage() {
 export default InformativePage
 
 
-function InformativeDesktop({cardList, id}) {
+function InformativeDesktop({cardList}) {
     const navigate = useNavigate()
     const sliderRef = useRef(null);
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -210,12 +210,64 @@ function InformativeDesktop({cardList, id}) {
 
 
 function InformativeMobile({cardList}) {
+    const navigate = useNavigate()
+    const sliderRef = useRef(null);
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const isCurrentSlide = (index) => index === currentSlide;
+
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        autoplay: true,
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SampleNextArrow />,
+        slidesToScroll: 1,
+        afterChange: (index) => {
+            setCurrentSlide(index);
+            console.log("What is the current slide : "  + currentSlide)
+        },
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+        ],
+    };
+
+    const next = () => {
+        if (sliderRef.current) {
+            sliderRef.current.slickNext();
+        }
+    };
+
+    const previous = () => {
+        if (sliderRef.current) {
+            sliderRef.current.slickPrev();
+        }
+    };
+
+    useEffect(() => {
+
+    }, []);
+
+
+    const handleSeeMore = () => {
+        const selectedCardId = cardList[currentSlide].id;
+        const selectedCardImage = cardList[currentSlide].image
+
+        navigate('/detail', { state: { selectedCardId, selectedCardImage } });
+    };
     return (
         <div className="h-screen w-screen relative">
-        <Navbar/>
+            <Navbar/>
 
-            <img className="h-full w-full absolute object-cover" src={informativeBali}
+            <img className="h-full w-full absolute object-cover" src={cardList[currentSlide].image}
                  alt="Background Informative Page"/>
+            <div className="h-full w-full absolute object-cover bg-black bg-opacity-50"></div>
 
             <div className="absolute h-full w-full">
                 <div className="w-full px-5 pt-16">
@@ -250,7 +302,9 @@ function InformativeMobile({cardList}) {
                         </div>
 
                         <div className="flex justify-end gap-4  my-4 lg:my-0">
-                            <div  className="bg-white h-10 w-10 rounded-full flex justify-center items-center">
+                            <div
+                                onClick={previous}
+                                className="bg-white h-10 w-10 rounded-full flex justify-center items-center">
                                 <svg className="w-3 lg:w-4 rotate-180" viewBox="0 0 26 37" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -259,6 +313,7 @@ function InformativeMobile({cardList}) {
                                 </svg>
                             </div>
                             <div
+                                onClick={next}
                                 className="bg-white h-10 w-10 rounded-full flex justify-center items-center">
                                 <svg className="w-3 lg:w-4" viewBox="0 0 26 37" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
@@ -271,48 +326,27 @@ function InformativeMobile({cardList}) {
 
                     </div>
 
-                    <Splide
-                        options={{
-                            type: "loop",
-                            focus: -1,
-                            rewind: true,
-
-                            height: 300,
-                            gap: "1.5rem",
-                            perPage: 2,
-                            perMove: 1,
-                            pagination: false,
-                            arrows: false,
-                            autoplay: true,
-                            interval: 1000,
-                        }}
-
-                    >
-                        {cardList.map((card, index) => (
-                            <SplideSlide key={index}>
+                    <div className="w-full">
+                        <Slider ref={sliderRef}  {...settings}>
+                            {cardList.map((card, index) => (
                                 <img
-                                    className={`${
-                                        index != 0
-                                            ? "w-full h-[356px] rounded-2xl mt-10"
-                                            : "w-full h-[405px] rounded-3xl  "
-                                    } object-cover`}
+                                    className={`w-[50vw] ${isCurrentSlide() ? "h-[205px]" : "h-[405px]"} rounded-3xl object-cover`}
                                     src={card.image}
                                     alt={`Informative Slide ${index}`}
                                 />
-                            </SplideSlide>
-                        ))}
-                    </Splide>
+                            ))}
+                        </Slider>
+                    </div>
 
-                    <h1 className="font-milonga text-[44px] text-white mt-4">Bali</h1>
+                    <h1 className="font-milonga text-[44px] text-white mt-4">{cardList[currentSlide].province}</h1>
                     <p className="font-urbanist font-normal text-sm text-white pe-16 mb-5">
-                        This text presents my research journey on the topic of Music and
-                        Tourism Imaginaries and gives the context which led to the
-                        publication of this special issue of Via Tourism Review.
+                        {cardList[currentSlide].description}
                     </p>
-                    <button className="w-36 h-11 border-[1px] border-white rounded-full text-white font-urbanist">
+
+                    <button onClick={handleSeeMore}
+                            className="w-36 h-11 border-[1px] border-white rounded-full text-white font-urbanist">
                         See More
                     </button>
-
 
                 </div>
             </div>
@@ -323,7 +357,7 @@ function InformativeMobile({cardList}) {
 }
 
 function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
+    const {className, style, onClick} = props;
     return (
         <div
 
