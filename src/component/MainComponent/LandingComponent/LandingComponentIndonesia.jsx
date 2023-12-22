@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 function LandingComponentIndonesia() {
   return (
     <>
-      <div className="w-screen h-[784px] lg:h-[1024px] relative bg-GreenWhite flex mb-[54px] lg:py-24 lg:px-36 items-center mt-14">
+      <div id="landingComponentIndonesia" className="w-screen h-[784px] lg:h-[1024px] relative bg-GreenWhite flex mb-[54px] lg:py-24 lg:px-36 items-center mt-14">
         <div>
           <h1 className="font-milonga text-primary absolute top-[178px] left-[30px] lg:left-[120px] lg:top-[292px] text-[35px] lg:text-[84px]" data-aos="fade-up">Indonesia</h1>
           <h3 className="font-yiBaiti tracking-widest text-primaryText absolute top-[220px] left-[33px] text-xs lg:text-xl lg:mb-10  lg:mt-[-15px] lg:top-[420px] lg:left-[127px] " data-aos="fade-up">ABOUT INDONESIA</h3>
