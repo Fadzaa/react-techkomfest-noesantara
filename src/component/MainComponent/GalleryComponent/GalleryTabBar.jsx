@@ -57,20 +57,21 @@ const AntTab = styled((props) => <Tab disableRipple {...props} />)(({ theme }) =
   },
 }));
 
-const GalleryTabBar = () => {
+const GalleryTabBar = ({searchQuery}) => {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
-
   const filteredData = (category) => {
-    if (category === 'All') {
-      return dataGallery; 
-    } else {
-      return dataGallery.filter((item) => item.category === category);
-    }
+    const filteredByCategory = category === 'All' ? dataGallery : dataGallery.filter((item) => item.category === category);
+    const filteredBySearch = searchQuery
+        ? filteredByCategory.filter((item) => item.culture_name.toLowerCase().includes(searchQuery.toLowerCase()))
+        : filteredByCategory;
+
+    console.log(filteredBySearch)
+    return filteredBySearch
   };
 
   const tabCategories = [

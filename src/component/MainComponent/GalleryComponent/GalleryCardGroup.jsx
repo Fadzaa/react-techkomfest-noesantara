@@ -1,39 +1,50 @@
-import React from 'react';
-import { bgGallery1, bgGallery2, bgGallery3, bgGallery4, bgGallery5 } from '../../../utils/images.js';
+import React, { useEffect, useState } from 'react';
 
 
-const GalleryCardGroup = ({ images }) => {
+const getPatternSize = (index) => {
+    const patterns = [
+        ['1', '1', '1'],
+        ['1', '2'],
+        ['2', '1'],
+        ['3']
+    ];
 
-  return (
-    <>
-      <div className="flex flex-col gap-2 justify-center items-center lg:gap-2 overflow-auto max-h-[250px] lg:max-h-[500px] ">
-         <div className="flex flex-row gap-2 lg:gap-2">
-          {images.map((image, index) => (
-            <img key={index} src={image} alt={`Culture Image ${index}`} className="w-[136px] h-[89px] lg:w-[282px] lg:h-[186px] rounded-lg object-cover" />
-          ))}
-        </div>
-        {/* <div className="flex gap-2 lg:gap-2">
-          <div className="flex flex-col gap-2  lg:gap-2">
-            <img src={bgGallery3} alt="" className="w-[218px] h-[89px] lg:w-[453px] lg:h-[186px] object-cover rounded-lg" />
-            <img src={bgGallery3} alt="" className="w-[218px] h-[51px] lg:w-[453px] lg:h-[107px] object-cover rounded-lg" />
-          </div>
-          <img src={bgGallery5} alt="" className="w-[74px] h-[144px] lg:w-[155px] lg:h-[300px] object-cover rounded-lg" />
-        </div> */}
-        {/* <div className="flex flex-row gap-2 lg:gap-2">
-          <img src={images} alt="" className="w-[136px] h-[89px] lg:w-[282px] lg:h-[186px] rounded-lg" />
-          <img src={bgGallery2} alt="" className="w-[79px] h-[89px] lg:w-[164px] lg:h-[186px] rounded-lg" />
-          <img src={bgGallery3} alt="" className="w-[74px] h-[89px]  lg:w-[155px] lg:h-[186px] rounded-lg" />
-        </div> */}
-        {/* <div className="flex gap-2 lg:gap-2">
-          <div className="flex flex-col gap-2  lg:gap-2">
-            <img src={bgGallery3} alt="" className="w-[218px] h-[89px] lg:w-[453px] lg:h-[186px] object-cover rounded-lg" />
-            <img src={bgGallery3} alt="" className="w-[218px] h-[51px] lg:w-[453px] lg:h-[107px] object-cover rounded-lg" />
-          </div>
-          <img src={bgGallery5} alt="" className="w-[74px] h-[144px] lg:w-[155px] lg:h-[300px] object-cover rounded-lg" />
-        </div> */}
-      </div>
-    </>
-  );
+    const patternIndex = index % patterns.length;
+    return patterns[patternIndex];
+};
+
+const GalleryCardGroup = ({ images, searchQuery }) => {
+    const [imageSizes, setImageSizes] = useState([]);
+
+    useEffect(() => {
+        let sizes = [];
+        images.forEach((_, index) => {
+            const pattern = getPatternSize(index);
+            sizes.push(...pattern);
+        });
+        setImageSizes(sizes);
+        console.log(images)
+    }, [images]);
+
+    const filteredImages = searchQuery
+        ? images.filter((image) => image.toLowerCase().includes(searchQuery.toLowerCase()))
+        : images;
+
+    return (
+        <>
+            <div className=" w-full grid grid-cols-3 gap-2 overflow-y-auto h-[40vh] lg:h-[70vh]">
+                {filteredImages.map((image, index) => (
+                    <div key={index} className={`col-span-${imageSizes[index]}`}>
+                        <img
+                            src={image}
+                            alt={`Culture Image ${index}`}
+                            className="w-full h-[89px] lg:h-[186px] rounded-lg object-cover"
+                        />
+                    </div>
+                ))}
+            </div>
+        </>
+    );
 };
 
 export default GalleryCardGroup;
