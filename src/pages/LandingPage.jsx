@@ -8,6 +8,11 @@ import LandingComponentTestimony from '../component/MainComponent/LandingCompone
 function LandingPage() {
   return (
       <>
+      <LandingComponentHero/>
+      <LandingComponentCulture/>
+      <LandingComponentIndonesia/>
+       <LandingComponentTestimony/>
+      <Footer/>
       {/*<LandingComponentHero/>*/}
       {/*<LandingComponentCulture/>*/}
       {/*<LandingComponentIndonesia/>*/}
