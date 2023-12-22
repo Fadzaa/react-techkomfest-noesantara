@@ -17,6 +17,7 @@ import DetailHousePage from "./pages/Detail/DetailHousePage.jsx";
 import DetailClothPage from "./pages/Detail/DetailClothPage.jsx";
 import InformativeDetailPage from './pages/InformativeDetailPage';
 
+
 const App = () => {
   return (
     <BrowserRouter>

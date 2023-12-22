@@ -2,15 +2,18 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Sidebar from "./Sidebar";
 import { house4 } from "../../../utils/images.js";
+import {useLocation} from "react-router-dom";
 
 const InformativeDetailMain = () => {
   const [informativeData, setInformativeData] = useState(null);
   const [loading, setLoading] = useState(true); // New loading state
+  const location = useLocation();
+  const dataToPass = location.state;
 
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "https://zell-techkomfest.000webhostapp.com/api/informative/detail/1"
+        `https://zell-techkomfest.000webhostapp.com/api/informative/detail/${dataToPass.selectedCardId}`
       );
       const data = response.data;
       setInformativeData(data.data);
@@ -24,6 +27,7 @@ const InformativeDetailMain = () => {
 
   useEffect(() => {
     fetchData();
+    console.log(dataToPass.selectedCardId)
   }, []);
 
   return (
@@ -50,8 +54,8 @@ const InformativeDetailMain = () => {
               </div>
               
               <img
-                  className=" object-cover  rounded-xl w-[256px] h-[144px] mt-[21px] lg:w-[347px] lg:h-[232px]"
-                  src={house4}
+                  className="object-cover rounded-xl w-[256px] h-[144px] mt-[21px] lg:w-[347px] lg:h-[232px]"
+                  src={dataToPass.selectedCardImage}
                   alt=""
                 />
             </div>
