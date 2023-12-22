@@ -1,19 +1,23 @@
-import React from 'react';
-import ClothDetailCardGroup from './ClothDetailCardGroup.jsx';
+import React from "react";
+import ClothDetailCardGroup from "./ClothDetailCardGroup.jsx";
 
 const ClothDetailTraditional = () => {
   return (
     <>
-      <div className="h-screen w-screen relative">
-        <div>
-          <p className="font-milonga text-[36px] text-primary w-[306px] mt-[59px] ml-[27px] lg:text-[80px] lg:w-[671px] lg:absolute lg:top-[176px] lg:left-[86px]">What is traditional clothes?</p>
-          <div className="mt-[57px] lg:absolute lg:top-[176px] lg:right-[83px]">
-            <ClothDetailCardGroup />
+      <div className="h-screen w-screen relative mt-32">
+        <div className="flex flex-wrap items-center gap-7 lg:flex-row-reverse lg:gap-0 ">
+        <ClothDetailCardGroup />
+          <div className="flex flex-col w-full mx-auto px-12 gap-4 lg:w-[671px] lg:px-0">
+            <p className="font-milonga text-[36px] text-primary w-full  lg:text-[80px] lg:w-[671px] ">
+              What is traditional clothes?
+            </p>
+            <p className="  font-urbanist text-xl text-justify leading-[33px] tracking-wide w-full  lg:text-[32px] lg:w-[651px] lg:leading-[55px]  ">
+              Baju adat Indonesia mencerminkan kekayaan budaya dengan ciri khas
+              dan makna. Terbuat dari kain tradisional seperti batik, tenun, dan
+              sutra, dihiasi motif flora, fauna, dan geometris. Sebagai simbol
+              identitas budaya, menarik perhatian dunia internasional.
+            </p>
           </div>
-          <p className="font-urbanist text-xl leading-[33px] tracking-wider w-[306px] mt-[48px] ml-[27px] pb-[132px] lg:text-[32px] lg:w-[651px] lg:leading-[55px] lg:absolute lg:top-[440px] lg:left-[86px]">
-            Baju adat Indonesia mencerminkan kekayaan budaya dengan ciri khas dan makna. Terbuat dari kain tradisional seperti batik, tenun, dan sutra, dihiasi motif flora, fauna, dan geometris. Sebagai simbol identitas budaya, menarik
-            perhatian dunia internasional.
-          </p>
         </div>
       </div>
     </>
