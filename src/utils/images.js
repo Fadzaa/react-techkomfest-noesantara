@@ -81,6 +81,8 @@ import testimony6 from "../assets/image/testimony_6.png";
 import testimony7 from "../assets/image/testimony_7.png";
 import testimony8 from "../assets/image/testimony_8.png";
 
+import davidBechkam from "../assets/image/davidBechkam.png";
+import  markZuckeberg from "../assets/image/markZuckeberg.png";
 
 //Example
 export { 
@@ -165,5 +167,8 @@ export {
     testimony5,
     testimony6,
     testimony7,
-    testimony8
+    testimony8,
+    cardHouse2,
+    davidBechkam,
+    markZuckeberg
 }

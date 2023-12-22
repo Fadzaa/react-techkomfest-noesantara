@@ -9,6 +9,7 @@ import {
   testimony7,
   testimony8
 } from '../../../utils/images.js';
+import {davidBechkam, markZuckeberg, people} from '../../../utils/images.js';
 import TestimonyCard from '../../../global_component/TestimonyCard.jsx';
 import {useResponsive} from "../../../hooks/useResponsive.js";
 

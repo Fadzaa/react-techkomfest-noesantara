@@ -8,9 +8,9 @@ import HouseDetailWorld from '../../component/DetailComponent/HouseDetailCompone
 function DetailHousePage() {
   return (
     <>
-      {/* <DetailComponentHero title={'Traditional House'} subtitle={'Detail Budaya'} image={bgHeroHouse} description={'sentuhan warisan budaya yang mewujud dalam setiap ukiran dan coraknya.'} />
-      <HouseDetailTraditional /> */}
-      {/* <HouseDetailCollection/> */}
+      {/*<DetailComponentHero title={'Traditional House'} subtitle={'Detail Budaya'} image={bgHeroHouse} description={'sentuhan warisan budaya yang mewujud dalam setiap ukiran dan coraknya.'} />*/}
+      {/*<HouseDetailTraditional />*/}
+       {/*<HouseDetailCollection/>*/}
       <HouseDetailWorld />
     </>
   );
