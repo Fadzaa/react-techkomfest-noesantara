@@ -10,11 +10,11 @@ import Footer from '../../global_component/Footer.jsx';
 function DetailClothPage() {
     return (
         <>
-            <DetailComponentHero image={bgDetailCloth} title={"Traditional Cloth"} subtitle={"Detail Budaya"} description={"sentuhan warisan budaya yang mewujud dalam setiap ukiran dan coraknya."}/>
-            {/* <ClothDetailCollection/> */}
-            <ClothDetailTraditional/>
-            <ClothDetailWorld/>
-            <Footer/>
+            {/*<DetailComponentHero image={bgDetailCloth} title={"Traditional Cloth"} subtitle={"Detail Budaya"} description={"sentuhan warisan budaya yang mewujud dalam setiap ukiran dan coraknya."}/>*/}
+             <ClothDetailCollection/>
+            {/*<ClothDetailTraditional/>*/}
+            {/*<ClothDetailWorld/>*/}
+            {/*<Footer/>*/}
         </>
     );
 }

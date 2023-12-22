@@ -3,10 +3,10 @@ import React, { useEffect, useState } from 'react';
 
 const getPatternSize = (index) => {
     const patterns = [
-        ['1', '1', '1'],
-        ['1', '2'],
-        ['2', '1'],
-        ['3']
+        ['col-span-1', 'col-span-1', 'col-span-1'],
+        ['col-span-1', 'col-span-2'],
+        ['col-span-2', 'col-span-1'],
+        ['col-span-3']
     ];
 
     const patternIndex = index % patterns.length;
@@ -34,7 +34,7 @@ const GalleryCardGroup = ({ images, searchQuery }) => {
         <>
             <div className=" w-full grid grid-cols-3 gap-2 overflow-y-auto h-[40vh] lg:h-[70vh]">
                 {filteredImages.map((image, index) => (
-                    <div key={index} className={`${"col-span-" + imageSizes[index]}`}>
+                    <div key={index} className={`${imageSizes[index]}`}>
                         <img
                             src={image}
                             alt={`Culture Image ${index}`}
