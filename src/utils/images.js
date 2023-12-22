@@ -72,6 +72,8 @@ import barrierDesktop from "../assets/image/barrierDesktop.png";
 import bgHeroHouse from "../assets/image/bg_hero_house.png";
 import cardHouse1 from "../assets/image/cardTraditionalHouse1.png";
 import cardHouse2 from "../assets/image/cardTraditionalHouse2.png";
+import davidBechkam from "../assets/image/davidBechkam.png";
+import  markZuckeberg from "../assets/image/markZuckeberg.png";
 
 //Example
 export { 
@@ -148,5 +150,7 @@ export {
     barrierDesktop,
     bgHeroHouse,
     cardHouse1,
-    cardHouse2
+    cardHouse2,
+    davidBechkam,
+    markZuckeberg
 }
