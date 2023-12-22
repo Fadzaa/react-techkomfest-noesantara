@@ -43,7 +43,6 @@ import foodGudegDesktop from "../assets/image/food_gudeg_desktop.png";
 import foodRendangDesktop from "../assets/image/food_rendang_desktop.png";
 import foodSataiDesktop from "../assets/image/food_satai_desktop.png";
 import foodTempeDesktop from "../assets/image/food_tempe_desktop.png";
-import cardHouse from "../assets/image/cardTraditionalHouse.svg";
 import mbaruNiang from "../assets/image/mbaruNiang.png";
 import mbaruNiang2 from "../assets/image/mbaruNiang2.png";
 import weaponMenu from "../assets/image/WeaponMenu.png";
@@ -71,6 +70,8 @@ import recordWeapon3 from "../assets/image/record_weapon_3.png";
 import barrierMobile from "../assets/image/barrierMobile.png";
 import barrierDesktop from "../assets/image/barrierDesktop.png";
 import bgHeroHouse from "../assets/image/bg_hero_house.png";
+import cardHouse1 from "../assets/image/cardTraditionalHouse1.png";
+import cardHouse2 from "../assets/image/cardTraditionalHouse2.png";
 
 //Example
 export { 
@@ -115,7 +116,6 @@ export {
     foodRendang,
     foodSatai,
     foodTempe,
-    cardHouse,
     mbaruNiang,
     mbaruNiang2,
     foodGudegDesktop,
@@ -146,5 +146,7 @@ export {
     house4,
     barrierMobile,
     barrierDesktop,
-    bgHeroHouse
+    bgHeroHouse,
+    cardHouse1,
+    cardHouse2
 }
