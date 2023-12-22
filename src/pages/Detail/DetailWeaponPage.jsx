@@ -7,10 +7,12 @@ import RecordWeaponComponent from "../../component/DetailComponent/DetailWeaponC
 import CollectionWeaponComponent
     from "../../component/DetailComponent/DetailWeaponComponent/CollectionWeaponComponent.jsx";
 import Footer from "../../global_component/Footer.jsx";
+import Navbar from '../../global_component/Navbar.jsx';
 
 function DetailWeaponPage() {
     return (
         <>
+            <Navbar/>
             <DetailComponentHero image={bgHeroWeapon} title="Traditional Weapon" subtitle={"DETAIL BUDAYA"} description={"menyimpan kejayaan di setiap mata pisau dan gagangnya."}/>
             <TraditionalWeaponComponent/>
             <CollectionWeaponComponent/>
