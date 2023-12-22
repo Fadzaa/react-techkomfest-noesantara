@@ -72,6 +72,15 @@ import barrierDesktop from "../assets/image/barrierDesktop.png";
 import bgHeroHouse from "../assets/image/bg_hero_house.png";
 import cardHouse1 from "../assets/image/cardTraditionalHouse1.png";
 import cardHouse2 from "../assets/image/cardTraditionalHouse2.png";
+import testimony1 from "../assets/image/testimony_1.png";
+import testimony2 from "../assets/image/testimony_2.png";
+import testimony3 from "../assets/image/testimony_3.png";
+import testimony4 from "../assets/image/testimony_4.png";
+import testimony5 from "../assets/image/testimony_5.png";
+import testimony6 from "../assets/image/testimony_6.png";
+import testimony7 from "../assets/image/testimony_7.png";
+import testimony8 from "../assets/image/testimony_8.png";
+
 
 //Example
 export { 
@@ -148,5 +157,13 @@ export {
     barrierDesktop,
     bgHeroHouse,
     cardHouse1,
-    cardHouse2
+    cardHouse2,
+    testimony1,
+    testimony2,
+    testimony3,
+    testimony4,
+    testimony5,
+    testimony6,
+    testimony7,
+    testimony8
 }
