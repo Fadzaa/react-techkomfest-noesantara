@@ -1,19 +1,25 @@
 import React from 'react';
-import { cardHouse } from '../../../utils/images.js';
+import { cardHouse1, cardHouse2 } from '../../../utils/images';
 
 const HouseDetailTraditional = () => {
   return (
-    <div className='w-screen h-screen flex flex-col justify-center items-center lg:relative'>
-      <div>
-        <div className='font-milonga text-4xl mt-[107px] lg:text-[80px] lg:absolute lg:top-[187px] lg:left-[116px]'>
-          <p>What is</p>
-          <p className='text-primary lg:mt-10'>Traditional House?</p>
+    <div className='h-full '>
+      <div className="w-screen relative py-[107px] px-5 flex flex-col-reverse lg:px-20 md:flex-row gap-4 lg:gap-10 justify-center  ">
+        <div className="flex flex-col gap-3 lg:gap-24">
+          <div className="font-milonga text-4xl  lg:text-[80px] lg:space-y-16 lg:w-[692px]">
+            <h1>What is</h1>
+            <h1 className="text-primary ">Traditional House?</h1>
+          </div>
+          <p className="font-urbanist text-lg tracking-wide lg:text-2xl lg:w-[550px] w-full">
+            Rumah adat adalah rumah tradisional yang dibangun dengan cara yang sama dari generasi ke generasi dan tanpa atau sedikit sekali mengalami perubahan. Rumah adat merupakan bagian dari budaya dan identitas suatu masyarakat.
+          </p>
         </div>
-        <img src={cardHouse} alt="" className='mt-[29px] lg:w-[655px] lg:absolute lg:top-[187px] lg:right-[61px]' />
-        <p className='font-urbanist text-lg w-[319px] mt-6 lg:text-[32px] lg:w-[594px] lg:absolute lg:top-[476px] lg:left-[116px] lg:leading-10'>Rumah adat adalah rumah tradisional yang dibangun dengan cara yang sama dari generasi ke generasi dan tanpa atau sedikit sekali mengalami perubahan. Rumah adat merupakan bagian dari budaya dan identitas suatu masyarakat.</p>
+        <div className="relative flex flex-row w-full lg:w-[524px] md:w-[524px] sm:w-[474px] justify-center items-center">
+          <img src={cardHouse1} alt="" className=" w-full" />
+          <img src={cardHouse2} alt="" className="absolute -left-5 -bottom-5 lg:w-[241px] md-[241px] sm:w-[191px]" />
+        </div>
       </div>
     </div>
   );
 };
-
 export default HouseDetailTraditional;

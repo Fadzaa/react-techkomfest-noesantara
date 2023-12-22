@@ -1,27 +1,21 @@
 import React from 'react';
-import { mbaruNiang, mbaruNiang2 } from '../../../utils/images.js';
+import { cardHouse1, mbaruNiang } from '../../../utils/images';
 
 const HouseDetailWorld = () => {
   return (
-    <div className="flex flex-col justify-center items-center px-10 w-screen h-[130vh] relative bg-GreenWhite">
-      <div className="pt-[41px]">
-        <p className="font-milonga text-4xl lg:text-8xl text-center lg:absolute lg:right-[390px] lg:top-3 text-primary">World’s Record</p>
-        <div>
-          <img src={mbaruNiang2} alt="" className="hidden lg:absolute lg:block lg:top-0 lg:left-0 lg:opacity-50+ lg:w-[291px] h-[1026px] lg:object-cover" />
-          <div className="hidden lg:bg-primary lg:absolute lg:block lg:top-0 lg:left-0 lg:opacity-50 lg:w-[291px] lg:h-[1026px] "></div>
-          <img src={mbaruNiang} alt="" className="w-[261px] h-[360px] object-cover rounded-[20px] mt-6 lg:w-[473px] lg:h-[650px] lg:absolute lg:top-[277px] lg:left-[60px] " />
-        </div>
-        <div className=" lg:absolute lg:right-[233px] lg:top-[258px]">
-          <p className="font-urbanist font-bold text-[30px] w-[283px] mt-5 lg:text-[52px] lg:w-[603px] lg:font-semibold">Rumah adat Mbaru Niang</p>
-          <p className="font-urbanist font-semibold text-lg text-[#252525] mt-1 lg:text-[28px] lg:mt-0 ">Nusa Tenggara Timur, Indonesia</p>
-        </div>
-        <div className="lg:absolute top-[380px] lg:right-[73px]">
-          <p className="font-urbanist text-base mt-2 lg:text-[32px] lg:mt-6 lg:w-[763px] lg:leading-10">
+    <div className=" mx-auto bg-GreenWhite">
+      <h1 className="font-milonga text-primary text-4xl py-8 text-center">World's Record</h1>
+      <div className='flex flex-col md:flex-row w-[287px]' >
+        <img src={mbaruNiang} alt="mbaruNiang" className="w-full h-[359px] object-cover rounded-[20px]" />
+        <div className="">
+          <h1 className="font-urbanist font-bold text-[30px] py-5">Rumah adat Mbaru Niang</h1>
+          <p className="font-urbanist text-[18px] font-semibold">Nusa Tenggara Timur, Indonesia</p>
+          <p className="font-urbanist text-base py-6 ">
             Rumah adat Mbaru Niang adalah rumah adat suku Manggarai yang terletak di Kampung Adat Wae Rebo, Kabupaten Manggarai Barat, Nusa Tenggara Timur. Rumah ini merupakan salah satu rumah adat tertinggi di Indonesia, dengan ketinggian
-            mencapai 15 meter.
+            mencapai 15 meter
           </p>
-          <p className="font-urbanist text-base mt-1 lg:text-[32px] lg:mt-6 lg:w-[763px] lg:leading-10">Berikut adalah beberapa prestasi yang telah diraih oleh rumah adat Mbaru Niang:</p>
-          <ul className="font-urbanist text-base lg:items-baseline mt-1  lg:text-[32px] lg:mt-6 lg:w-[763px] lg:leading-10 list-disc list-inside">
+          <p className="font-urbanist text-base py-3">Berikut adalah beberapa rprestasi yang telah diraih oleh rumah adat Mbaru Niang:</p>
+          <ul className="font-urbanist text-base list-disc list-inside pb-[64px]">
             <li>Dinobatkan sebagai salah satu situs warisan dunia oleh UNESCO pada tahun 2012.</li>
             <li>Menjadi salah satu destinasi wisata populer di Nusa Tenggara Timur.</li>
             <li>Menjadi sumber inspirasi bagi para desainer dan arsitek.</li>
