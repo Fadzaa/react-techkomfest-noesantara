@@ -6,15 +6,17 @@ import ClothDetailCollection from "../../component/DetailComponent/ClothDetailCo
 import ClothDetailWorld from "../../component/DetailComponent/ClothDetailComponent/ClothDetailWorld.jsx";
 import ClothDetailTraditional from "../../component/DetailComponent/ClothDetailComponent/ClothDetailTraditional.jsx";
 import Footer from '../../global_component/Footer.jsx';
+import Navbar from '../../global_component/Navbar.jsx';
 
 function DetailClothPage() {
     return (
         <>
-            {/*<DetailComponentHero image={bgDetailCloth} title={"Traditional Cloth"} subtitle={"Detail Budaya"} description={"sentuhan warisan budaya yang mewujud dalam setiap ukiran dan coraknya."}/>*/}
-             <ClothDetailCollection/>
-            {/*<ClothDetailTraditional/>*/}
-            {/*<ClothDetailWorld/>*/}
-            {/*<Footer/>*/}
+            <Navbar/>
+            <DetailComponentHero image={bgDetailCloth} title={"Traditional Cloth"} subtitle={"Detail Budaya"} description={"sentuhan warisan budaya yang mewujud dalam setiap ukiran dan coraknya."}/>
+            {/* <ClothDetailCollection/> */}
+            <ClothDetailTraditional/>
+            <ClothDetailWorld/>
+            <Footer/>
         </>
     );
 }

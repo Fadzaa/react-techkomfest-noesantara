@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Question from "./Question";
 import Options from "./Options";
-import ProgressBar from "./ProgressBar";
 import Result from "./Result";
 
 const QuizComponent = () => {
