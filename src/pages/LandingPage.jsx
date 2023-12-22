@@ -13,11 +13,6 @@ function LandingPage() {
       <LandingComponentIndonesia/>
        <LandingComponentTestimony/>
       <Footer/>
-      {/*<LandingComponentHero/>*/}
-      {/*<LandingComponentCulture/>*/}
-      {/*<LandingComponentIndonesia/>*/}
-       <LandingComponentTestimony/>
-      {/*<Footer/>*/}
       </>
   )
 }
