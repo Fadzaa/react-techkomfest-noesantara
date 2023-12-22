@@ -28,7 +28,7 @@ const teamData = [
             github: "https://github.com/Nareswara05"
         },
         experience: [
-            "UI/UX Designer in PT Nuri Gaya Citra (Internship)"
+            " Internship UI/UX Designer in PT Nuri Gaya Citra "
         ],
         description: [
             "Saya disini sebagai UI/UX Designer dan UX Writer, Saya membuat User Interface untuk Website NeoSantara.  Dimana pembuatan wireframe, design thinking, problem solving, penyusunan kata saya lakukan untuk website ini. Saya juga membantu untuk menganalisis problem user dan memberikan solusi dari permasalahan user. ",
