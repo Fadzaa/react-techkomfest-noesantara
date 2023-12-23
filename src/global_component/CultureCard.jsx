@@ -1,9 +1,9 @@
 // import React from 'react';
 import React from 'react';
 
-function CultureCard({ image, title, isActive, onHover }) {
+function CultureCard({ image, title, isActive, onHover, onClick }) {
   return (
-    <div
+    <div onClick={onClick}
       className={`group ${
         isActive ? "w-24 lg:w-[387px]" : "w-[55px] lg:w-[127px]"
       } h-[200px] lg:h-[473px] rounded-lg lg:rounded-2xl flex flex-col justify-end relative overflow-hidden me-3 lg:ms-4 transition-all duration-500`}
