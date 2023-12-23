@@ -4,7 +4,7 @@ import ClothDetailCardGroup from "./ClothDetailCardGroup.jsx";
 const ClothDetailTraditional = () => {
   return (
     <>
-      <div className="h-screen w-screen relative mt-32">
+      <div className="w-screen relative mt-32 mb-8">
         <div className="flex flex-wrap items-center gap-7 lg:flex-row-reverse lg:gap-0 ">
         <ClothDetailCardGroup />
           <div className="flex flex-col w-full mx-auto px-12 gap-4 lg:w-[671px] lg:px-0">

@@ -21,7 +21,7 @@ const ClothDetailWorld = () => {
 
   return (
     <>
-      <div className="mb-10">
+      <div className="mb-10  w-screen">
         <h1 className="text-primary text-[36px] lg:text-[64px] text-center font-milonga">
           World's Record
         </h1>
