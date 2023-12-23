@@ -11,7 +11,7 @@ const Footer = () => {
                 <h2 className="font-urbanist font-semibold text-xl text-white lg:text-2xl">Contact</h2>
                 <div className="text-white text-xs font-urbanist lg:text-base">
                   <p>0895395343223</p>
-                  <p>fattahganteng@gmail.com</p>
+                  <p>fadza20@gmail.com</p>
                 </div>
               </div>
               <div>

@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {
+    foodGudeg,
     foodGudegDesktop,
     foodRendang,
-    foodRendangDesktop,
-    foodSataiDesktop,
+    foodRendangDesktop, foodSatai,
+    foodSataiDesktop, foodTempe,
     foodTempeDesktop
 } from "../../../utils/images.js";
 import {iconThropy} from "../../../utils/icon.js";
@@ -91,10 +92,30 @@ function DetailWorldRecord() {
     </>
 
     const worldRecordMobile = <>
-        <FoodCard/>
-        <FoodCard/>
-        <FoodCard/>
-        <FoodCard/>
+        <FoodCard
+            image={foodRendang}
+            name={"Rendang"}
+            place={"Minangkabau, Sumatra barat,"}
+            award={"The World's Most Delicious Food by CNN International in 2011, 2017, and 2022."}
+        />
+        <FoodCard
+            image={foodSatai}
+            name={"Satai"}
+            place={"Ponorogo, Jawa Timur, "}
+            award={"Makanan Terpopuler di Dunia oleh TasteAtlas 2019"}
+        />
+        <FoodCard
+            image={foodGudeg}
+            name={"Gudeg"}
+            place={"Yogyakarta, DIY,"}
+            award={"Makanan Terlezat di Asia oleh CNN International 2016"}
+        />
+        <FoodCard
+            image={foodTempe}
+            name={"Tempe"}
+            place={"Jawa Tengah,"}
+            award={"Makanan Tersehat di Dunia oleh CNN International 2019"}
+        />
     </>
 
     return (
@@ -112,22 +133,21 @@ function DetailWorldRecord() {
 
 export default DetailWorldRecord;
 
-function FoodCard() {
+function FoodCard({image, place, award, name}) {
     return (
         <div className="w-full h-[140px]  relative rounded-xl overflow-hidden mb-6">
-            <img className="absolute w-full h-full object-cover" src={foodRendang} alt="Makanan Rendang"/>
+            <img className="absolute w-full h-full object-cover" src={image} alt="Makanan Rendang"/>
             <div className="absolute h-full p-4 pb-2 flex flex-col justify-between">
                 <div>
-                    <h1 className="font-milonga text-lg text-white">Rendang</h1>
+                    <h1 className="font-milonga text-lg text-white">{name}</h1>
                     <div className="font-urbanist font-medium text-xs text-white">
-                        <h3>Minangkabau, Sumatra barat, </h3>
+                        <h3>{place}</h3>
                         <h3>Indonesia</h3>
                     </div>
                 </div>
                 <div className="flex">
                     <img className="w-5 me-2" src={iconThropy} alt="Icon Thropy"/>
-                    <p className="font-urbanist font-medium text-white text-[10px]">The world's most delicious food by
-                        CNN International in 2011, 2017, and 2022.</p>
+                    <p className="font-urbanist font-medium text-white text-[10px]">{award}</p>
                 </div>
             </div>
         </div>

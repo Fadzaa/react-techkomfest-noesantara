@@ -13,7 +13,7 @@ function DetailClothPage() {
         <>
             <Navbar/>
             <DetailComponentHero image={bgDetailCloth} title={"Traditional Cloth"} subtitle={"Detail Budaya"} description={"sentuhan warisan budaya yang mewujud dalam setiap ukiran dan coraknya."}/>
-            {/* <ClothDetailCollection/> */}
+             {/*<ClothDetailCollection/>*/}
             <ClothDetailTraditional/>
             <ClothDetailWorld/>
             <Footer/>
