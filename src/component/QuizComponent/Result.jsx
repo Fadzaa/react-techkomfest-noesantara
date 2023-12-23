@@ -1,9 +1,15 @@
-// Result.js
+// Result.jsx
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Result = ({ userAnswers, correctAnswers }) => {
+  if (!userAnswers || !userAnswers.length) {
+    // If userAnswers is not available, you can handle it accordingly
+    return <div>Loading...</div>;
+  }
+
   const totalQuestions = userAnswers.length;
-  const userScore = correctAnswers * 10;
+  const userScore = correctAnswers * 20;
   const percentage = (correctAnswers / totalQuestions) * 100;
 
   return (
@@ -20,13 +26,10 @@ const Result = ({ userAnswers, correctAnswers }) => {
           <p className="text-lg text-black">Your Score: {userScore} / 100</p>
           <p className="text-lg text-black">Accuracy: {percentage.toFixed(2)}%</p>
         </div>
-        <div className="flex justify-center items-center space-x-4">
-          <button className="bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600">
-            Retake Quiz
-          </button>
-          <button className="bg-gray-500 text-white px-6 py-3 rounded-md hover:bg-gray-600">
-            Share Result
-          </button>
+        <div className="flex justify-center items-center space-x-4 ">
+          <Link to="/" className="bg-primary text-white px-9 py-3 rounded-md">
+            Back To Home
+          </Link>
         </div>
       </div>
     </div>

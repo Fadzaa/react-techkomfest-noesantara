@@ -30,7 +30,7 @@ function NavbarDesktop() {
     { name: "Gallery", href: "/gallery" },
     { name: "Informative Page", href: "/informative" },
     { name: "About", href: "/about" },
-    { name: "Quiz", href: "/menu" },
+    { name: "Quiz", href: "/quiz" },
   ];
 
   useEffect(() => {
@@ -112,7 +112,7 @@ function NavbarMobile() {
     { name: "Gallery", href: "/gallery" },
     { name: "Informative Page", href: "/informative" },
     { name: "About", href: "/about" },
-    { name:"Quiz", href:"/menu" },
+    { name:"Quiz", href:"/quiz" },
   ];
 
   return (
