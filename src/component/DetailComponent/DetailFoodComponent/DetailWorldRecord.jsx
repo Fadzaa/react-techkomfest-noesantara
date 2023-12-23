@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import {
+  foodGudeg,
   foodGudegDesktop,
   foodRendang,
-  foodRendangDesktop,
-  foodSataiDesktop,
+  foodRendangDesktop, foodSatai,
+  foodSataiDesktop, foodTempe,
   foodTempeDesktop,
 } from "../../../utils/images.js";
 import { iconThropy } from "../../../utils/icon.js";
@@ -121,10 +122,30 @@ function DetailWorldRecord() {
 
   const worldRecordMobile = (
     <>
-      <FoodCard />
-      <FoodCard />
-      <FoodCard />
-      <FoodCard />
+      <FoodCard
+          image={foodRendang}
+          name={"Rendang"}
+          place={"Minangkabau, Sumatra barat,"}
+          award={"The World's Most Delicious Food by CNN International in 2011, 2017, and 2022."}
+      />
+      <FoodCard
+          image={foodSatai}
+          name={"Satai"}
+          place={"Ponorogo, Jawa Timur, "}
+          award={"Makanan Terpopuler di Dunia oleh TasteAtlas 2019"}
+      />
+      <FoodCard
+          image={foodGudeg}
+          name={"Gudeg"}
+          place={"Yogyakarta, DIY,"}
+          award={"Makanan Terlezat di Asia oleh CNN International 2016"}
+      />
+      <FoodCard
+          image={foodTempe}
+          name={"Tempe"}
+          place={"Jawa Tengah,"}
+          award={"Makanan Tersehat di Dunia oleh CNN International 2019"}
+      />
     </>
   );
 
