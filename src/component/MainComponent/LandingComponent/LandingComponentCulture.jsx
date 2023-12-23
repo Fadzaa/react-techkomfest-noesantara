@@ -1,9 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { cultureClothes, cultureFood, cultureHouse, cultureWeapon } from "../../../utils/images.js";
+import {
+  cultureClothes,
+  cultureFood,
+  cultureHouse,
+  cultureWeapon,
+} from "../../../utils/images.js";
 import CultureCard from "../../../global_component/CultureCard.jsx";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function LandingComponentCulture() {
   const [activeCard, setActiveCard] = useState(0);
@@ -15,37 +20,44 @@ function LandingComponentCulture() {
   }, []);
 
   const cards = [
-    { title: "Food", image: cultureFood, path: "/food"},
-    { title: "Clothes", image: cultureClothes, path: "/cloth" },
+    { title: "Food", image: cultureFood, path: "/food" },
+    { title: "Clothes", image: cultureClothes, path: "/clothes" },
     { title: "Weapon", image: cultureWeapon, path: "/weapon" },
     { title: "House", image: cultureHouse, path: "/house" },
   ];
 
+  const navigate = useNavigate();
 
-    const navigate = useNavigate();
+  const handleNavigate = (title) => {
+    navigate(`${title.toLowerCase()}`);
+    window.scrollTo(0, 0);
+  };
 
-    const handleNavigate = (title) => {
-      navigate(`${title.toLowerCase()}`);
-      window.scrollTo(0, 0);
-    };
-
-
-    const handleCardHover = (index) => {
-      setActiveCard(index);
-    }
-
+  const handleCardHover = (index) => {
+    setActiveCard(index);
+  };
 
   return (
     <div className="w-screen lg:h-screen bg-white  flex flex-col items-start  py-4 px-8 md:flex md:flex-row md:py-24 md:px-36 md:justify-between md:items-center">
       <div>
-        <h1 className="font-milonga text-primary text-[40px] lg:text-[84px]" data-aos="fade-up">
+        <h1
+          className="font-milonga text-primary text-[40px] lg:text-[84px]"
+          data-aos="fade-up"
+        >
           Culture
         </h1>
-        <h3 className="font-yiBaiti tracking-widest text-primaryText  mb-3 ps-1 mt-[-5px] lg:mb-10 lg:ps-3 lg:mt-[-15px]" data-aos="fade-up">
+        <h3
+          className="font-yiBaiti tracking-widest text-primaryText  mb-3 ps-1 mt-[-5px] lg:mb-10 lg:ps-3 lg:mt-[-15px]"
+          data-aos="fade-up"
+        >
           INDONESIAN CULTURES
         </h3>
-        <p className="font-urbanist font-normal text-primaryText  text-xs leading-6 ps-1 lg:ps-3 lg:text-2xl  lg:leading-9 lg:w-96 " data-aos="fade-up">
-          We present various fascinating cultural options, inviting you to explore the extraordinary cultural heritage in our homeland.
+        <p
+          className="font-urbanist font-normal text-primaryText  text-xs leading-6 ps-1 lg:ps-3 lg:text-2xl  lg:leading-9 lg:w-96 "
+          data-aos="fade-up"
+        >
+          We present various fascinating cultural options, inviting you to
+          explore the extraordinary cultural heritage in our homeland.
         </p>
       </div>
 
