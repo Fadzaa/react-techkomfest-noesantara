@@ -1,12 +1,5 @@
 import React, {useEffect, useRef, useState} from 'react'
 import Navbar from '../global_component/Navbar'
-import { bgInformative1, informativeBali, informativeJakarta, informativeJawaBarat, informativeJawaTengah, informativePapua } from '../utils/images'
-import { Splide, SplideSlide } from '@splidejs/react-splide'
-// Default theme
-import '@splidejs/react-splide/css';
-
-// or only core styles
-import '@splidejs/react-splide/css/core';
 import {useResponsive} from "../hooks/useResponsive.js";
 import Slider from "react-slick";
 import axios from "axios";
@@ -93,12 +86,14 @@ export default InformativePage
 function InformativeDesktop({searchQuery, handleSearchChange, settings, previous, next, currentSlide, sliderRef}) {
     const navigate = useNavigate()
 
+    const [isLoading, setLoading] = useState(false);
     const [cardList, setCardList] = useState([{}]);
     const isCurrentSlide = (index) => index === currentSlide;
 
 
     const fetchData = async () => {
         try {
+            setLoading(true);
             const response = await axios.get('https://zell-techkomfest.000webhostapp.com/api/informative');
             const data = response.data.data;
 
@@ -109,10 +104,12 @@ function InformativeDesktop({searchQuery, handleSearchChange, settings, previous
 
             setCardList(filteredData);
             console.log( "Filtered Data" + cardList)
-            // console.log(cardList)
+
         } catch (error) {
-            // setLoading(false);
+
             console.error('Error fetching data:', error);
+        } finally {
+            setLoading(false);
         }
     };
 

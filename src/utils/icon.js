@@ -19,6 +19,7 @@ import leftBottomDecorMobile from "../assets/icon/left_bottom_decoration_mobile.
 import rightBottomDecorMobile from "../assets/icon/right_bottom_decoration_mobile.svg";
 import leftTopDecorMobile from "../assets/icon/left_top_decoration_mobile.svg";
 import rightTopDecorMobile from "../assets/icon/right_top_decoration_mobile.svg";
+import crossPrimary from "../assets/icon/cross_primary.svg";
 
 export {
     logo,
@@ -43,4 +44,5 @@ export {
     rightBottomDecorMobile,
     leftTopDecorMobile,
     rightTopDecorMobile,
+    crossPrimary
 }
