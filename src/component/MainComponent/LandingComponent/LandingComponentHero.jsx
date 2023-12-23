@@ -1,8 +1,9 @@
-import React from 'react'
-import { bgLandingHero, mistEffect } from '../../../utils/images.js'
+import React from 'react';
+import { bgLandingHero, mistEffect } from '../../../utils/images.js';
 import Navbar from '../../../global_component/Navbar.jsx';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link as ScrollLink } from 'react-scroll';
 
 function LandingComponentHero() {
   return (
@@ -34,9 +35,17 @@ function LandingComponentHero() {
           <h1 className="font-milonga text-5xl lg:text-[100px] text-white mb-14" data-aos="fade-up">
             Neosantara
           </h1>
-          <button className="w-[157px] lg: h-[40px] border-[2px] border-white rounded-full font-urbanist text-white text-sm lg:text-base transition-transform transform-gpu hover:-translate-y-1 hover:shadow-lg" data-aos="fade-up">
-            Explore Now
-          </button>
+          <ScrollLink
+            to="landingComponentIndonesia" // Use the ID of the target component
+            spy={true}
+            smooth={true}
+            offset={-70} // Adjust this value based on your layout
+            duration={500}
+          >
+            <button className="w-[157px] lg: h-[40px] border-[2px] border-white rounded-full font-urbanist text-white text-sm lg:text-base transition-transform transform-gpu hover:-translate-y-1 hover:shadow-lg" data-aos="fade-up">
+              Explore Now
+            </button>
+          </ScrollLink>
         </div>
 
         <Navbar />
@@ -45,4 +54,4 @@ function LandingComponentHero() {
   );
 }
 
-export default LandingComponentHero
+export default LandingComponentHero;
