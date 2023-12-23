@@ -14,6 +14,7 @@ function LandingComponentHero() {
             className="top-0 object-cover w-full h-full absolute"
             src={bgLandingHero}
             alt="hero"
+            loading="lazy"
           />
           <div className="h-full absolute w-full mt-8 lg:mt-28">
             <img
