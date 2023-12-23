@@ -47,12 +47,12 @@ function NavbarDesktop() {
     };
   }, []);
 
-  return (
+  return (   
     <div
       className={`font-urbanist text-xl fixed z-10 w-screen flex justify-center  ${
         scrolled ? "bg-white text-black shadow-md" : ""
-      }`}
-    >
+        }`}>
+    
       <div className="my-5 ">
         <nav className="flex list-none gap-7 justify-center">
           {navItems.map((item, index) => (

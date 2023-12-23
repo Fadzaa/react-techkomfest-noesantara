@@ -15,48 +15,10 @@ import CircularProgress from "@mui/joy/CircularProgress";
 
 function InformativePage() {
     const isMobile = useResponsive(640)
-    const [cardList, setCardList] = useState([{}]);
-    const [detailId, setDetailId] = useState(0)
-    const [loading, setLoading] = useState(true); // A
-    const fetchData = async () => {
-        try {
-            const response = await axios.get('https://zell-techkomfest.000webhostapp.com/api/informative');
-            setCardList(response.data.data);
-            setLoading(false);
-            console.log(cardList)
-        } catch (error) {
-            setLoading(false);
-            console.error('Error fetching data:', error);
-        }
-    };
+    const [searchQuery, setSearchQuery] = useState('');
 
-
-    // Fetch data on component mount
-    useEffect(() => {
-        fetchData();
-    }, [cardList]);
-
-  return (
-      <>
-          {loading ? (
-              <div className="h-screen w-screen flex items-center justify-center">
-                  <CircularProgress />
-              </div>// Display CircularProgress while loading
-          ) : (
-              isMobile ? <InformativeMobile cardList={cardList} /> : <InformativeDesktop cardList={cardList} />
-          )}
-      </>
-  );
-}
-
-export default InformativePage
-
-
-function InformativeDesktop({cardList}) {
-    const navigate = useNavigate()
-    const sliderRef = useRef(null);
     const [currentSlide, setCurrentSlide] = useState(0);
-    const isCurrentSlide = (index) => index === currentSlide;
+    const sliderRef = useRef(null);
 
     const settings = {
         dots: false,
@@ -93,10 +55,71 @@ function InformativeDesktop({cardList}) {
             sliderRef.current.slickPrev();
         }
     };
+    const handleSearchChange = (event) => {
+        setSearchQuery(event.target.value);
+    };
+
+
+  return (
+      <>
+          { (
+              isMobile
+                  ? <InformativeMobile
+                      searchQuery={searchQuery}
+                      handleSearchChange={handleSearchChange}
+                      settings={settings}
+                      next={next}
+                      previous={previous}
+                      currentSlide={currentSlide}
+                      sliderRef={sliderRef}
+                  />
+                  : <InformativeDesktop
+                      searchQuery={searchQuery}
+                      handleSearchChange={handleSearchChange}
+                      settings={settings}
+                      next={next}
+                      previous={previous}
+                      currentSlide={currentSlide}
+                      sliderRef={sliderRef}
+                  />
+          )}
+      </>
+  );
+}
+
+export default InformativePage
+
+
+function InformativeDesktop({searchQuery, handleSearchChange, settings, previous, next, currentSlide, sliderRef}) {
+    const navigate = useNavigate()
+
+    const [cardList, setCardList] = useState([{}]);
+    const isCurrentSlide = (index) => index === currentSlide;
+
+
+    const fetchData = async () => {
+        try {
+            const response = await axios.get('https://zell-techkomfest.000webhostapp.com/api/informative');
+            const data = response.data.data;
+
+
+            const filteredData = data.filter((item) =>
+                item.province.toLowerCase().includes(searchQuery.toLowerCase())
+            );
+
+            setCardList(filteredData);
+            console.log( "Filtered Data" + cardList)
+            // console.log(cardList)
+        } catch (error) {
+            // setLoading(false);
+            console.error('Error fetching data:', error);
+        }
+    };
+
 
     useEffect(() => {
-
-    }, []);
+        fetchData();
+    }, [searchQuery]);
 
 
     const handleSeeMore = () => {
@@ -130,8 +153,8 @@ function InformativeDesktop({cardList}) {
                                       }}></ion-icon>
                             <input type="text"
                                    placeholder="What do you want to learn today?"
-                                // value={searchQuery}
-                                // onChange={handleSearchChange}
+                                   value={searchQuery}
+                                   onChange={handleSearchChange}
                                    className="bg-transparent font-urbanist text-white w-full text-[10px] lg:text-base lg:h-[48px] rounded-3xl focus:outline-none"/>
                         </div>
 
@@ -154,17 +177,8 @@ function InformativeDesktop({cardList}) {
                     <div className="flex justify-between w-full mb-5">
 
                         <div className="flex w-3/4">
-                            <div
-                                className="w-full border border-white rounded-xl h-10 flex justify-between py-2 px-5 me-4">
-                                <div className="font-urbanist text-white font-medium">Pulau</div>
-                                <div className="w-4 h-4 bg-white"></div>
-                            </div>
-                            <div className="w-full border border-white rounded-xl h-10 flex justify-between py-2 px-5">
-                                <div className="font-urbanist text-white font-medium">Pulau</div>
-                                <div className="w-4 h-4 bg-white"></div>
-                            </div>
-                        </div>
 
+                        </div>
                         <div className="flex justify-end gap-4  my-4 lg:my-0">
                             <div onClick={previous}
                                  className="bg-white h-10 w-10 rounded-full flex justify-center items-center">
@@ -209,50 +223,36 @@ function InformativeDesktop({cardList}) {
 }
 
 
-function InformativeMobile({cardList}) {
+function InformativeMobile({searchQuery, handleSearchChange, settings, previous, next, currentSlide, sliderRef}) {
     const navigate = useNavigate()
-    const sliderRef = useRef(null);
-    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const [cardList, setCardList] = useState([{}]);
     const isCurrentSlide = (index) => index === currentSlide;
 
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        autoplay: true,
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SampleNextArrow />,
-        slidesToScroll: 1,
-        afterChange: (index) => {
-            setCurrentSlide(index);
-            console.log("What is the current slide : "  + currentSlide)
-        },
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                },
-            },
-        ],
-    };
 
-    const next = () => {
-        if (sliderRef.current) {
-            sliderRef.current.slickNext();
+    const fetchData = async () => {
+        try {
+            const response = await axios.get('https://zell-techkomfest.000webhostapp.com/api/informative');
+            const data = response.data.data;
+
+
+            const filteredData = data.filter((item) =>
+                item.province.toLowerCase().includes(searchQuery.toLowerCase())
+            );
+
+            setCardList(filteredData);
+            console.log( "Filtered Data" + cardList)
+            // console.log(cardList)
+        } catch (error) {
+            // setLoading(false);
+            console.error('Error fetching data:', error);
         }
     };
 
-    const previous = () => {
-        if (sliderRef.current) {
-            sliderRef.current.slickPrev();
-        }
-    };
 
     useEffect(() => {
-
-    }, []);
+        fetchData();
+    }, [searchQuery]);
 
 
     const handleSeeMore = () => {
@@ -261,6 +261,7 @@ function InformativeMobile({cardList}) {
 
         navigate('/detail', { state: { selectedCardId, selectedCardImage } });
     };
+
     return (
         <div className="h-screen w-screen relative">
             <Navbar/>
@@ -282,23 +283,14 @@ function InformativeMobile({cardList}) {
                                   }}></ion-icon>
                         <input type="text"
                                placeholder="What do you want to learn today?"
-                            // value={searchQuery}
-                            // onChange={handleSearchChange}
+                                value={searchQuery}
+                                onChange={handleSearchChange}
                                className="bg-transparent font-urbanist text-white w-full text-[10px] lg:text-base lg:h-[48px] rounded-3xl focus:outline-none"/>
                     </div>
 
                     <div className="flex justify-between items-center w-full mb-2">
 
                         <div className="flex w-3/4">
-                            <div
-                                className="w-full border border-white rounded-xl h-10 flex justify-between py-2 px-5 me-4">
-                                <div className="font-urbanist text-white font-medium">Pulau</div>
-                                <div className="w-4 h-4 bg-white"></div>
-                            </div>
-                            <div className="w-full border border-white rounded-xl h-10 flex justify-between py-2 px-5">
-                                <div className="font-urbanist text-white font-medium">Pulau</div>
-                                <div className="w-4 h-4 bg-white"></div>
-                            </div>
                         </div>
 
                         <div className="flex justify-end gap-4  my-4 lg:my-0">
@@ -330,7 +322,7 @@ function InformativeMobile({cardList}) {
                         <Slider ref={sliderRef}  {...settings}>
                             {cardList.map((card, index) => (
                                 <img
-                                    className={`w-[50vw] ${isCurrentSlide() ? "h-[205px]" : "h-[405px]"} rounded-3xl object-cover`}
+                                    className={`w-[50vw] ${isCurrentSlide() ? "h-[205px]" : "h-[255px]"} rounded-3xl object-cover`}
                                     src={card.image}
                                     alt={`Informative Slide ${index}`}
                                 />
@@ -339,7 +331,7 @@ function InformativeMobile({cardList}) {
                     </div>
 
                     <h1 className="font-milonga text-[44px] text-white mt-4">{cardList[currentSlide].province}</h1>
-                    <p className="font-urbanist font-normal text-sm text-white pe-16 mb-5">
+                    <p className="font-urbanist font-normal text-sm text-white  mb-5">
                         {cardList[currentSlide].description}
                     </p>
 
