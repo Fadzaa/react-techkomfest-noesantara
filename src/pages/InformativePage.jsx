@@ -1,11 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
-import Navbar from "../global_component/Navbar";
-import "@splidejs/react-splide/css";
-import "@splidejs/react-splide/css/core";
-import { useResponsive } from "../hooks/useResponsive.js";
+import React, {useEffect, useRef, useState} from 'react'
+import Navbar from '../global_component/Navbar'
+import {useResponsive} from "../hooks/useResponsive.js";
 import Slider from "react-slick";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import {Link, useNavigate} from 'react-router-dom';
+import CircularProgress from "@mui/joy/CircularProgress";
 
 function InformativePage() {
   const isMobile = useResponsive(640);
@@ -93,28 +92,32 @@ function InformativeDesktop({
 }) {
   const navigate = useNavigate();
 
-  const [cardList, setCardList] = useState([{}]);
-  const isCurrentSlide = (index) => index === currentSlide;
+    const [isLoading, setLoading] = useState(false);
+    const [cardList, setCardList] = useState([{}]);
+    const isCurrentSlide = (index) => index === currentSlide;
 
-  const fetchData = async () => {
-    try {
-      const response = await axios.get(
-        "https://zell-techkomfest.000webhostapp.com/api/informative",
-      );
-      const data = response.data.data;
+
+    const fetchData = async () => {
+        try {
+            setLoading(true);
+            const response = await axios.get('https://zell-techkomfest.000webhostapp.com/api/informative');
+            const data = response.data.data;
 
       const filteredData = data.filter((item) =>
         item.province.toLowerCase().includes(searchQuery.toLowerCase()),
       );
 
-      setCardList(filteredData);
-      console.log("Filtered Data" + cardList);
-      // console.log(cardList)
-    } catch (error) {
-      // setLoading(false);
-      console.error("Error fetching data:", error);
-    }
-  };
+            setCardList(filteredData);
+            console.log( "Filtered Data" + cardList)
+
+        } catch (error) {
+
+            console.error('Error fetching data:', error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
 
   useEffect(() => {
     fetchData();
