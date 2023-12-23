@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { logo, menuMobile } from '../utils/icon.js';
+import {crossPrimary, leftBottomDecorMobile, logo, menuMobile, rightBottomDecorMobile} from '../utils/icon.js';
 
 export default function Navbar() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -128,17 +128,28 @@ function NavbarMobile() {
         />
       </button>
       {isMobileMenuOpen && (
-        <div className={`fixed top-0 left-0 w-screen h-screen bg-white`}>
-          <button onClick={toggleMobileMenu} className="absolute top-4 right-9">
-            <FontAwesomeIcon icon={faTimes} style={{ color: isScrolled ? 'black' : 'black', fontSize: '30px' }} />
-          </button>
-          <div className="flex flex-col items-center mt-16">
-            {navItems.map((item, index) => (
-              <a key={index} href={item.href} className={`text-xl my-2 text-black`}>
-                {item.name}
-              </a>
-            ))}
+        <div className="fixed top-0 left-0 w-screen h-screen bg-white">
+          <img className="absolute bottom-0 left-0" src={leftBottomDecorMobile} alt="Left Bottom Decor Mobile"/>
+          <img className="absolute bottom-0 right-0" src={rightBottomDecorMobile} alt="Left Bottom Decor Mobile"/>
+
+          <div className="flex flex-col h-full w-full px-5 pt-4 relative justify-between">
+            <div className="flex w-full justify-between">
+              <h1 className="font-milonga text-primary text-[36px]">N</h1>
+              <button onClick={toggleMobileMenu} className="">
+                <img src={crossPrimary} alt="Cross Primary"/>
+              </button>
+            </div>
+            <div className="flex flex-col items-center gap-8 pb-8">
+              {navItems.map((item, index) => (
+                  <a key={index} href={item.href} className={`font-urbanist text-lg text-primary font-light`}>
+                  {item.name}
+                </a>
+              ))}
+            </div>
+            <div></div>
           </div>
+
+
         </div>
       )}
     </div>
