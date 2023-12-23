@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { cultureClothes, cultureFood, cultureHouse, cultureWeapon } from "../../../utils/images.js";
 import CultureCard from "../../../global_component/CultureCard.jsx";
+import {useNavigate} from "react-router-dom";
 
 function LandingComponentCulture() {
   const [activeCard, setActiveCard] = useState(0);
@@ -14,15 +15,25 @@ function LandingComponentCulture() {
   }, []);
 
   const cards = [
-    { title: "Food", image: cultureFood },
-    { title: "Clothes", image: cultureClothes },
-    { title: "Weapon", image: cultureWeapon },
-    { title: "House", image: cultureHouse },
+    { title: "Food", image: cultureFood, path: "/food"},
+    { title: "Clothes", image: cultureClothes, path: "/cloth" },
+    { title: "Weapon", image: cultureWeapon, path: "/weapon" },
+    { title: "House", image: cultureHouse, path: "/house" },
   ];
 
-  const handleCardHover = (index) => {
-    setActiveCard(index);
-  };
+
+    const navigate = useNavigate();
+
+    const handleNavigate = (title) => {
+      navigate(`${title.toLowerCase()}`);
+      window.scrollTo(0, 0);
+    };
+
+
+    const handleCardHover = (index) => {
+      setActiveCard(index);
+    }
+
 
   return (
     <div className="w-screen lg:h-screen bg-white  flex flex-col items-start  py-4 px-8 md:flex md:flex-row md:py-24 md:px-36 md:justify-between md:items-center">
@@ -44,6 +55,7 @@ function LandingComponentCulture() {
             key={index}
             image={card.image}
             title={card.title}
+            onClick={() => handleNavigate(card.path)}
             isActive={index === activeCard}
             onHover={() => handleCardHover(index)}
             data-aos="fade-up"
