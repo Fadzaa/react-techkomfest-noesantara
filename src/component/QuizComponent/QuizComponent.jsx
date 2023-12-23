@@ -1,73 +1,100 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 import Question from "./Question";
 import Options from "./Options";
+import ProgressBar from "./ProgressBar";
 import Result from "./Result";
+import CircularProgress from "@mui/joy/CircularProgress";
 
 const QuizComponent = () => {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [userAnswers, setUserAnswers] = useState([]);
-  const [correctAnswers, setCorrectAnswers] = useState(0);
-  const [quizCompleted, setQuizCompleted] = useState(false);
-  const [questions, setQuestions] = useState([]);
+  const navigate = useNavigate();
+
+  const initialState = {
+    currentQuestion: 0,
+    userAnswers: [],
+    correctAnswers: 0,
+    quizCompleted: false,
+    questions: [],
+  };
+
+  const [quizState, setQuizState] = useState({ ...initialState });
+  const [loading, setLoading] = useState(true);
+
+  const getRandomQuestions = (allQuestions, count) => {
+    const shuffledQuestions = allQuestions.sort(() => Math.random() - 0.5);
+    return shuffledQuestions.slice(0, count);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://zell-techkomfest.000webhostapp.com/api/quiz",
+          "https://zell-techkomfest.000webhostapp.com/api/quiz"
         );
-        setQuestions(response.data);
+        const randomQuestions = getRandomQuestions(response.data, 5);
+        setQuizState({ ...initialState, questions: randomQuestions });
       } catch (error) {
         console.error("Error fetching data:", error);
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchData();
-  }, []);
+  }, []); 
 
   const handleAnswerClick = (selectedOption) => {
     const isCorrect = selectedOption.isCorrect;
 
-    setUserAnswers([...userAnswers, { question: currentQuestion, isCorrect }]);
-    if (isCorrect) {
-      setCorrectAnswers(correctAnswers + 1);
-    }
+    setQuizState((prev) => ({
+      ...prev,
+      userAnswers: [...prev.userAnswers, { question: prev.currentQuestion, isCorrect }],
+      correctAnswers: isCorrect ? prev.correctAnswers + 1 : prev.correctAnswers,
+      currentQuestion: prev.currentQuestion < prev.questions.length - 1 ? prev.currentQuestion + 1 : prev.currentQuestion,
+      quizCompleted: prev.currentQuestion === prev.questions.length - 1,
+    }));
 
-    if (currentQuestion < questions.length - 1) {
-      setCurrentQuestion(currentQuestion + 1);
-    } else {
-      setQuizCompleted(true);
+    if (quizState.quizCompleted) {
+      navigate('/result');
     }
   };
 
   useEffect(() => {
-    if (quizCompleted) {
-      console.log("Quiz completed!"); // You can perform any actions related to quiz completion here
+    if (quizState.quizCompleted) {
+      console.log("Quiz completed!"); 
     }
-  }, [quizCompleted]);
+  }, [quizState.quizCompleted]);
+
+  const handleRetakeQuiz = () => {
+    setQuizState({ ...initialState });
+    navigate('/quiz');
+  };
 
   return (
     <div className="w-full h-screen relative flex flex-col items-center justify-between py-12">
-      {!quizCompleted && questions.length > 0 && (
+      {loading && (
+        <CircularProgress style={{ color: 'primary', position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} />
+      )}
+      {!loading && !quizState.quizCompleted && quizState.questions.length > 0 && (
         <>
           <div>
-            <Question question={questions[currentQuestion].question} />
+            <Question question={quizState.questions[quizState.currentQuestion].question} />
             <Options
-              options={questions[currentQuestion].options}
+              options={quizState.questions[quizState.currentQuestion].options}
               handleAnswerClick={handleAnswerClick}
-              userAnswers={userAnswers}
-              currentQuestion={currentQuestion}
+              userAnswers={quizState.userAnswers}
+              currentQuestion={quizState.currentQuestion}
             />
           </div>
           <ProgressBar
-            currentQuestion={currentQuestion}
-            totalQuestions={questions.length}
+            currentQuestion={quizState.currentQuestion}
+            totalQuestions={quizState.questions.length}
           />
         </>
       )}
-      {quizCompleted && (
-        <Result userAnswers={userAnswers} correctAnswers={correctAnswers} />
+      {!loading && quizState.quizCompleted && (
+        <Result userAnswers={quizState.userAnswers} correctAnswers={quizState.correctAnswers} onRetakeQuiz={handleRetakeQuiz} />
       )}
     </div>
   );
