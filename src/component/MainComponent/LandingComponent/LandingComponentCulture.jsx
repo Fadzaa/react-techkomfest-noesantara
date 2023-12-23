@@ -9,8 +9,10 @@ import {
 } from "../../../utils/images.js";
 import CultureCard from "../../../global_component/CultureCard.jsx";
 import { useNavigate } from "react-router-dom";
+import {useTranslation} from "react-i18next";
 
 function LandingComponentCulture() {
+  const { t } = useTranslation();
   const [activeCard, setActiveCard] = useState(0);
 
   useEffect(() => {
@@ -44,7 +46,7 @@ function LandingComponentCulture() {
           className="font-milonga text-primary text-[40px] lg:text-[84px]"
           data-aos="fade-up"
         >
-          Culture
+          {t('welcome')}
         </h1>
         <h3
           className="font-yiBaiti tracking-widest text-primaryText  mb-3 ps-1 mt-[-5px] lg:mb-10 lg:ps-3 lg:mt-[-15px]"
