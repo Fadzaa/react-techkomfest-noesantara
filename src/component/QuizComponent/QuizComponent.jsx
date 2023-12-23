@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 import Question from "./Question";
 import Options from "./Options";
-import ProgressBar from "./ProgressBar";
+import ProgressBar from "./ProgressBar.jsx";
 import Result from "./Result";
 import CircularProgress from "@mui/joy/CircularProgress";
 
