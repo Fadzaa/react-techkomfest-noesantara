@@ -80,6 +80,7 @@ import testimony5 from "../assets/image/testimony_5.png";
 import testimony6 from "../assets/image/testimony_6.png";
 import testimony7 from "../assets/image/testimony_7.png";
 import testimony8 from "../assets/image/testimony_8.png";
+import fattah from "../assets/image/fattah.png";
 
 import davidBechkam from "../assets/image/davidBechkam.png";
 import  markZuckeberg from "../assets/image/markZuckeberg.png";
@@ -169,5 +170,6 @@ export {
     testimony8,
     cardHouse2,
     davidBechkam,
-    markZuckeberg
+    markZuckeberg,
+    fattah
 }

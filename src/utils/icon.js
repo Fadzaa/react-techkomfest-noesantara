@@ -11,6 +11,14 @@ import wavesDown from "../assets/icon/waves_down.svg";
 import rectangleBottomDecoration from "../assets/icon/rectangle_bottom_decoration.svg";
 import rectangleTopDecoration from "../assets/icon/rectangle_top_decoration.svg";
 import arrowRight from "../assets/icon/arrowRight.svg";
+import leftBottomDecoration from "../assets/icon/left_bottom_decoration.svg";
+import rightBottomDecoration from "../assets/icon/right_bottom_decoration.svg";
+import leftTopDecoration from "../assets/icon/left_top_decoration.svg";
+import rightTopDecoration from "../assets/icon/right_top_decoration.svg";
+import leftBottomDecorMobile from "../assets/icon/left_bottom_decoration_mobile.svg";
+import rightBottomDecorMobile from "../assets/icon/right_bottom_decoration_mobile.svg";
+import leftTopDecorMobile from "../assets/icon/left_top_decoration_mobile.svg";
+import rightTopDecorMobile from "../assets/icon/right_top_decoration_mobile.svg";
 
 export {
     logo,
@@ -25,6 +33,14 @@ export {
     wavesDown,
     rectangleBottomDecoration,
     rectangleTopDecoration,
-    arrowRight
+    arrowRight,
+    leftBottomDecoration,
+    rightBottomDecoration,
+    leftTopDecoration,
+    rightTopDecoration,
 
+    leftBottomDecorMobile,
+    rightBottomDecorMobile,
+    leftTopDecorMobile,
+    rightTopDecorMobile,
 }

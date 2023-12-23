@@ -14,6 +14,7 @@ const QuizComponent = () => {
     currentQuestion: 0,
     userAnswers: [],
     correctAnswers: 0,
+    wrongAnswers: 0,
     quizCompleted: false,
     questions: [],
   };
@@ -51,6 +52,7 @@ const QuizComponent = () => {
       ...prev,
       userAnswers: [...prev.userAnswers, { question: prev.currentQuestion, isCorrect }],
       correctAnswers: isCorrect ? prev.correctAnswers + 1 : prev.correctAnswers,
+      wrongAnswers: !isCorrect ? prev.wrongAnswers + 1 : prev.wrongAnswers,
       currentQuestion: prev.currentQuestion < prev.questions.length - 1 ? prev.currentQuestion + 1 : prev.currentQuestion,
       quizCompleted: prev.currentQuestion === prev.questions.length - 1,
     }));
@@ -72,13 +74,13 @@ const QuizComponent = () => {
   };
 
   return (
-    <div className="w-full h-screen relative flex flex-col items-center justify-between py-12">
+    <div className="w-full h-screen relative flex flex-col items-center justify-between ">
       {loading && (
         <CircularProgress style={{ color: 'primary', position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} />
       )}
       {!loading && !quizState.quizCompleted && quizState.questions.length > 0 && (
         <>
-          <div>
+          <div className="py-12">
             <Question question={quizState.questions[quizState.currentQuestion].question} />
             <Options
               options={quizState.questions[quizState.currentQuestion].options}
@@ -94,7 +96,11 @@ const QuizComponent = () => {
         </>
       )}
       {!loading && quizState.quizCompleted && (
-        <Result userAnswers={quizState.userAnswers} correctAnswers={quizState.correctAnswers} onRetakeQuiz={handleRetakeQuiz} />
+        <Result
+            userAnswers={quizState.userAnswers}
+            correctAnswers={quizState.correctAnswers}
+            wrongAnswers={quizState.wrongAnswers}
+            onRetakeQuiz={handleRetakeQuiz} />
       )}
     </div>
   );
