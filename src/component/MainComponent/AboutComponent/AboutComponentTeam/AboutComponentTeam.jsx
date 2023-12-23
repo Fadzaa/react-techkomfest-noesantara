@@ -3,7 +3,7 @@ import PersonCard from "./PersonCard.jsx";
 import PersonBiodata from "./PersonBiodata.jsx";
 import PersonDescription from "./PersonDescription.jsx";
 import PersonSubDescription from "./PersonSubDescription.jsx";
-import {aboutPerson} from "../../../../utils/images.js";
+import {aboutPerson, fattah} from "../../../../utils/images.js";
 import teamData from "../../../../utils/teamData.js";
 
 
@@ -27,7 +27,7 @@ function AboutComponentTeam() {
                 <div className="w-2/3 lg:w-3/5 h-[2px] lg:h-[5px] bg-primary mb-10 lg:mb-16"></div>
             </div>
             <div className="lg:flex lg:border-black lg:border-opacity-30 lg:border-[1px] lg:rounded-xl">
-                <PersonCard image={aboutPerson}/>
+                <PersonCard image={fattah}/>
                 <div className="lg:flex flex-col lg:py-20 lg:justify-between lg:px-8">
                     <div className="flex justify-end gap-4  my-4 lg:my-0">
                         <div onClick={handlePrevClick} className="bg-GreenWhite h-10 w-10 rounded-full flex justify-center items-center">
