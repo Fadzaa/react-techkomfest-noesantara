@@ -60,17 +60,20 @@ const HouseDetailCollection = () => {
   }, []);
 
   return (
-    <div className='mx-auto items-center w-full relative container'>
-      <img className='absolute -top-14 sm:-top-36 lg:-top-10 hp:-top-20 md:-top-40 z-10 w-full xl:-top-40' src={barrierImage} alt="" />
-      <Slider {...settings}>
-        {houseImages.map((house, index) => (
-          <div className='w-[154px] h-[152px] lg:w-[349px] lg:h-[345px]' key={index}>
-            <img className='w-full h-[152px]  lg:h-[345px] object-cover' src={house} alt={`House ${index + 1}`} />
-          </div>
-        ))}
-      </Slider>
-      <img className='absolute -bottom-14 sm:-bottom-36 hp:-bottom-20 lg:-bottom-10 xl:-bottom-40 z-10 w-full' src={barrierImage} alt="" />
-    </div>
+      <div className=' w-screen relative  flex flex-col justify-center py-10 bg-white lg:py-32'>
+        <h1 className="w-full flex items-center justify-center font-milonga text-center text-primary text-[32px] lg:text-[64px]">Best Collection Of Traditional House</h1>
+        <div className="relative overflow-hidden bg-white h-[20vh] lg:h-[50vh]">
+          <img className='h-36 lg:h-48 w-full absolute z-10 -top-28' src={barrierImage} alt=""/>
+          <Slider {...settings}>
+            {houseImages.map((house, index) => (
+                <div className='w-[154px] h-[152px] lg:w-[349px] lg:h-[345px]' key={index}>
+                  <img className='w-full h-[152px]  lg:h-[345px] object-cover' src={house} alt={`House ${index + 1}`}/>
+                </div>
+            ))}
+          </Slider>
+          <img className='h-32  lg:h-52 w-full absolute z-10 -bottom-20' src={barrierImage} alt=""/>
+        </div>
+      </div>
   );
 };
 
