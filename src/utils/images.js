@@ -174,6 +174,6 @@ export {
   markZuckeberg,
   fattah,
   nares,
-  rafiu
+  rafiu,
   kebayaGajahMada,
 };
