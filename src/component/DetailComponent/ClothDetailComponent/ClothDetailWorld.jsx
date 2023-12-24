@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import { kebaya, payasAgung, ulos } from "../../../utils/images.js";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 
 const ClothDetailWorld = () => {
+  const { t } = useTranslation();
   const [selectedCloth, setSelectedCloth] = useState({
     image: ulos,
     title: "Ulos",
-    description:
-      "Ulos adalah kain tenun tradisional khas suku Batak di Sumatera Utara. Ulos terbuat dari benang kapas atau sutra yang ditenun dengan alat tenun tradisional. Ulos memiliki berbagai macam motif dan warna yang melambangkan berbagai macam makna, seperti kemakmuran, keberuntungan, dan perlindungan.",
+    description: t("ulosDesc"),
     origin: "Batak, Sumatra Utara, Indonesia",
   });
 
@@ -76,7 +77,7 @@ const ClothDetailWorld = () => {
                   handleImageClick(
                     kebaya,
                     "Kebaya",
-                    "Kebaya adalah pakaian tradisional wanita yang berasal dari Indonesia. Kebaya terbuat dari kain yang dijahit menjadi gaun longgar yang longgar. Biasanya terbuat dari katun, sutra, atau poliester. Kebaya biasanya dikenakan dengan kain sarung, rok, atau celana panjang.",
+                    t("kebayaDesc"),
                     "Jawa Tengah, Indonesia",
                   )
                 }
@@ -100,7 +101,7 @@ const ClothDetailWorld = () => {
                   handleImageClick(
                     payasAgung,
                     "Payas Agung",
-                    "Payas Agung adalah pakaian adat Bali yang dikenakan pada acara-acara formal, seperti pernikahan, upacara keagamaan, dan pertunjukan seni. Payas Agung terdiri dari berbagai macam elemen, seperti kain songket, perhiasan emas, dan hiasan kepala.",
+                    t("payasDesc"),
                     "Bali, Indonesia",
                   )
                 }

@@ -2,8 +2,10 @@ import React, { useEffect } from "react";
 import { peopleFood } from "../../../utils/images.js";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 
 function DetailFoodOpinion() {
+  const { t } = useTranslation();
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -22,12 +24,10 @@ function DetailFoodOpinion() {
         className="flex flex-col lg:w-[45%] lg:py-10 lg:justify-center"
       >
         <h1 className="font-milonga font-light text-primary text-3xl lg:text-[96px] mt-[30px] mb-4 lg:leading-normal lg:whitespace-pre-line lg:mb-10">
-          What people say?
+          {t("peopleOpinionFood")}
         </h1>
         <p className="font-urbanist font-normal text-primaryText text-lg lg:text-2xl leading-9 tracking-wide lg:leading-10">
-          Chef Internasional tertarik dengan makanan Indonesia, terutama makanan
-          khas Bali yang kaya rempah-rempah. Mereka memuji bahan dasar lokal dan
-          mempelajari bumbu dasar seperti merah, kuning, oranye, dan sambal{" "}
+          {t("peopleOpinionFoodDesc")}
         </p>
       </div>
     </div>

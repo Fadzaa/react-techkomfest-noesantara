@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { traditionalWeapon } from "../../../utils/images.js";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 
 function TraditionalWeaponComponent() {
   useEffect(() => {
@@ -9,6 +10,7 @@ function TraditionalWeaponComponent() {
       duration: 1000,
     });
   }, []);
+
   return (
     <div className="w-screen bg-white px-11 py-10 mt-10 mb-24 lg:ps-32 lg:px-0 lg:flex lg:flex-row-reverse lg:justify-between lg:items-center">
       <ImageExplanation />
@@ -20,22 +22,20 @@ function TraditionalWeaponComponent() {
 export default TraditionalWeaponComponent;
 
 function TextExplanation() {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col lg:w-[45vw] lg:py-10 lg:justify-center">
       <h1
         data-aos="fade-right"
         className="font-milonga font-light text-primary text-3xl lg:text-[80px] mt-[30px] mb-4 lg:leading-normal lg:whitespace-pre-line lg:mb-10"
       >
-        What Is Traditional Weapon?
+        {t("traditionalWeapon")}
       </h1>
       <p
         data-aos="fade-right"
         className="font-urbanist font-normal text-primaryText text-lg lg:text-2xl leading-9 tracking-wide lg:leading-10 lg:w-[35vw]"
       >
-        Chef Senjata adat Indonesia adalah senjata yang telah digunakan oleh
-        masyarakat Indonesia sejak zaman dahulu. Senjata adat Indonesia memiliki
-        berbagai macam bentuk dan fungsi, mulai dari senjata untuk berperang,
-        berburu, hingga upacara adat.{" "}
+        {t("traditionalWeaponDesc")}
       </p>
     </div>
   );
