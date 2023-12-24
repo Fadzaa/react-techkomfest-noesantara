@@ -84,7 +84,10 @@ const GalleryTabBar = ({searchQuery}) => {
   ];
 
   const tabContents = tabCategories.map((category, index) => (
-    <GalleryCardGroup key={index} category={category} images={filteredData(category).map((item) => item.culture_image)} />
+    <GalleryCardGroup key={index} category={category} items={filteredData(category).map((item) => ({
+      image: item.culture_image,
+      name: item.culture_name,
+    }))} />
   ));
 
   return (
