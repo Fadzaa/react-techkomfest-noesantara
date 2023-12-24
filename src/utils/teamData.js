@@ -1,6 +1,9 @@
+import {fattah, nares, rafiu} from "./images.js";
+
 const teamData = [
 
     {
+        image: fattah,
         name: "Fattah Anggit Al Dzakwan",
         role: "Project Leader",
         education: "SMK Raden Umar Said Kudus",
@@ -20,6 +23,7 @@ const teamData = [
         ]
     },
     {
+        image: nares,
         name: "Nareswara Maulana Aletha Alhaq,",
         role: "UI/UX Designer",
         education: "SMK Raden Umar Said Kudus",
@@ -37,6 +41,7 @@ const teamData = [
         ]
     },
     {
+        image: rafiu,
         name: "Rafiu Sidqi",
         role: "Fullstack Dev",
         education: "SMK Raden Umar Said Kudus",
