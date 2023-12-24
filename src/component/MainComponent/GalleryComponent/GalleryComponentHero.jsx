@@ -3,6 +3,7 @@ import { bgGallery1, bgGallery2, bgGallery3, bgGallery4, bgGallery5, bgGallery6,
 import GalleryTabBar from './GalleryTabBar.jsx';
 import Navbar from "../../../global_component/Navbar.jsx";
 import {useTranslation} from "react-i18next";
+import axios from "axios";
 
 const GalleryComponentHero = () => {
   const {t} = useTranslation();
@@ -13,6 +14,8 @@ const GalleryComponentHero = () => {
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
   };
+
+
 
 
   useEffect(() => {

@@ -14,7 +14,7 @@ function DetailFoodPage() {
       <DetailComponentHero
         image={bgHeroFood}
         title={"Traditional Food"}
-        subtitle={"DetailComponent Budaya"}
+        subtitle={"Detail Budaya"}
         description={
           "Crafting Memorable Characters, Villains, Magic Systems, and Stories"
         }
