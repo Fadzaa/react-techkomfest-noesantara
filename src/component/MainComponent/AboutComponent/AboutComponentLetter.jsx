@@ -4,8 +4,10 @@ import {
   letterDecorationmobile,
 } from "../../../utils/images.js";
 import AOS from "aos";
+import {useTranslation} from "react-i18next";
 
 const AboutComponentLetter = () => {
+  const {t} = useTranslation();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [selectedImage, setSelectedImage] = useState(
     windowWidth <= 360 ? letterDecorationmobile : letterDecoration,
@@ -40,24 +42,15 @@ const AboutComponentLetter = () => {
           data-aos="fade-right"
           className="font-milonga mx-[30px] lg:mx-[80px]"
         >
-          <p className="text-[38px] lg:text-[80px] text-primary">Letter</p>
-          <p className="text-[28px] lg:text-[45px]">From Our Teams</p>
+          <p className="text-[38px] lg:text-[80px] text-primary">{t('letter')}</p>
+          <p className="text-[28px] lg:text-[45px]">{t('fromOurTeams')}</p>
         </div>
         <div className="flex flex-col gap-2  lg:text-[28px] lg:gap-9 lg:leading-9 mt-7 mx-[30px] lg:mx-[80px] font-urbanist text-sm">
           <p data-aos="fade-up">
-            Neosantara berkomitmen menjadi platform pendidikan teknologi
-            terkemuka, menumbuhkan bakat digital berstandar global. Upaya kami
-            didedikasikan untuk mempercepat kemajuan Indonesia menuju puncak
-            dalam ranah digital.
+            {t('letterParagraph1')}
           </p>
           <p data-aos="fade-up">
-            Dalam semangat komitmen ini, kami mengundang Anda untuk menjelajahi
-            Neosantara sebuah website digital yang menghidupkan kembali kekayaan
-            budaya Indonesia melalui pengalaman inovatif dan mendalam. Temukan
-            perpaduan tradisi dan teknologi, di mana masa lalu bertemu dengan
-            masa depan digital. Bersama-sama, mari kita merayakan perpaduan
-            tradisi dan teknologi, membuka jalan bagi kepemimpinan digital
-            Indonesia.
+            {t('letterParagraph2')}
           </p>
         </div>
         <img

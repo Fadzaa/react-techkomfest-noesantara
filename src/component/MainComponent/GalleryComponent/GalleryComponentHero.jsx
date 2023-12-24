@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { bgGallery1, bgGallery2, bgGallery3, bgGallery4, bgGallery5, bgGallery6, bgGallery7 } from '../../../utils/images.js';
 import GalleryTabBar from './GalleryTabBar.jsx';
 import Navbar from "../../../global_component/Navbar.jsx";
+import {useTranslation} from "react-i18next";
 
 const GalleryComponentHero = () => {
+  const {t} = useTranslation();
   const [backgroundImages, setBackgroundImages] = useState([bgGallery5, bgGallery2, bgGallery6, bgGallery4]);
   const [currentBackgroundIndex, setCurrentBackgroundIndex] = useState(0);
   const [fade, setFade] = useState(false);
@@ -50,14 +52,13 @@ const GalleryComponentHero = () => {
 
             <h1 className="font-milonga mt-4 ml-[-3px]  text-[55px] lg:text-[100px] text-white lg:mb-8">Gallery</h1>
             {/*INI*/}
-            <p className="lg:mb-6 lg:mt-3 mt-3 font-urbanist font-medium text-[#DADADA] leading-6 text-xs lg:text-base"> Tiap gambar adalah pintu ajaib ke budaya
-              dan keindahan yang tak terlupakan. </p>
+            <p className="lg:mb-6 lg:mt-3 mt-3 font-urbanist font-medium text-[#DADADA] leading-6 text-xs lg:text-base">{t('galleryDescription')}  </p>
 
             <div className="border border-white border-opacity-70 mt-[55px] h-[39px] rounded-[20px] flex  lg:h-[48px] lg:rounded-3xl lg:flex items-center gap-1 lg:gap-5 lg:text-sm">
               <ion-icon name="search-outline"
                         style={{fontSize: '24px', margin: '0 10px', marginLeft: '20px', color: 'white'}}></ion-icon>
               <input type="text"
-                     placeholder="What do you want to see today?"
+                     placeholder={t('galleryInput')}
                      value={searchQuery}
                      onChange={handleSearchChange}
                      className="bg-transparent font-urbanist text-white w-full text-[10px] lg:text-base lg:h-[48px] rounded-3xl focus:outline-none"/>
