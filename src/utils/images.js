@@ -85,6 +85,7 @@ import nares from "../assets/image/nares.jpg";
 import rafiu from "../assets/image/rafiu.jpg";
 import davidBechkam from "../assets/image/davidBechkam.png";
 import markZuckeberg from "../assets/image/markZuckeberg.png";
+import kebayaGajahMada from "../assets/image/kebayaGajahmada.png";
 
 export {
   bgLandingHero,
@@ -174,4 +175,5 @@ export {
   fattah,
   nares,
   rafiu
+  kebayaGajahMada,
 };

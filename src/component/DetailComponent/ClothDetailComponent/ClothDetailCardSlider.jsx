@@ -1,141 +1,62 @@
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-import {
-  clothCard1,
-  clothCard2,
-  clothCard3,
-  clothCard4,
-} from "../../utils/images";
-
-const ClothDetailCardSlider = () => {
+function App() {
   const settings = {
-    className: "center",
-    autoplay: true,
-    dots: false,
+    dots: true,
     infinite: true,
-    speed: 2000,
+    speed: 500,
     slidesToShow: 3,
-    centerMode : true,
-    slidesToScroll: 3,
-    arrows: true,
-    centerPadding: "100px",
-
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,  
-          centerMode : true,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 3,
-          centerMode : true,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          centerMode : true,
-          dots: false,
-        },
-      },
-    ],
+    slidesToScroll: 1,
   };
-
   return (
-    <div className="w-full lg:w-[1200px] md:w-screen sm:w-screen mx-auto   ">
-      <Slider {...settings}>
-        <div className="w-[300px] lg:w-[368px] px-2">
-          <div className="relative">
-            <img
-              src={clothCard1}
-              alt=""
-              className="object-cover h-[323px] w-[300px] lg:h-[544px] lg:w-[368px]"
-            />
-            <div className="absolute bottom-5 left-5 text-white">
-              <h1 className="font-milonga lg:text-2xl">Kebaya Gajah Mada</h1>
-              <h2 className="font-urbanist lg:text-xl">Bali, Indonesia</h2>
+    <div className="w-3/4 m-auto">
+      <div className="mt-20">
+        <Slider {...settings}>
+          {data.map((d) => (
+            <div key={d.name} className="bg-white h-[450px] text-black rounded-xl relative">
+              <div className="h-56 flex rounded-t-xl">
+                <img src={d.image} alt="" className="h-[330px] w-56 object-cover" />
+                <div className='absolute top-60'>
+                  <p className=" font-milonga pl-7  text-3xl text-white">{d.name}</p>
+                  <p className=" font-urbanist font-semibold text-2xl text-white pl-7">{d.region}</p>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="w-[300px] lg:w-[368px] px-2">
-          <div className="relative">
-            <img
-              src={clothCard1}
-              alt=""
-              className="object-cover h-[323px] w-[300px] lg:h-[544px] lg:w-[368px]"
-            />
-            <div className="absolute bottom-5 left-5 text-white">
-              <h1 className="font-milonga lg:text-2xl">Kebaya Gajah Mada</h1>
-              <h2 className="font-urbanist lg:text-xl">Bali, Indonesia</h2>
-            </div>
-          </div>
-        </div>
-        <div className="w-[300px] lg:w-[368px] px-2">
-          <div className="relative">
-            <img
-              src={clothCard1}
-              alt=""
-              className="object-cover h-[323px] w-[300px] lg:h-[544px] lg:w-[368px]"
-            />
-            <div className="absolute bottom-5 left-5 text-white">
-              <h1 className="font-milonga lg:text-2xl">Kebaya Gajah Mada</h1>
-              <h2 className="font-urbanist lg:text-xl">Bali, Indonesia</h2>
-            </div>
-          </div>
-        </div>
-        <div className="w-[300px] lg:w-[368px] px-2">
-          <div className="relative">
-            <img
-              src={clothCard1}
-              alt=""
-              className="object-cover h-[323px] w-[300px] lg:h-[544px] lg:w-[368px]"
-            />
-            <div className="absolute bottom-5 left-5 text-white">
-              <h1 className="font-milonga lg:text-2xl">Kebaya Gajah Mada</h1>
-              <h2 className="font-urbanist lg:text-xl">Bali, Indonesia</h2>
-            </div>
-          </div>
-        </div>
-        <div className="w-[300px] lg:w-[368px] px-2">
-          <div className="relative">
-            <img
-              src={clothCard1}
-              alt=""
-              className="object-cover h-[323px] w-[300px] lg:h-[544px] lg:w-[368px]"
-            />
-            <div className="absolute bottom-5 left-5 text-white">
-              <h1 className="font-milonga lg:text-2xl">Kebaya Gajah Mada</h1>
-              <h2 className="font-urbanist lg:text-xl">Bali, Indonesia</h2>
-            </div>
-          </div>
-        </div>
-        <div className="w-[300px] lg:w-[368px] px-2">
-          <div className="relative">
-            <img
-              src={clothCard1}
-              alt=""
-              className="object-cover h-[323px] w-[300px] lg:h-[544px] lg:w-[368px]"
-            />
-            <div className="absolute bottom-5 left-5 text-white">
-              <h1 className="font-milonga lg:text-2xl">Kebaya Gajah Mada</h1>
-              <h2 className="font-urbanist lg:text-xl">Bali, Indonesia</h2>
-            </div>
-          </div>
-        </div>
-       
-      </Slider>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
-};
+}
 
-export default ClothDetailCardSlider;
+const data = [
+  {
+    name: `Rafiu Sidqi`,
+    image: `https://o-cdn-cas.sirclocdn.com/parenting/images/Baju-Tradisional-Adat-Bali-1.width-800.format-webp.webp`,
+    region: `Sze`,
+  },
+  {
+    name: `Rafiu Sidqi`,
+    image: `https://o-cdn-cas.sirclocdn.com/parenting/images/Baju-Tradisional-Adat-Bali-1.width-800.format-webp.webp`,
+    region: `Sze`,
+  },
+  {
+    name: `Rafiu Sidqi`,
+    image: `https://o-cdn-cas.sirclocdn.com/parenting/images/Baju-Tradisional-Adat-Bali-1.width-800.format-webp.webp`,
+    region: `Sze`,
+  },
+  {
+    name: `Rafiu Sidqi`,
+    image: `https://o-cdn-cas.sirclocdn.com/parenting/images/Baju-Tradisional-Adat-Bali-1.width-800.format-webp.webp`,
+    region: `Sze`,
+  },
+  {
+    name: `Rafiu Sidqi`,
+    image: `https://o-cdn-cas.sirclocdn.com/parenting/images/Baju-Tradisional-Adat-Bali-1.width-800.format-webp.webp`,
+    region: `Sze`,
+  },
+];
+
+export default App;
