@@ -6,6 +6,7 @@ import {
 } from "../../../utils/images.js";
 import { rainbowShape } from "../../../utils/icon.js";
 import AOS from "aos";
+import { useTranslation } from "react-i18next";
 
 function RecordWeaponComponent() {
   useEffect(() => {
@@ -13,13 +14,14 @@ function RecordWeaponComponent() {
       duration: 1000,
     });
   }, []);
+  const { t } = useTranslation();
   return (
     <div className="w-screen bg-[#FAF8ED] px-[40px] lg:px-[80px] py-10 lg:py-20 flex flex-col items-center relative">
       <h1
         data-aos="fade-up"
         className="font-milonga text-4xl lg:text-[80px] text-primary mb-10 lg:mb-28"
       >
-        World's Record
+        {t("worldRecord")}
       </h1>
       <div className="w-full flex flex-col-reverse justify-between lg:flex-row ">
         <div className="flex flex-col w-full mt-7 lg:w-1/2">
@@ -46,10 +48,8 @@ function RecordWeaponComponent() {
 export default RecordWeaponComponent;
 
 function TextExplanation() {
-  const textDescription =
-    "Keris merupakan senjata khas Indonesia yang telah diakui oleh UNESCO sebagai salah satu warisan budaya\n" +
-    "                takbenda dunia. Keris memiliki bentuk yang unik dan ragam hias yang indah. Keris biasanya digunakan\n" +
-    "                sebagai senjata untuk berperang, berburu, atau upacara adat.";
+  const { t } = useTranslation();
+  const textDescription = t("worldWeaponDesc");
   return (
     <div className="flex flex-col">
       <h1
@@ -69,11 +69,12 @@ function TextExplanation() {
 }
 
 function CardExplanation() {
+  const { t } = useTranslation();
   const listExplanation = [
-    "Koleksi Museum Louvre, Paris, Prancis: Keris menjadi salah satu koleksi senjata berharga di Museum Louvre yang terkenal di dunia. Ini menunjukkan pengakuan terhadap nilai budaya dan keindahan keris.",
-    "Diskusi Pecinta Senjata: Keris menjadi topik diskusi yang menarik di kalangan pecinta senjata internasional karena estetika dan nilai seninya yang tinggi.",
-    "Warisan Budaya Takbenda UNESCO: Keris diakui oleh UNESCO sebagai salah satu warisan budaya takbenda dunia pada tahun 2008, mengukuhkan pentingnya keris bagi identitas dan warisan budaya Indonesia.",
-    "Kompetisi Senjata Tradisional: Keris pernah meraih penghargaan dalam kompetisi senjata tradisional internasional, seperti kemenangan Mandau (senjata Dayak yang dipengaruhi keris) di AS. Ini menunjukkan kualitas teknik pembuatan dan estetika keris.",
+    t("listExplanation1"),
+    t("listExplanation2"),
+    t("listExplanation3"),
+    t("listExplanation4"),
   ];
   return (
     <div data-aos="fade-up" className="bg-primary rounded-xl py-4 px-3">

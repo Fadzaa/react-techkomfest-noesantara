@@ -3,13 +3,16 @@ import {
   foodGudeg,
   foodGudegDesktop,
   foodRendang,
-  foodRendangDesktop, foodSatai,
-  foodSataiDesktop, foodTempe,
+  foodRendangDesktop,
+  foodSatai,
+  foodSataiDesktop,
+  foodTempe,
   foodTempeDesktop,
 } from "../../../utils/images.js";
 import { iconThropy } from "../../../utils/icon.js";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 
 function DetailWorldRecord() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -22,6 +25,7 @@ function DetailWorldRecord() {
     return () => window.removeEventListener("resize", handleWindowResize);
   }, [width]);
 
+  const { t } = useTranslation();
   const worldRecordDesktop = (
     <>
       <div data-aos="fade-up" className="relative h-[50vh] w-full">
@@ -123,28 +127,30 @@ function DetailWorldRecord() {
   const worldRecordMobile = (
     <>
       <FoodCard
-          image={foodRendang}
-          name={"Rendang"}
-          place={"Minangkabau, Sumatra barat,"}
-          award={"The World's Most Delicious Food by CNN International in 2011, 2017, and 2022."}
+        image={foodRendang}
+        name={"Rendang"}
+        place={"Minangkabau, Sumatra barat,"}
+        award={
+          "The World's Most Delicious Food by CNN International in 2011, 2017, and 2022."
+        }
       />
       <FoodCard
-          image={foodSatai}
-          name={"Satai"}
-          place={"Ponorogo, Jawa Timur, "}
-          award={"Makanan Terpopuler di Dunia oleh TasteAtlas 2019"}
+        image={foodSatai}
+        name={"Satai"}
+        place={"Ponorogo, Jawa Timur, "}
+        award={"Makanan Terpopuler di Dunia oleh TasteAtlas 2019"}
       />
       <FoodCard
-          image={foodGudeg}
-          name={"Gudeg"}
-          place={"Yogyakarta, DIY,"}
-          award={"Makanan Terlezat di Asia oleh CNN International 2016"}
+        image={foodGudeg}
+        name={"Gudeg"}
+        place={"Yogyakarta, DIY,"}
+        award={"Makanan Terlezat di Asia oleh CNN International 2016"}
       />
       <FoodCard
-          image={foodTempe}
-          name={"Tempe"}
-          place={"Jawa Tengah,"}
-          award={"Makanan Tersehat di Dunia oleh CNN International 2019"}
+        image={foodTempe}
+        name={"Tempe"}
+        place={"Jawa Tengah,"}
+        award={"Makanan Tersehat di Dunia oleh CNN International 2019"}
       />
     </>
   );
@@ -161,15 +167,13 @@ function DetailWorldRecord() {
         data-aos="fade-up"
         className="font-milonga text-4xl lg:text-[96px] text-primary mb-4 lg:mb-10"
       >
-        World's Record
+        {t("worldRecord")}
       </h1>
       <p
         data-aos="fade-up"
         className="font-urbanist text-base lg:text-2xl text-primaryText text-center leading-8 mb-6"
       >
-        Makanan tradisional Indonesia mencakup beragam hidangan khas yang
-        diwariskan dari generasi ke generasi. Dikenal karena keberagaman
-        rempah-rempah
+        {t("worldRecordDesc")}
       </p>
       {width < breakpoint ? worldRecordMobile : worldRecordDesktop}
     </div>

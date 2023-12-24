@@ -12,6 +12,7 @@ import { wavesDown, wavesTop } from "../../../utils/icon.js";
 import { useResponsive } from "../../../hooks/useResponsive.js";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 
 function CollectionWeaponComponent() {
   const isMobile = useResponsive(640);
@@ -40,22 +41,24 @@ function CollectionWeaponComponent() {
 export default CollectionWeaponComponent;
 
 function HeadingSection() {
+  const { t } = useTranslation();
   return (
     <>
       <h1
         data-aos="fade-up"
         className="font-milonga text-[36px] text-center mb-6"
       >
-        Traditional Weapon Collection
+        {t("traditionalWeaponCollMobile")}
       </h1>
       <p data-aos="fade-up" className="font-urbanist text-base mb-10">
-        Koleksi terbaik Senjata Adat Indonesia
+        {t("traditionalWeaponCollDesc")}
       </p>
     </>
   );
 }
 
 function HeadingSectionDesktop() {
+  const { t } = useTranslation();
   return (
     <div className="h-[40vh] w-full relative flex flex-col items-center mb-10">
       <div className="w-full h-full absolute">
@@ -67,12 +70,12 @@ function HeadingSectionDesktop() {
         />
       </div>
       <div className="font-milonga text-[72px] text-center mb-6">
-        <h1 data-aos="fade-up">Traditional Weapon</h1>
-        <h1 data-aos="fade-up">Collection</h1>
+        <h1 data-aos="fade-up">{t("traditionalWeaponColl")}</h1>
+        <h1 data-aos="fade-up">{t("traditionalWeaponCollection")}</h1>
       </div>
 
       <p data-aos="fade-up" className="font-urbanist text-xl mb-10">
-        Koleksi terbaik Senjata Adat Indonesia
+        {t("traditionalWeaponCollDesc")}
       </p>
     </div>
   );
