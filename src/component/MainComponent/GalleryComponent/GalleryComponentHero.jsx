@@ -7,7 +7,7 @@ import axios from "axios";
 
 const GalleryComponentHero = () => {
   const {t} = useTranslation();
-  const [backgroundImages, setBackgroundImages] = useState([bgGallery5, bgGallery2, bgGallery6, bgGallery4]);
+  const [backgroundImages, setBackgroundImages] = useState([bgGallery5, bgGallery2, bgGallery6, bgGallery3]);
   const [currentBackgroundIndex, setCurrentBackgroundIndex] = useState(0);
   const [fade, setFade] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
