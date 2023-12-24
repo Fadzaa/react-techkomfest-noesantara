@@ -6,7 +6,7 @@
   "clothes": "Clothes",
   "weapon": "Weapon",
   "house": "House",
-  "indonesiaDescription" : "Indonesia, negara kepulauan yang megah, terkenal dengan keindahan alamnya yang mempesona, budaya yang beragam, dan keramahan masyarakatnya.",
+  "indonesiaDescription": "Indonesia, negara kepulauan yang megah, terkenal dengan keindahan alamnya yang mempesona, budaya yang beragam, dan keramahan masyarakatnya.",
   "indonesiaBoxDescription": "“Indonesia, surga tropis yang mempesona, menyuguhkan keindahan alam yang tak terlukiskan. Mulai dari pulau-pulau eksotik dengan hamparan pantai berpasir putih yang panjang hingga pegunungan megah yang menyentuh langit, Indonesia menawarkan beragam panorama menawan. Hutan hujan lebat, danau tenang, dan terumbu karang memukau. di dasar laut semuanya menyatu dalam kekayaan alam yang menawan. Dikombinasikan dengan keragaman budaya yang berakar pada sejarah panjang, Indonesia adalah destinasi yang memanjakan mata, merayakan keindahan alam dan warisan budaya yang tak tertandingi.\"",
   "testimonyRoleDavid": "Mantan Pemain Sepak Bola Inggris",
   "testimonyDescriptionDavid": "\"Indonesia adalah negara yang indah dengan budaya yang kaya. Masyarakatnya sangat ramah dan menyambut saya dengan tangan terbuka. Saya sangat terkesan dengan keindahan alam Indonesia, terutama Bali. Saya akan selalu mengingat pengalaman saya di Indonesia,\"",
@@ -23,7 +23,7 @@
   "testimonyRoleMessi": "Pemain Sepak Bola dari Argentina",
   "testimonyDescriptionMessi": "\"Raja Ampat adalah salah satu tempat terindah yang pernah saya kunjungi. Keindahan alamnya sangat luar biasa. Masyarakat Indonesia juga sangat ramah dan menyambut saya dengan tangan terbuka. Saya akan selalu mengingat pengalaman saya di Indonesia,\"",
   "testimonyRoleGordon": "Chef Internasional",
-  "testimonyDescriptionGordon": "\"Kuliner Indonesia benar-benar menggugah selera. Dari nasi goreng yang sederhana hingga rendang yang kaya rempah, setiap hidangan memiliki cita rasa yang unik dan lezat. Kreativitas dan inovasi para koki Indonesia dalam mengolah bahan-bahan lokal patut diacungi jempol.\""
+  "testimonyDescriptionGordon": "\"Kuliner Indonesia benar-benar menggugah selera. Dari nasi goreng yang sederhana hingga rendang yang kaya rempah, setiap hidangan memiliki cita rasa yang unik dan lezat. Kreativitas dan inovasi para koki Indonesia dalam mengolah bahan-bahan lokal patut diacungi jempol.\"",
   "welcome": "Welcome!",
   "greeting": "Hello, {{name}}!",
   "message": "Ini Pesan",
