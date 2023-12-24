@@ -83,6 +83,7 @@ import testimony8 from "../assets/image/testimony_8.png";
 import fattah from "../assets/image/fattah.png";
 import davidBechkam from "../assets/image/davidBechkam.png";
 import markZuckeberg from "../assets/image/markZuckeberg.png";
+import kebayaGajahMada from "../assets/image/kebayaGajahmada.png";
 
 export {
   bgLandingHero,
@@ -170,4 +171,5 @@ export {
   davidBechkam,
   markZuckeberg,
   fattah,
+  kebayaGajahMada,
 };

@@ -1,6 +1,6 @@
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 function App() {
   const settings = {
@@ -15,20 +15,13 @@ function App() {
       <div className="mt-20">
         <Slider {...settings}>
           {data.map((d) => (
-            <div
-              key={d.name}
-              className="bg-white h-[450px] text-black rounded-xl"
-            >
-              <div className="h-56 bg-indigo-500 flex justify-center items-center rounded-t-xl">
-                <img src={d.img} alt="" className="h-44 w-44 rounded-full" />
-              </div>
-
-              <div className="flex flex-col items-center justify-center gap-4 p-4">
-                <p className="text-xl font-semibold">{d.name}</p>
-                <p className="text-center">{d.review}</p>
-                <button className="bg-indigo-500 text-white text-lg px-6 py-1 rounded-xl">
-                  Read More
-                </button>
+            <div key={d.name} className="bg-white h-[450px] text-black rounded-xl relative">
+              <div className="h-56 flex rounded-t-xl">
+                <img src={d.image} alt="" className="h-[330px] w-56 object-cover" />
+                <div className='absolute top-60'>
+                  <p className=" font-milonga pl-7  text-3xl text-white">{d.name}</p>
+                  <p className=" font-urbanist font-semibold text-2xl text-white pl-7">{d.region}</p>
+                </div>
               </div>
             </div>
           ))}
@@ -40,29 +33,29 @@ function App() {
 
 const data = [
   {
-    name: `John Morgan`,
-    img: `/students/John_Morgan.jpg`,
-    review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+    name: `Rafiu Sidqi`,
+    image: `https://o-cdn-cas.sirclocdn.com/parenting/images/Baju-Tradisional-Adat-Bali-1.width-800.format-webp.webp`,
+    region: `Sze`,
   },
   {
-    name: `Ellie Anderson`,
-    img: `/students/Ellie_Anderson.jpg`,
-    review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+    name: `Rafiu Sidqi`,
+    image: `https://o-cdn-cas.sirclocdn.com/parenting/images/Baju-Tradisional-Adat-Bali-1.width-800.format-webp.webp`,
+    region: `Sze`,
   },
   {
-    name: `Nia Adebayo`,
-    img: `/students/Nia_Adebayo.jpg`,
-    review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+    name: `Rafiu Sidqi`,
+    image: `https://o-cdn-cas.sirclocdn.com/parenting/images/Baju-Tradisional-Adat-Bali-1.width-800.format-webp.webp`,
+    region: `Sze`,
   },
   {
-    name: `Rigo Louie`,
-    img: `/students/Rigo_Louie.jpg`,
-    review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+    name: `Rafiu Sidqi`,
+    image: `https://o-cdn-cas.sirclocdn.com/parenting/images/Baju-Tradisional-Adat-Bali-1.width-800.format-webp.webp`,
+    region: `Sze`,
   },
   {
-    name: `Mia Williams`,
-    img: `/students/Mia_Williams.jpg`,
-    review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+    name: `Rafiu Sidqi`,
+    image: `https://o-cdn-cas.sirclocdn.com/parenting/images/Baju-Tradisional-Adat-Bali-1.width-800.format-webp.webp`,
+    region: `Sze`,
   },
 ];
 
