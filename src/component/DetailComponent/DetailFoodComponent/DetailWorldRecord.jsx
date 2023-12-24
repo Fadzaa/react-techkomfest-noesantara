@@ -182,27 +182,26 @@ function DetailWorldRecord() {
 
 export default DetailWorldRecord;
 
-function FoodCard() {
+function FoodCard({image, place, name, award}) {
   return (
     <div className="w-full h-[140px]  relative rounded-xl overflow-hidden mb-6">
       <img
         className="absolute w-full h-full object-cover"
-        src={foodRendang}
+        src={image}
         alt="Makanan Rendang"
       />
       <div className="absolute h-full p-4 pb-2 flex flex-col justify-between">
         <div>
-          <h1 className="font-milonga text-lg text-white">Rendang</h1>
+          <h1 className="font-milonga text-lg text-white">{name}</h1>
           <div className="font-urbanist font-medium text-xs text-white">
-            <h3>Minangkabau, Sumatra barat, </h3>
+            <h3>{place}</h3>
             <h3>Indonesia</h3>
           </div>
         </div>
         <div className="flex">
           <img className="w-5 me-2" src={iconThropy} alt="Icon Thropy" />
           <p className="font-urbanist font-medium text-white text-[10px]">
-            The world's most delicious food by CNN International in 2011, 2017,
-            and 2022.
+            {award}
           </p>
         </div>
       </div>
