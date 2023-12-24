@@ -14,6 +14,7 @@ import {
 import { davidBechkam, markZuckeberg, people } from '../../../utils/images.js';
 import TestimonyCard from '../../../global_component/TestimonyCard.jsx';
 import { useResponsive } from "../../../hooks/useResponsive.js";
+import {useTranslation} from "react-i18next";
 
 const LandingComponentTestimony = () => {
   useEffect(() => {
@@ -30,6 +31,7 @@ const LandingComponentTestimony = () => {
 export default LandingComponentTestimony;
 
 function TestimonyDesktop() {
+  const {t} = useTranslation();
   return (
     <>
       <div className="mb-[195px]" data-aos="fade-up">
@@ -47,11 +49,11 @@ function TestimonyDesktop() {
 
                 <div className="w-full h-full px-6 flex flex-col justify-between">
 
-                  <p className="mt-4 text-xs font font-urbanist text-[#232527] leading-5">"Indonesia is a beautiful country with a rich culture. The people are very friendly and welcomed me with open arms. I am very impressed with the natural beauty of Indonesia, especially Bali. I will always remember my experience in Indonesia."</p>
+                  <p className="mt-4 text-xs font font-urbanist text-[#232527] leading-5">{t('testimonyDescriptionDavid')}</p>
 
                   <div className="font-urbanist text-sm ">
                     <p className="font-bold">David Beckham</p>
-                    <p className="text-TextSecondary">Ex Football Player</p>
+                    <p className="text-TextSecondary">{t('testimonyRoleDavid')}</p>
                   </div>
 
                 </div>
@@ -62,8 +64,8 @@ function TestimonyDesktop() {
                 image={testimony3}
                 width={'[294px]'}
                 name={"Beyoncé"}
-                role={"singer from the United States"}
-                text={"Gamelan is a very beautiful and enchanting music. I am very impressed with the skill of Indonesian gamelan players. Indonesian people are also very friendly and welcomed me with open arms. I will always remember my experience in Indonesia."}
+                role={t('testimonyRoleBeyonce')}
+                text={t('testimonyDescriptionBeyonce')}
               />
 
             </div>
@@ -74,10 +76,10 @@ function TestimonyDesktop() {
                   <img src={testimony2} alt="people" className="w-[500px] h-[254px] rounded-3xl object-cover" />
                 </div>
                 <div className="flex flex-col gap-16 pt-4 " data-aos="fade-up">
-                  <p className="text-xs font font-urbanist text-[#232527] leading-5">"I am very impressed with the entrepreneurial spirit of the Indonesian people. They are very resilient and never give up. I am also very impressed with the economic growth of Indonesia. Indonesia has great potential to become a developed country."</p>
+                  <p className="text-xs font font-urbanist text-[#232527] leading-5">{t('testimonyDescriptionMark')}</p>
                   <div>
                     <p className="font-bold">Mark Zuckerberg</p>
-                    <p className="text-TextSecondary">Founder Facebook</p>
+                    <p className="text-TextSecondary">{t('testimonyRoleMark')}</p>
                   </div>
                 </div>
               </div>
@@ -86,18 +88,18 @@ function TestimonyDesktop() {
                 height={'[185px]'}
                 image={testimony6}
                 name={"Jackie Chan"}
-                role={"action actor from Hong Kong"}
+                role={t('testimonyRoleJackie')}
                 marginTop={4}
-                text={'"Pencak silat is a martial art that is very beautiful and enchanting. I am very impressed with the skill of Indonesian Pencak Silat warriors. Indonesian people are also very friendly and welcomed me with open arms. I will always remember my experience in Indonesia."'}
+                text={t('testimonyDescriptionJackie')}
               />
               <TestimonyCard
                 width={'[595px]'}
                 height={'[185px]'}
                 image={testimony8}
                 name={"Justin Bieber"}
-                role={"Singer"}
+                role={t('testimonyRoleJustin')}
                 marginTop={4}
-                text={'"Indonesian music and dance really captivated me. I once watched a beautiful and elegant traditional Balinese dance performance. The movements of the dancers are so charming and meaningful. Gamelan and keroncong music also have unique and soul-touching sounds."'}
+                text={t('testimonyDescriptionJustin')}
               />
             </div>
 
@@ -107,8 +109,8 @@ function TestimonyDesktop() {
                 height={'[241px]'}
                 image={testimony4}
                 name={"Oprah Winfrey"}
-                role={"American talk show host"}
-                text={'"Indonesia is a very diverse country. Each region has a unique and interesting culture. I am also very impressed with the natural beauty of Indonesia, especially Raja Ampat. Raja Ampat is one of the most beautiful places I have ever visited."'}
+                role={t('testimonyRoleOprah')}
+                text={t('testimonyDescriptionOprah')}
               />
               <TestimonyCard
                 width={'[323px]'}
@@ -116,8 +118,8 @@ function TestimonyDesktop() {
                 marginTop={4}
                 image={testimony7}
                 name={"Lionel Messi"}
-                role={"football player from Argentina"}
-                text={'"Raja Ampat is one of the most beautiful places I have ever visited. Its natural beauty is truly extraordinary. Indonesian people are also very friendly and welcomed me with open arms. I will always remember my experience in Indonesia."'}
+                role={t('testimonyRoleMessi')}
+                text={t('testimonyDescriptionMessi')}
               />
               <TestimonyCard
                 width={'[330px]'}
@@ -125,8 +127,8 @@ function TestimonyDesktop() {
                 marginTop={4}
                 image={testimony5}
                 name={"Gordon Ramsay"}
-                role={"International Chef"}
-                text={'"Indonesian cuisine really stimulates the palate. From simple fried rice to richly spiced rendang, every dish has a unique and delicious flavor. The creativity and innovation of Indonesian chefs in using local ingredients are commendable."'}
+                role={t('testimonyRoleGordon')}
+                text={t('testimonyDescriptionGordon')}
               />
             </div>
           </div>
@@ -137,6 +139,7 @@ function TestimonyDesktop() {
 }
 
 function TestimonyMobile() {
+  const {t} = useTranslation();
   return (
     <div className="w-screen px-[30px]" data-aos="fade-up">
       <h1 className="font-milonga text-[40px] text-primary mb-2">Testimony</h1>
@@ -144,23 +147,23 @@ function TestimonyMobile() {
       <TestimonyCardMobile
         image={testimony1}
         name={"David Beckham"}
-        role={"Former English football player"}
+        role={t('testimonyRoleDavid')}
         source={"source: www.youtube.com"}
-        description={"\"Indonesia is a beautiful country with a rich culture. The people are very friendly and welcomed me with open arms. I am very impressed with the natural beauty of Indonesia, especially Bali. I will always remember my experience in Indonesia.\""}
+        description={t('testimonyDescriptionDavid')}
       />
       <TestimonyCardMobile
         image={testimony2}
         name={"Mark Zuckerberg"}
-        role={"Founder Facebook"}
+        role={t('testimonyRoleMark')}
         source={"source: www.youtube.com"}
-        description={"\"I am very impressed with the entrepreneurial spirit of the Indonesian people. They are very resilient and never give up. I am also very impressed with the economic growth of Indonesia. Indonesia has great potential to become a developed country.\""}
+        description={t('testimonyDescriptionMark')}
       />
       <TestimonyCardMobile
         image={testimony3}
         name={"Beyoncé"}
-        role={"singer from the United States"}
+        role={t('testimonyRoleBeyonce')}
         source={"source: www.youtube.com"}
-        description={"\"Gamelan is a very beautiful and enchanting music. I am very impressed with the skill of Indonesian gamelan players. Indonesian people are also very friendly and welcomed me with open arms. I will always remember my experience in Indonesia.\""}
+        description={t('testimonyDescriptionBeyonce')}
       />
     </div>
   )

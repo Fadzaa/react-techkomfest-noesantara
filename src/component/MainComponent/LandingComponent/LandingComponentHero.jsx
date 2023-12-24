@@ -4,8 +4,10 @@ import Navbar from '../../../global_component/Navbar.jsx';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link as ScrollLink } from 'react-scroll';
+import {useTranslation} from "react-i18next";
 
 function LandingComponentHero() {
+  const {t} = useTranslation();
   return (
     <div className="h-screen w-screen relative">
       <div>
@@ -43,8 +45,8 @@ function LandingComponentHero() {
             offset={-70} // Adjust this value based on your layout
             duration={500}
           >
-            <button className="w-[157px] lg: h-[40px] border-[2px] border-white rounded-full font-urbanist text-white text-sm lg:text-base transition-transform transform-gpu hover:-translate-y-1 hover:shadow-lg" data-aos="fade-up">
-              Explore Now
+            <button className="px-8 lg: h-[40px] border-[2px] border-white rounded-full font-urbanist text-white text-sm lg:text-base transition-transform transform-gpu hover:-translate-y-1 hover:shadow-lg" data-aos="fade-up">
+              {t('explore')}
             </button>
           </ScrollLink>
         </div>
