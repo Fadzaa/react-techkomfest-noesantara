@@ -40,12 +40,11 @@ const GalleryCardGroup = ({ items, searchQuery }) => {
                             alt={`Culture Image ${index}`}
                             className="w-full h-[89px] lg:h-[186px] rounded-lg object-cover"
                         />
-                        <div
-                            className="absolute inset-0 z-10 flex items-center justify-center opacity-0 transition-opacity group-hover:opacity-100">
+                        <div className="w-full h-[89px] lg:h-[186px] absolute inset-0 z-10 flex items-center justify-center opacity-0 transition-opacity group-hover:opacity-100">
                             <div className="font-urbanist text-white font-semibold text-lg">{item.name}</div>
                         </div>
                         <div
-                            className="absolute inset-0 bg-gradient-to-b from-transparent to-black rounded-lg opacity-0 transition-opacity group-hover:opacity-70"></div>
+                            className="h-[89px] lg:h-[186px] absolute inset-0 bg-gradient-to-b from-transparent to-black rounded-lg opacity-0 transition-opacity group-hover:opacity-70"></div>
                     </div>
                 ))}
             </div>
