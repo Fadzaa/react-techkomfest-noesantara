@@ -13,6 +13,7 @@ import DetailHousePage from "./pages/Detail/DetailHousePage.jsx";
 import DetailClothPage from "./pages/Detail/DetailClothPage.jsx";
 import InformativeDetailPage from "./pages/InformativeDetailPage";
 import Result from "./component/QuizComponent/Result";
+import ClothDetailCardSlider from "./component/DetailComponent/ClothDetailComponent/ClothDetailCardSlider.jsx";
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
         <Route path="/menu" element={<QuizMenuComponent />} />
         <Route path="/detail" element={<InformativeDetailPage />} />
         <Route path="/resultquiz" element={<Result />} />
+        <Route path="/slider" element={<ClothDetailCardSlider />} />
       </Routes>
     </BrowserRouter>
   );
