@@ -10,7 +10,7 @@ const ProgressBar = ({ currentQuestion, totalQuestions }) => {
   ));
 
   return (
-    <div className="mt-[20px] lg:mt-[70px]">
+    <div className="mb-20">
       <div className="flex gap-3 justify-center items-center flex-wrap mx-16">{progressBarItems}</div>
     </div>
   );
