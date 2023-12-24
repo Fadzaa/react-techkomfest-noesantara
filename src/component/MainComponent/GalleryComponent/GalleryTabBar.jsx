@@ -5,6 +5,8 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import GalleryCardGroup from './GalleryCardGroup';
 import dataGallery from './dataGallery';
+import axios from "axios";
+import {useEffect, useState} from "react";
 
 const AntTabs = styled(Tabs)(({ theme }) => ({
   width: 300,
@@ -58,14 +60,36 @@ const AntTab = styled((props) => <Tab disableRipple {...props} />)(({ theme }) =
 }));
 
 const GalleryTabBar = ({searchQuery}) => {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
+  const [cardList, setCardList] = useState([{}]);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
+  const fetchData = async () => {
+    try {
+
+      const response = await axios.get('https://zell-techkomfest.000webhostapp.com/api/gallery');
+      const data = response.data.data;
+
+      const filteredData = data.filter((item) => item.province.toLowerCase().includes(searchQuery.toLowerCase()),);
+
+      setCardList(filteredData);
+      console.log("Filtered Data" + cardList)
+
+    } catch (error) {
+
+      console.error('Error fetching data:', error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   const filteredData = (category) => {
-    const filteredByCategory = category === 'All' ? dataGallery : dataGallery.filter((item) => item.category === category);
+    const filteredByCategory = category === 'All' ? cardList : cardList.filter((item) => item.category === category);
     const filteredBySearch = searchQuery
         ? filteredByCategory.filter((item) => item.culture_name.toLowerCase().includes(searchQuery.toLowerCase()))
         : filteredByCategory;
