@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
+import {useTranslation} from "react-i18next";
 
 const AboutComponentMission = () => {
+  const {t} = useTranslation();
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -15,8 +17,7 @@ const AboutComponentMission = () => {
             data-aos="fade-right"
             className="flex flex-row font-milonga gap-2 text-[28px] lg:text-[64px] mx-[30px] lg:mx-[80px]"
           >
-            <p>Our</p>
-            <p className="text-primary">Mission</p>
+            <p className="text-primary">{t('ourMission')}</p>
           </div>
           <div className="bg-primary w-[272px] h-[5px] mt-[38px] lg:w-[887px] mx-[30px] lg:mx-[80px] lg:mt-2"></div>
           <div className="flex flex-col gap-4 mt-4 mx-[30px] lg:mx-[80px] lg:text-2xl lg:mt-[32px] lg:flex lg:flex-col lg:items-center">
@@ -25,12 +26,10 @@ const AboutComponentMission = () => {
               className="font-urbanist lg:flex lg:gap-[56px]"
             >
               <p className="text-base font-semibold lg:w-[320px] lg:text-2xl">
-                Interactive Cultural Education
+                {t('mission1')}
               </p>
               <p className="mt-1 lg:w-[905px]">
-                Presenting educational content with an interactive approach,
-                providing young people with a deep understanding of cultural
-                values, traditions and local wisdom.
+                {t('mission1Description')}
               </p>
             </div>
             <div
@@ -38,13 +37,10 @@ const AboutComponentMission = () => {
               className="font-urbanist lg:flex lg:gap-[56px]"
             >
               <p className="text-base font-semibold lg:w-[320px] lg:text-2xl">
-                Encouraging Creative Expression
+                {t('mission2')}
               </p>
               <p className="mt-1 lg:w-[905px]">
-                Inspire young people to express their cultural identity through
-                creative forms of expression, such as art, music and writing,
-                thereby helping to reinforce their ties to their cultural
-                heritage.{" "}
+                {t('mission2Description')}
               </p>
             </div>
             <div
@@ -52,12 +48,10 @@ const AboutComponentMission = () => {
               className="font-urbanist  lg:flex lg:gap-[56px]"
             >
               <p className="text-base font-semibold lg:w-[320px] lg:text-2xl">
-                Innovation in Digital Experience
+                {t('mission3')}
               </p>
               <p className="mt-1 lg:w-[905px]">
-                Bringing culture to young people through digital innovations,
-                such as virtual tours, interactive games, and engaging
-                multimedia content to increase appeal.
+                {t('mission3Description')}
               </p>
             </div>
             <div
@@ -65,12 +59,10 @@ const AboutComponentMission = () => {
               className="font-urbanist  lg:flex lg:gap-[56px]"
             >
               <p className="text-base font-semibold lg:w-[320px] lg:text-2xl">
-                Tradition Preservation
+                {t('mission4')}
               </p>
               <p className="mt-1 lg:w-[905px]">
-                Invite young people to be directly involved in tradition
-                preservation activities, such as cultural festivals, traditional
-                craft workshops, and other participatory programs.
+                {t('mission4Description')}
               </p>
             </div>
           </div>

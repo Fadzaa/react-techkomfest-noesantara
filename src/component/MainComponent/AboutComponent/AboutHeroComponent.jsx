@@ -1,8 +1,10 @@
 import React from 'react'
 import Navbar from "../../../global_component/Navbar.jsx";
 import {bgHeroAbout} from "../../../utils/images.js";
+import {useTranslation} from "react-i18next";
 
 function AboutHeroComponent() {
+  const {t} = useTranslation();
   return (
       <div className="w-screen h-[70vh] relative">
         <Navbar/>
@@ -14,8 +16,8 @@ function AboutHeroComponent() {
         <div className="absolute h-full w-full flex flex-col justify-center items-center">
           {/*About Us*/}
           <div className="flex font-milonga font-normal text-[40px] lg:text-[80px] mb-8">
-            <h1 className="text-white me-5">About</h1>
-            <h1 className="text-primary">Us</h1>
+            <h1 className="text-white me-5">{t('about')}</h1>
+            <h1 className="text-primary">{t('us')}</h1>
           </div>
 
           {/*About Our Team*/}
@@ -27,7 +29,7 @@ function AboutHeroComponent() {
 
           {/*Button*/}
           <button className="px-6 lg:px-10 py-2 lg:py-3 border-2 border-white rounded-full">
-            <p className="font-urbanist text-white font-normal text-sm">Check Here</p>
+            <p className="font-urbanist text-white font-normal text-sm">{t('checkHere')}</p>
           </button>
 
         </div>
