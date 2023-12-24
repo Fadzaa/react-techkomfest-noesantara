@@ -22,10 +22,10 @@ function LandingComponentCulture() {
   }, []);
 
   const cards = [
-    { title: "Food", image: cultureFood, path: "/food" },
-    { title: "Clothes", image: cultureClothes, path: "/clothes" },
-    { title: "Weapon", image: cultureWeapon, path: "/weapon" },
-    { title: "House", image: cultureHouse, path: "/house" },
+    { title: t('food'), image: cultureFood, path: "/food" },
+    { title: t('clothes'), image: cultureClothes, path: "/clothes" },
+    { title: t('weapon'), image: cultureWeapon, path: "/weapon" },
+    { title: t('house'), image: cultureHouse, path: "/house" },
   ];
 
   const navigate = useNavigate();
@@ -46,7 +46,7 @@ function LandingComponentCulture() {
           className="font-milonga text-primary text-[40px] lg:text-[84px]"
           data-aos="fade-up"
         >
-          {t('welcome')}
+          {t('culture')}
         </h1>
         <h3
           className="font-yiBaiti tracking-widest text-primaryText  mb-3 ps-1 mt-[-5px] lg:mb-10 lg:ps-3 lg:mt-[-15px]"
@@ -58,8 +58,7 @@ function LandingComponentCulture() {
           className="font-urbanist font-normal text-primaryText  text-xs leading-6 ps-1 lg:ps-3 lg:text-2xl  lg:leading-9 lg:w-96 "
           data-aos="fade-up"
         >
-          We present various fascinating cultural options, inviting you to
-          explore the extraordinary cultural heritage in our homeland.
+          {t('cultureDescription')}
         </p>
       </div>
 
