@@ -2,8 +2,10 @@ import React, { useEffect } from "react";
 import { traditionalFood } from "../../../utils/images.js";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 
 function DetailTraditionalFood() {
+  const { t } = useTranslation();
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -16,16 +18,14 @@ function DetailTraditionalFood() {
           data-aos="fade-right"
           className="font-milonga text-white text-[32px] lg:text-[54px] mb-10"
         >
-          <h1>What is</h1>
-          <h1>Traditional Food?</h1>
+          <h1>{t("traditionalFoodWhat")}</h1>
+          <h1>{t("traditionalFoodWhatis")}</h1>
         </div>
         <p
           data-aos="fade-right"
           className="font-urbanist text-white text-lg lg:text-xl leading-9"
         >
-          Makanan tradisional Indonesia mencakup beragam hidangan khas yang
-          diwariskan dari generasi ke generasi. Dikenal karena keberagaman
-          rempah-rempahnya, makanan ini sering menggunakan bahan{" "}
+          {t("traditionalFoodDesc")}
         </p>
       </div>
       <img
