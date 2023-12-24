@@ -52,7 +52,7 @@ const Footer = () => {
           </div>
           <div className='mt-[119px] lg:mt-[65px]'>
             <div className="h-[1px] bg-white w-screen"></div>
-            <p className="text-center text-white text-base font-urbanist my-8 lg:mt-11">Copyright &copy; 2023 Lorem Ipsum Ltd.</p>
+            <p className="text-center text-white text-base font-urbanist my-8 lg:mt-11">Copyright &copy; REPEEL2.</p>
           </div>
         </div>
       </div>

@@ -76,8 +76,7 @@ const GalleryComponentHero = () => {
 
 
 
-        <p className="lg:text-[#D1D1D1] lg:font-urbanist lg:text-base lg:absolute lg:bottom-4 lg:text-center lg:ps-20 lg:left-0 hidden lg:block">Copyright &copy; 2023
-          Lorem Ipsum Ltd.</p>
+        
       </div>
   );
 };
