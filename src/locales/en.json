@@ -74,5 +74,25 @@
   "listExplanation1": "Louvre Museum Collection, Paris, France: Keris is one of the prized weapon collections in the world-famous Louvre Museum. This shows recognition of the cultural value and beauty of the keris.",
   "listExplanation2": "Gun Lovers Discussion: Keris is an interesting topic of discussion among international gun lovers due to its high aesthetic and artistic value.",
   "listExplanation3": "UNESCO Intangible Cultural Heritage: Keris was recognized by UNESCO as one of the world's intangible cultural heritages in 2008, confirming its importance to Indonesia's identity and cultural heritage.",
-  "listExplanation4": "Traditional Weapons Competition: Keris has won awards in international traditional weapon competitions, such as the victory of Mandau (a keris-influenced Dayak weapon) in the US. This demonstrates the quality of the kris' manufacturing techniques and aesthetics."
+  "listExplanation4": "Traditional Weapons Competition: Keris has won awards in international traditional weapon competitions, such as the victory of Mandau (a keris-influenced Dayak weapon) in the US. This demonstrates the quality of the kris' manufacturing techniques and aesthetics.",
+  "titleHouse1": "What is",
+  "titleHouse2": "Traditional House?",
+    "subtitleHouse": "Traditional houses are...",
+    "contentHouse": "A traditional house is a house built in the same way from generation to generation, with little or no change. Traditional houses are a part of the culture and identity of a community.",
+  
+      "houseDetailWorld": {
+        "title": "World's Record",
+        "imageAlt": "Mbaru Niang traditional house",
+        "location": "East Nusa Tenggara, Indonesia",
+        "description": "Mbaru Niang traditional house is the traditional house of the Manggarai tribe located in the Wae Rebo Traditional Village, West Manggarai Regency, East Nusa Tenggara. This house is one of the tallest traditional houses in Indonesia, reaching a height of 15 meters.",
+        "achievementsTitle": "Achievements:",
+        "achievementsList": [
+          "Designated as a UNESCO World Heritage Site in 2012.",
+          "One of the popular tourist destinations in East Nusa Tenggara.",
+          "Inspiration for designers and architects."
+        ]
+      
+    }
+    
+  
 }

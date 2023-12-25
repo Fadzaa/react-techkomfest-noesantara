@@ -40,10 +40,7 @@ const HouseDetailWorld = () => {
             data-aos="fade-up"
             className="font-urbanist text-base py-6 lg:text-xl"
           >
-            Rumah adat Mbaru Niang adalah rumah adat suku Manggarai yang
-            terletak di Kampung Adat Wae Rebo, Kabupaten Manggarai Barat, Nusa
-            Tenggara Timur. Rumah ini merupakan salah satu rumah adat tertinggi
-            di Indonesia, dengan ketinggian mencapai 15 meter
+            {}
           </p>
           <p
             data-aos="fade-up"

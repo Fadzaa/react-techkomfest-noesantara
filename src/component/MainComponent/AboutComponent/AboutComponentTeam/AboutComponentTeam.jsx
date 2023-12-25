@@ -21,7 +21,7 @@ function AboutComponentTeam() {
     const currentPerson = teamData[currentIndex];
 
     return (
-        <div className="w-screen px-6 pt-6 lg:px-16 relative mb-12 lg:mb-24">
+        <div className="w-screen px-6 py-6 lg:px-16 relative mb-12 lg:mb-24">
             <div className="flex flex-col items-center">
                 <h1 className=" font-milonga text-[40px] lg:text-[80px] text-primary">Our Team</h1>
                 <div className="w-2/3 lg:w-3/5 h-[2px] lg:h-[5px] bg-primary mb-10 lg:mb-16"></div>
@@ -59,9 +59,9 @@ function AboutComponentTeam() {
                         />
 
 
-                        <div className="lg:flex mt-10">
+                        <div className="lg:flex lg:flex-row mt-10 flex-col flex gap-16 pb-16">
                             <PersonDescription descriptionTop={currentPerson.description[0]} descriptionBottom={currentPerson.description[1]}/>
-                            <div className="lg:flex lg:flex-col lg:justify-between lg:w-1/3">
+                            <div className="lg:flex lg:flex-col lg:justify-between lg:w-1/3 py-8">
                                 <PersonSubDescription title={"Experience"} description={currentPerson.experience[0]}/>
                                 <PersonSubDescription title={"Education"} description={"SMK Raden Umar Said"}/>
                             </div>

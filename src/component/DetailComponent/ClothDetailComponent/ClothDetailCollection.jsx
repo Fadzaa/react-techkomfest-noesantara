@@ -16,7 +16,7 @@ const ClothDetailCollection = () => {
 
   return (
     <>
-      <div className="bg-GreenWhite w-screen h-screen">
+      <div className="bg-GreenWhite w-screen h-screen mx-auto">
         <div>
           <p className="w-[905px] font-milonga text-primary text-[64px] pt-[53px] ml-[268px] text-center">Best Collection Of Traditional Clothes</p>
 
