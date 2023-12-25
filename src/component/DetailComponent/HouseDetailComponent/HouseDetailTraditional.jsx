@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { cardHouse1, cardHouse2 } from "../../../utils/images";
 import AOS from "aos";
+import { useTranslation } from "react-i18next";
 
 const HouseDetailTraditional = () => {
   useEffect(() => {
@@ -8,6 +9,7 @@ const HouseDetailTraditional = () => {
       duration: 1000,
     });
   }, []);
+  const { t } = useTranslation();
   return (
     <div className="h-full ">
       <div className="w-screen relative py-[107px] px-5 flex flex-col-reverse lg:px-20 md:flex-row gap-4 lg:gap-10 justify-center  ">
@@ -16,17 +18,14 @@ const HouseDetailTraditional = () => {
             data-aos="fade-right"
             className="font-milonga text-4xl  lg:text-[80px] lg:space-y-16 lg:w-[692px]"
           >
-            <h1>What is</h1>
+            <h1 className="leading-24">{t("titleHouse")}</h1>
             <h1 className="text-primary ">Traditional House?</h1>
           </div>
           <p
             data-aos="fade-right"
             className="font-urbanist text-lg tracking-wide lg:text-2xl lg:w-[550px] w-full"
           >
-            Rumah adat adalah rumah tradisional yang dibangun dengan cara yang
-            sama dari generasi ke generasi dan tanpa atau sedikit sekali
-            mengalami perubahan. Rumah adat merupakan bagian dari budaya dan
-            identitas suatu masyarakat.
+            {}
           </p>
         </div>
         <div

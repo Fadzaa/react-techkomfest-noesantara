@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
+import { useTranslation } from "react-i18next";
 import "slick-carousel/slick/slick-theme.css";
 import { barrierDesktop, barrierMobile, house1, house2, house3, house4 } from '../../../utils/images.js';
 
@@ -58,6 +59,8 @@ const HouseDetailCollection = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+
 
   return (
       <div className=' w-screen relative  flex flex-col justify-center py-10 bg-white lg:py-32'>
