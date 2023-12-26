@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { mbaruNiang } from "../../../utils/images";
 import AOS from "aos";
+import { useTranslation } from "react-i18next";
+
 
 const HouseDetailWorld = () => {
   useEffect(() => {
@@ -8,8 +10,14 @@ const HouseDetailWorld = () => {
       duration: 1000,
     });
   }, []);
+
+  const { t } = useTranslation();
+
+  const achievementsList = t('achievementsListMbaru', { returnObjects: true });
+
+
   return (
-    <div className=" bg-GreenWhite w-screen px-8 relative">
+    <div className=" bg-GreenWhite w-screen px-8 relative  py-12">
       <h1
         data-aos="fade-up"
         className="font-milonga text-primary text-4xl py-8 text-center lg:text-5xl"
@@ -28,40 +36,33 @@ const HouseDetailWorld = () => {
             data-aos="fade-up"
             className="font-urbanist font-bold text-[30px] lg:text-4xl py-5 lg:py-2"
           >
-            Rumah adat Mbaru Niang
+            {t("imageAltMbaru")}
           </h1>
           <p
             data-aos="fade-up"
             className="font-urbanist text-[18px] font-semibold lg:text-2xl"
           >
-            Nusa Tenggara Timur, Indonesia
+            {t("locationMbaru")}
           </p>
           <p
             data-aos="fade-up"
             className="font-urbanist text-base py-6 lg:text-xl"
           >
-            {}
+            {t("descriptionMbaru")}
           </p>
           <p
             data-aos="fade-up"
             className="font-urbanist text-base py-3 lg:text-xl"
           >
-            Berikut adalah beberapa rprestasi yang telah diraih oleh rumah adat
-            Mbaru Niang:
+            {t("achievementsTitleMbaru")}
           </p>
           <ul
             data-aos="fade-up"
             className="font-urbanist text-base list-disc list-inside pb-[64px] lg:text-xl"
           >
-            <li>
-              Dinobatkan sebagai salah satu situs warisan dunia oleh UNESCO pada
-              tahun 2012.
-            </li>
-            <li>
-              Menjadi salah satu destinasi wisata populer di Nusa Tenggara
-              Timur.
-            </li>
-            <li>Menjadi sumber inspirasi bagi para desainer dan arsitek.</li>
+            {achievementsList.map((achievement, index) => (
+          <li key={index}>{achievement}</li>
+        ))}
           </ul>
         </div>
       </div>

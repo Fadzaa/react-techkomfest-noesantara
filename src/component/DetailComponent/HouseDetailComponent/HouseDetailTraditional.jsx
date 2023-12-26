@@ -18,14 +18,14 @@ const HouseDetailTraditional = () => {
             data-aos="fade-right"
             className="font-milonga text-4xl  lg:text-[80px] lg:space-y-16 lg:w-[692px]"
           >
-            <h1 className="leading-24">{t("titleHouse")}</h1>
-            <h1 className="text-primary ">Traditional House?</h1>
+            <h1 className="leading-24">{t("titleHouse1")}</h1>
+            <h1 className="text-primary ">{t("titleHouse2")}</h1>
           </div>
           <p
             data-aos="fade-right"
             className="font-urbanist text-lg tracking-wide lg:text-2xl lg:w-[550px] w-full"
           >
-            {}
+            {t("contentHouse")}
           </p>
         </div>
         <div

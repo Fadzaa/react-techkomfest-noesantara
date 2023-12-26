@@ -4,7 +4,7 @@ import { bgHeroHouse } from "../../utils/images.js";
 import HouseDetailTraditional from "../../component/DetailComponent/HouseDetailComponent/HouseDetailTraditional.jsx";
 import HouseDetailCollection from "../../component/DetailComponent/HouseDetailComponent/HouseDetailCollection.jsx";
 import HouseDetailWorld from "../../component/DetailComponent/HouseDetailComponent/HouseDetailWorld.jsx";
-
+import Footer from "../../global_component/Footer.jsx";
 function DetailHousePage() {
   return (
     <>
@@ -19,6 +19,7 @@ function DetailHousePage() {
       <HouseDetailTraditional />
       <HouseDetailCollection />
       <HouseDetailWorld />
+        <Footer/>
     </>
   );
 }
