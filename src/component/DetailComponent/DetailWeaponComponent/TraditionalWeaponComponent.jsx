@@ -43,7 +43,7 @@ function TextExplanation() {
 
 function ImageExplanation() {
   return (
-    <div className="w-full h-[532px] bg-[#FAF8ED] rounded-[80px] lg:rounded-full flex justify-center items-center lg:w-[50vw] lg:h-[85vh]">
+    <div className="w-[360px] h-[532px] bg-[#FAF8ED] rounded-[80px] lg:rounded-full flex justify-center items-center lg:w-[50vw] lg:h-[85vh]">
       <img
         data-aos="fade-left"
         className="w-4/5 h-4/5 object-cover rounded-full "

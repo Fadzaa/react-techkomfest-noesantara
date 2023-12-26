@@ -4,10 +4,11 @@ import { bgHeroHouse } from "../../utils/images.js";
 import HouseDetailTraditional from "../../component/DetailComponent/HouseDetailComponent/HouseDetailTraditional.jsx";
 import HouseDetailCollection from "../../component/DetailComponent/HouseDetailComponent/HouseDetailCollection.jsx";
 import HouseDetailWorld from "../../component/DetailComponent/HouseDetailComponent/HouseDetailWorld.jsx";
-
+import Footer from "../../global_component/Footer.jsx";
 function DetailHousePage() {
   return (
     <>
+      <div className="overflow-x-hidden">
       <DetailComponentHero
         title={"Traditional House"}
         subtitle={"Detail Budaya"}
@@ -19,6 +20,8 @@ function DetailHousePage() {
       <HouseDetailTraditional />
       <HouseDetailCollection />
       <HouseDetailWorld />
+      <Footer/>
+      </div>
     </>
   );
 }

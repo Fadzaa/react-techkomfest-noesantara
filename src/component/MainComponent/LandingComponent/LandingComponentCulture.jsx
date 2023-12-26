@@ -40,7 +40,7 @@ function LandingComponentCulture() {
   };
 
   return (
-    <div className="w-screen lg:h-screen bg-white  flex flex-col items-start  py-4 px-8 md:flex md:flex-row md:py-24 md:px-36 md:justify-between md:items-center">
+    <div className="w-screen lg:h-screen bg-white  flex flex-col items-start  py-4 px-8 md:flex md:flex-row md:py-28 md:px-36 md:justify-between md:items-center">
       <div>
         <h1
           className="font-milonga text-primary text-[40px] lg:text-[84px]"
@@ -62,7 +62,7 @@ function LandingComponentCulture() {
         </p>
       </div>
 
-      <div className="flex mt-7 lg:ms-11 " data-aos="fade-up">
+      <div className="flex mt-7 lg:ms-5 " data-aos="fade-up">
         {cards.map((card, index) => (
           <CultureCard
             key={index}

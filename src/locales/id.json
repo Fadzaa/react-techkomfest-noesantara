@@ -77,6 +77,18 @@
   "listExplanation4": "Kompetisi Senjata Tradisional: Keris meraih penghargaan dalam kompetisi senjata tradisional internasional, seperti kemenangan Mandau (senjata Dayak yang terpengaruh oleh keris) di Amerika Serikat. Ini menunjukkan kualitas teknik pembuatan keris dan estetika yang tinggi.",
   "titleHouse1": "Apa Itu",
   "titleHouse2": "Rumah Adat?",
-    "subtitleHouse": "Rumah tradisional adalah...",
-    "contentHouse": "Rumah tradisional adalah rumah yang dibangun dengan cara yang sama dari generasi ke generasi, dengan sedikit atau tanpa perubahan. Rumah tradisional merupakan bagian dari budaya dan identitas suatu masyarakat."
+  "subtitleHouse": "Rumah tradisional adalah...",
+  "contentHouse": "Rumah tradisional adalah rumah yang dibangun dengan cara yang sama dari generasi ke generasi, dengan sedikit atau tanpa perubahan. Rumah tradisional merupakan bagian dari budaya dan identitas suatu masyarakat.",
+    "titleMbaru": "Rekor Dunia",
+    "imageAltMbaru": "Rumah adat Mbaru Niang",
+    "locationMbaru": "Nusa Tenggara Timur, Indonesia",
+    "descriptionMbaru": "Rumah adat Mbaru Niang adalah rumah adat suku Manggarai yang terletak di Desa Adat Wae Rebo, Kabupaten Manggarai Barat, Nusa Tenggara Timur. Rumah ini merupakan salah satu rumah adat tertinggi di Indonesia, mencapai ketinggian 15 meter.",
+    "achievementsTitleMbaru": "Prestasi:",
+    "achievementsListMbaru": [
+      "Ditetapkan sebagai Situs Warisan Dunia UNESCO pada tahun 2012.",
+      "Salah satu tujuan wisata populer di Nusa Tenggara Timur.",
+      "Inspirasi bagi perancang dan arsitek."
+    ]
+  
+  
 }
