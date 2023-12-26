@@ -4,26 +4,30 @@ import 'slick-carousel/slick/slick-theme.css';
 
 function App() {
   const settings = {
+    autoplay: true,
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 5,
+    centerMode : true,
     slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
+          autoplay: false ,
           dots: true,
           infinite: true,
           speed: 500,
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 1,
         }
       },
       {
         breakpoint: 768,
         settings: {
-          dots: true,
+          dots: false,
+          autoplay: true,
           infinite: true,
           speed: 500,
           slidesToShow: 3,
@@ -33,7 +37,8 @@ function App() {
       {
         breakpoint: 640,
         settings: {
-          dots: true,
+          dots: false,
+          autoplay: true,
           infinite: true,
           speed: 500,
           slidesToShow: 2,
@@ -43,7 +48,8 @@ function App() {
       {
         breakpoint: 480,
         settings: {
-          dots: true,
+          dots: false,
+          autoplay: true,
           infinite: true,
           speed: 500,
           slidesToShow: 1,
@@ -53,11 +59,11 @@ function App() {
     ]
   };
   return (
-    <div className="mx-auto">
-      <div className="mt-20">
+    <div className="mx-auto container justify-center w-screen items-center   ">
+      <div className="mt-20 items-center">
         <Slider {...settings}>
           {data.map((d) => (
-            <div key={d.name} className=" w-56 text-black rounded-xl relative">
+            <div key={d.name} className=" w-56 text-black rounded-xl relative ">
               <div className="h-[330px] w-56 flex rounded-t-xl">
                 <img src={d.image} alt={d.name} className=" object-cover w-full" />
                 <div className='absolute top-60'>
@@ -96,9 +102,21 @@ const data = [
   },
   {
     name: `Baju Dayak`,
-    image:'https://o-cdn-cas.sirclocdn.com/parenting/images/dsc8590.width-800.format-webp.webp',
+    image: 'https://o-cdn-cas.sirclocdn.com/parenting/images/dsc8590.width-800.format-webp.webp',
     region: `Kalimantan`,
   },
+  {
+    name: `Ulee Balang`,
+    image: 'https://o-cdn-cas.sirclocdn.com/parenting/images/187570873_928636181313016_2975744.width-800.format-webp.webp',
+    region: `Aceh`,
+  },
+  {
+    name: `Baju Betabur`,
+    image: 'https://o-cdn-cas.sirclocdn.com/parenting/images/WhatsApp_Image_2021-07-31_at_10.3.width-800.format-webp.webp',
+    region: `Bengkulu`,
+  },
+  
 ];
+
 
 export default App;

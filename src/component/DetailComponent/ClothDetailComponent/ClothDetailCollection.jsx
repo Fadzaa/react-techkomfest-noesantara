@@ -16,9 +16,9 @@ const ClothDetailCollection = () => {
 
   return (
     <>
-      <div className="bg-GreenWhite w-screen h-screen mx-auto">
+      <div className="bg-GreenWhite w-screen h-[658px] lg:h-screen mx-auto">
         <div>
-          <p className="w-[905px] font-milonga text-primary text-[64px] pt-[53px] ml-[268px] text-center">Best Collection Of Traditional Clothes</p>
+          <p className=" font-milonga text-primary lg:text-[64px] pt-[53px] text-[36px] text-center">Best Collection Of Traditional Clothes</p>
 
             <ClothDetailCardSlider/>
         </div>

@@ -11,6 +11,7 @@ function DetailClothPage() {
   return (
     <>
       <Navbar />
+      <div className="overflow-x-hidden">
       <DetailComponentHero
         image={bgDetailCloth}
         title={"Traditional Cloth"}
@@ -19,10 +20,11 @@ function DetailClothPage() {
           "sentuhan warisan budaya yang mewujud dalam setiap ukiran dan coraknya."
         }
       />
-      <ClothDetailCollection />
       <ClothDetailTraditional />
+      <ClothDetailCollection />
       <ClothDetailWorld />
       <Footer />
+      </div>
     </>
   );
 }

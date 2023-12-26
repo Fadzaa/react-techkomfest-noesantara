@@ -8,6 +8,7 @@ import Footer from "../../global_component/Footer.jsx";
 function DetailHousePage() {
   return (
     <>
+      <div className="overflow-x-hidden">
       <DetailComponentHero
         title={"Traditional House"}
         subtitle={"Detail Budaya"}
@@ -19,7 +20,8 @@ function DetailHousePage() {
       <HouseDetailTraditional />
       <HouseDetailCollection />
       <HouseDetailWorld />
-        <Footer/>
+      <Footer/>
+      </div>
     </>
   );
 }

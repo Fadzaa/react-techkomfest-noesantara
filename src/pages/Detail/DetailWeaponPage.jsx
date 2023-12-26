@@ -11,6 +11,7 @@ function DetailWeaponPage() {
   return (
     <>
       <Navbar />
+      <div className="overflow-x-hidden">
       <DetailComponentHero
         image={bgHeroWeapon}
         title="Traditional Weapon"
@@ -21,6 +22,7 @@ function DetailWeaponPage() {
       <CollectionWeaponComponent />
       <RecordWeaponComponent />
       <Footer />
+      </div>
     </>
   );
 }
