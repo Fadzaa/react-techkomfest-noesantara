@@ -36,7 +36,7 @@ const GalleryComponentHero = () => {
   
 
   return (
-      <div className="w-screen h-screen relative">
+      <div className="w-screen h-screen relative overflow-y-hidden">
         <Navbar/>
         <div className="absolute w-full h-full bg-black opacity-95"></div>
         <img src={backgroundImages[currentBackgroundIndex]} alt="bggallery"

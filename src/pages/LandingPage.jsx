@@ -8,11 +8,13 @@ import LandingComponentTestimony from "../component/MainComponent/LandingCompone
 function LandingPage() {
   return (
     <>
+      <div className="overflow-x-hidden">
       <LandingComponentHero />
       <LandingComponentCulture />
       <LandingComponentIndonesia />
       <LandingComponentTestimony />
       <Footer />
+      </div>
     </>
   );
 }
