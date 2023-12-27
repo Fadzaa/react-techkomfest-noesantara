@@ -51,6 +51,7 @@ function InformativePage() {
 
   return (
     <>
+      <div className='overflow-y-hidden'>
       {isMobile ? (
         <InformativeMobile
           searchQuery={searchQuery}
@@ -72,6 +73,7 @@ function InformativePage() {
           sliderRef={sliderRef}
         />
       )}
+      </div>
     </>
   );
 }
