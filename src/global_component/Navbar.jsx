@@ -6,7 +6,7 @@ import {useTranslation} from "react-i18next";
 
 export default function Navbar() {
   const [width, setWidth] = useState(window.innerWidth);
-  const breakpoint = 640;
+  const breakpoint = 815;
 
 
 
