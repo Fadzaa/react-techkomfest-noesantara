@@ -5,7 +5,7 @@ function CultureCard({ image, title, isActive, onHover, onClick }) {
   return (
     <div onClick={onClick}
       className={`group ${
-        isActive ? "w-24 lg:w-[387px] cursor-pointer" : "w-[55px] lg:w-[100px]"
+        isActive ? "w-24 lg:w-[387px] cursor-pointer" : "w-[55px] lg:w-[120px]"
       } h-[200px] lg:h-[473px] rounded-lg lg:rounded-2xl flex flex-col justify-end relative overflow-hidden me-3 lg:ms-4 transition-all duration-500`}
       onMouseEnter={onHover}
       onMouseLeave={onHover}
