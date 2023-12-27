@@ -1,52 +1,70 @@
-import { useState, useEffect } from 'react';
-import { arrowRight } from '../../../utils/icon';
-import {Link, NavLink} from "react-router-dom";
+import { useState, useEffect } from "react";
+import { arrowRight } from "../../../utils/icon";
+import { Link, NavLink } from "react-router-dom";
+import { Link as ScrollLink, Element } from "react-scroll";
 
 const Sidebar = () => {
-  const [open, setOpen] = useState(window.innerWidth >= 1040); // Initially open on desktop
+  const [open, setOpen] = useState(window.innerWidth >= 1040);
+  const [arrowRotation, setArrowRotation] = useState(open ? 180 : 0);
 
   useEffect(() => {
     const handleResize = () => {
-      setOpen(window.innerWidth >= 1020);
+      const isOpen = window.innerWidth >= 1020;
+      setOpen(isOpen);
+      setArrowRotation(isOpen ? 180 : 0);
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   const Menus = [
-    { title: 'About', id: 'about' },
-    { title: 'History', id: 'history' },
-    { title: 'Geography', id: 'geography' },
-    { title: 'Demographics', id: 'demographics' },
-    { title: 'Art And Culture', id: 'art-culture' },
+    { title: "About", id: "about" },
+    { title: "History", id: "history" },
+    { title: "Geography", id: "geography" },
+    { title: "Demographics", id: "demographics" },
+    { title: "Art And Culture", id: "art-culture" },
   ];
 
   const Search = [
-    { title: 'Jawa Tengah', id: 'jawa-tengah' },
-    { title: 'Jawa Timur', id: 'jawa-timur' },
-    { title: 'Jawa Barat', id: 'jawa-barat' },
-    { title: 'Maluku', id: 'maluku' },
-    { title: 'Sulawesi Utara', id: 'sulawesi-utara' },
+    { title: "Jawa Tengah", id: "jawa-tengah" },
+    { title: "Jawa Timur", id: "jawa-timur" },
+    { title: "Jawa Barat", id: "jawa-barat" },
+    { title: "Maluku", id: "maluku" },
+    { title: "Sulawesi Utara", id: "sulawesi-utara" },
   ];
 
   return (
     <div className="flex">
       <div
-        className={` ${open ? 'w-60' : 'w-7 '} bg-GreenWhite h-screen lg: p-5 pt-8 fixed duration-300 overflow-y-auto flex flex-col justify-center`}
+        className={` ${
+          open ? "w-60" : "w-7 "
+        } bg-GreenWhite h-screen lg: p-5 pt-8 fixed duration-300 overflow-y-auto flex flex-col justify-center`}
       >
         <img
           src={arrowRight}
-          className={`absolute cursor-pointer right-0 w-7 ${!open && 'rotate-180'}`}
-          onClick={() => setOpen(!open)}
+          className={`absolute cursor-pointer right-0 w-7 transform rotate-${arrowRotation} duration-300`}
+          onClick={() => {
+            setOpen(!open);
+            setArrowRotation(open ? 0 : 180);
+          }}
         />
+
         <div className="flex gap-x-4 items-center  ">
-          <div className={` ${open ? 'w-30' : 'w-3 '} bg-GreenWhite fixed pt-8 mt-20 `}>
+          <div
+            className={` ${
+              open ? "w-30" : "w-3 "
+            } bg-GreenWhite fixed pt-8 mt-20 `}
+          >
             <Link to={"/"}>
-              <h1 className={`cursor-pointer text-black origin-left font-bold font-milonga text-3xl duration-200 ${!open && 'scale-0'} `}>
+              <h1
+                className={`cursor-pointer text-black origin-left font-bold font-milonga text-3xl duration-200 ${
+                  !open && "scale-0"
+                } `}
+              >
                 Neosantara
               </h1>
             </Link>
@@ -54,18 +72,28 @@ const Sidebar = () => {
         </div>
         <ul className="mt-24">
           {Menus.map((Menu, index) => (
-              <li
-                  key={index}
-                  className={`flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-black text-sm items-center gap-x-4 
-              ${Menu.gap ? 'mt-9' : 'mt-2'} ${index === 0 && 'bg-light-white'}`}
+            <li
+              key={index}
+              className={`flex rounded-md p-2 cursor-pointer hover:bg-light-white text-black text-sm items-center gap-x-4 ${
+                Menu.gap ? "mt-9" : "mt-2"
+              } ${index === 0 && "bg-light-white"}`}
             >
-              <a href={`#${Menu.id}`} className={`${!open && 'hidden'} origin-left duration-200 font-urbanist text-base`}>
+              <ScrollLink
+                to={Menu.id}
+                spy={true}
+                smooth={true}
+                offset={-70} // Adjust the offset according to your layout
+                duration={500}
+                className={`${
+                  !open && "hidden"
+                } origin-left duration-200 font-urbanist text-base`}
+              >
                 {Menu.title}
-              </a>
+              </ScrollLink>
             </li>
           ))}
         </ul>
-        <div className={`flex items-center mt-10 ${open ? 'block' : 'hidden'}`}>
+        <div className={`flex items-center mt-10 ${open ? "block" : "hidden"}`}>
           <input
             type="text"
             placeholder="Search"
@@ -78,9 +106,16 @@ const Sidebar = () => {
             <li
               key={index}
               className={`flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-black text-sm items-center gap-x-4 
-              ${Search.gap ? 'mt-9' : 'mt-2'} ${index === 0 && 'bg-light-white'}`}
+              ${Search.gap ? "mt-9" : "mt-2"} ${
+                index === 0 && "bg-light-white"
+              }`}
             >
-              <a href={`#${Search.id}`} className={`${!open && 'hidden'} origin-left duration-200 font-urbanist text-base`}>
+              <a
+                href={`#${Search.id}`}
+                className={`${
+                  !open && "hidden"
+                } origin-left duration-200 font-urbanist text-base`}
+              >
                 {Search.title}
               </a>
             </li>
