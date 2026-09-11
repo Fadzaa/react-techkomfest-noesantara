@@ -3,6 +3,7 @@ import axios from "axios";
 import Sidebar from "./Sidebar";
 import { house4 } from "../../../utils/images.js";
 import {useLocation} from "react-router-dom";
+import { API_BASE_URL } from "../../../config";
 
 const InformativeDetailMain = () => {
   const [informativeData, setInformativeData] = useState(null);
@@ -13,7 +14,7 @@ const InformativeDetailMain = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        `https://zell-techkomfest.000webhostapp.com/api/informative/detail/${dataToPass.selectedCardId}`
+        `${API_BASE_URL}/api/informative/detail/${dataToPass.selectedCardId}`
       );
       const data = response.data;
       setInformativeData(data.data);

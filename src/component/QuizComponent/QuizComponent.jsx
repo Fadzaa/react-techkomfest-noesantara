@@ -6,6 +6,7 @@ import Options from "./Options";
 import ProgressBar from "./ProgressBar.jsx";
 import Result from "./Result";
 import CircularProgress from "@mui/joy/CircularProgress";
+import { API_BASE_URL } from "../../config";
 
 const QuizComponent = () => {
   const navigate = useNavigate();
@@ -31,7 +32,7 @@ const QuizComponent = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://zell-techkomfest.000webhostapp.com/api/quiz"
+          `${API_BASE_URL}/api/quiz`
         );
         const randomQuestions = getRandomQuestions(response.data, 5);
         setQuizState({ ...initialState, questions: randomQuestions });

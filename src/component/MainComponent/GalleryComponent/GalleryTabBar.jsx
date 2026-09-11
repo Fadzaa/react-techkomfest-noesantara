@@ -7,6 +7,7 @@ import GalleryCardGroup from './GalleryCardGroup';
 import dataGallery from './dataGallery';
 import axios from "axios";
 import {useEffect, useState} from "react";
+import { API_BASE_URL } from "../../../config";
 
 const AntTabs = styled(Tabs)(({ theme }) => ({
   width: 300,
@@ -70,7 +71,7 @@ const GalleryTabBar = ({searchQuery}) => {
   const fetchData = async () => {
     try {
 
-      const response = await axios.get('https://zell-techkomfest.000webhostapp.com/api/gallery');
+      const response = await axios.get(`${API_BASE_URL}/api/gallery`);
       const data = response.data.data;
 
       const filteredData = data.filter((item) => item.province.toLowerCase().includes(searchQuery.toLowerCase()),);

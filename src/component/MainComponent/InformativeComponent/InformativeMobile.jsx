@@ -4,6 +4,7 @@ import axios from "axios";
 import Navbar from "../../../global_component/Navbar.jsx";
 import Slider from "react-slick";
 import {bgGallery2, bgGallery4, bgGallery5, bgGallery6} from "../../../utils/images.js";
+import { API_BASE_URL } from "../../../config";
 
 export default function InformativeMobile({searchQuery, handleSearchChange, settings, previous, next, currentSlide, sliderRef,}) {
     const navigate = useNavigate();
@@ -18,7 +19,7 @@ export default function InformativeMobile({searchQuery, handleSearchChange, sett
     const fetchData = async () => {
         try {
             setLoading(true);
-            const response = await axios.get('https://zell-techkomfest.000webhostapp.com/api/informative');
+            const response = await axios.get(`${API_BASE_URL}/api/informative`);
             const data = response.data.data;
 
             const filteredData = data.filter((item) => item.province.toLowerCase().includes(searchQuery.toLowerCase()),);
